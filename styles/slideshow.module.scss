@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+.backgroundImage {
+    background-image: url('/images/landingBg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 560px;
+}
+
+.titleFont{
+    font-family: $tertiaryFont;
+    font-weight: 700;
+    font-size: 64px;
+    background: linear-gradient(135deg, #0FA1DB 0%, #9AE95A 50.32%, #F8C800 97.59%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: "";
+}
+
+.tab {
+    width: 90%;
+    border: 1px solid;
+    border-radius: 12px;
+    transform: translateY(120px);
+    background: linear-gradient(93.73deg, rgba(255, 255, 255, 0.02) 20.02%, rgba(255, 255, 255, 0) 93.68%), linear-gradient(0deg, rgba(8, 8, 24, 0.3), rgba(8, 8, 24, 0.3));
+    backdrop-filter: blur(30px);
+    border-image-source: linear-gradient(94.01deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 54.02%, rgba(255, 255, 255, 0.25) 100%);
+}
