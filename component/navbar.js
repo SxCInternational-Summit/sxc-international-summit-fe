@@ -1,10 +1,8 @@
 import {
-    Box,
     Image,
     Link,
     Flex,
-    Center,
-    Button
+    Center
 } from "@chakra-ui/react";
 import styles from "../styles/navbar.module.scss";
 

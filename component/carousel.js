@@ -1,22 +1,12 @@
 import {
     Box,
     Image,
-    Link,
-    Flex,
     Center,
-    Button,
-    Text,
-    Heading,
-    Tabs, 
-    TabList, 
-    TabPanels, 
-    Tab, 
-    TabPanel
+    Text
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import styles from "../styles/slideshow.module.scss"
+import styles from "../styles/carousel.module.scss"
 
-const Slideshow = () => {
+const Carousel = () => {
 
     return(
         <Box className={styles.backgroundImage}>
@@ -37,4 +27,4 @@ const Slideshow = () => {
     )
 }
 
-export default Slideshow;
+export default Carousel;

@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .backgroundImage {
-    background-image: url('/images/landingBg.svg');
+    background-image: $bgLanding;
     background-size: cover;
     background-repeat: no-repeat;
     height: 560px;
@@ -11,7 +11,7 @@
     font-family: $tertiaryFont;
     font-weight: 700;
     font-size: 64px;
-    background: linear-gradient(135deg, #0FA1DB 0%, #9AE95A 50.32%, #F8C800 97.59%);
+    background: $gradientColor;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: "";

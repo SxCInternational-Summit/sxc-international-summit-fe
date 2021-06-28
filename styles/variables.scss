@@ -4,4 +4,8 @@
 
 $primaryFont: 'Lato', sans-serif;
 $secondaryFont: 'Questrial', sans-serif;
-$tertiaryFont: -apple-system, BlinkMacSystemFont, sans-serif;
+$tertiaryFont: -apple-system, BlinkMacSystemFont, sans-serif; //SF Pro Display
+
+$gradientColor: linear-gradient(135deg, #0FA1DB 0%, #9AE95A 50.32%, #F8C800 97.59%);
+
+$bgLanding: url('/images/landingBg.svg');
