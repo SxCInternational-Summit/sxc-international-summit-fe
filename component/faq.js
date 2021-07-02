@@ -3,19 +3,14 @@ import {
     AccordionItem,
     AccordionButton,
     AccordionPanel,
-    AccordionIcon,
     Box,
     Text,
-    ChevronDownIcon,
-    ChevronUpIcon,
-    useBoolean
   } from '@chakra-ui/react';
 
 import { IoMdArrowDropdownCircle } from "react-icons/io"
 import styles from "../styles/event.module.scss"
 
 const Faq = () => {
-    // const [isExpanded, setIsExpanded] = useBoolean()
     const rotateIcon = (el) => {
         el.classList.toggle(styles.rotate)
     }
