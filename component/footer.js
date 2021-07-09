@@ -2,9 +2,11 @@ import {
     Image,
     Link,
     Flex,
-    Center
+    Center,
+    Text,
+    Stack
 } from "@chakra-ui/react";
-import styles from "styles/footer.scss"
+import styles from "../styles/footer.module.scss"
 
 const Footer = () => {
     return(
