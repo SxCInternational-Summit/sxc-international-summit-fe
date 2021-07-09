@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+.backgroundImage {
+    background: $bgLanding no-repeat center center;
+    background-size: cover;
+    height: calc(100vh - 64px);
+}
+
+.titleFont{
+    font: 700 64px $tertiaryFont;
+    background: $gradientColor;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: "";
+}
+
+.subtitleFont{
+    font: 400 16px $secondaryFont;
+    color: white;
+}
+
+.video{
+    border-radius: 12px;
+    position: absolute;
+    margin-top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}

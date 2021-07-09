@@ -1,10 +1,8 @@
 import {
-    Box,
     Image,
     Link,
     Flex,
-    Center,
-    Button
+    Center
 } from "@chakra-ui/react";
 import styles from "../styles/navbar.module.scss";
 
@@ -12,7 +10,7 @@ const Navbar = () => {
     return(
         <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0}>
             <Link href="/">
-                <Image src="/images/logo.svg" alt="logo" ml="120px" cursor="pointer" />
+                <Image src="/images/navbarLogo.svg" alt="logo" ml="120px" cursor="pointer" />
             </Link>
             
             <Center color="white" className={styles.headerFont} >
