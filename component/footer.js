@@ -21,7 +21,7 @@ const Footer = () => {
                 </Flex>
                 <Center color="white" className={styles.footerFont} >
                     <Text fontSize="md">
-                        (md) Copyright @2021 StudentsxCEOs 
+                        Copyright @2021 StudentsxCEOs 
                     </Text>
                 </Center>
             </Stack>
