@@ -1,0 +1,59 @@
+@import "./variables.scss";
+
+.backgroundImage {
+    background: $bgLanding no-repeat center center;
+    background-size: cover;
+    height: 100vh !important; 
+    top: 0;
+    width: 100vw !important;
+    overflow: auto; 
+} 
+
+.gradientBlue{
+    background: linear-gradient(102.67deg, #0F75BC -2.74%, #0FA1DB 91.23%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: "";
+}
+
+.titleFont{
+    font: 700 64px $tertiaryFont;
+    line-height: 100%;
+}
+
+.sloganFont{
+    font: 400 24px $secondaryFont;
+    color: white;
+}
+
+.buttonFont {
+    font: 700 16px $tertiaryFont;
+}
+
+.sectionFont {
+    font: 700 36px $tertiaryFont;
+    color: white;
+}
+
+.descriptionBox{
+    border: 8px solid;
+    font: 400 16px $secondaryFont;
+    padding: 24px 16px 24px 41px;
+}
+
+.firstBox {
+    border-image: conic-gradient(from 180deg at 50% 50%, #FF4141 -229.55deg, rgba(255, 105, 65, 0) 126.54deg, #FF4141 130.45deg, rgba(255, 105, 65, 0) 486.54deg) 1 1%;
+}
+
+.secondBox{
+    border-image: conic-gradient(from 180deg at 50% 50%, #FE7C34 -223.15deg, rgba(254, 124, 52, 0) 121.17deg, #FE7C34 136.85deg, rgba(254, 124, 52, 0) 481.17deg) 1 1%;
+}
+
+.thirdBox {
+    border-image: conic-gradient(from 180deg at 50% 50%, #F8C800 -225.11deg, rgba(248, 200, 0, 0) 122.1deg, #F8C800 134.89deg, rgba(248, 200, 0, 0) 482.1deg) 1 1%;
+}
+
+.orangeGradient {
+    background: linear-gradient(135deg, #F8C800 0%, #FF6941 100%);
+
+}

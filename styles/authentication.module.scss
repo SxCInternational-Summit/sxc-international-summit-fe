@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+.backgroundImage {
+    background: $bgLanding no-repeat center center;
+    background-size: cover;
+    height: 100vh !important; 
+    top: 0;
+    width: 100vw !important;
+    overflow: auto; 
+} 
+
+.glassBackground{
+    background: linear-gradient(93.73deg, rgba(255, 255, 255, 0.02) 20.02%, rgba(255, 255, 255, 0) 93.68%), rgba(8, 8, 24, 0.5);
+    backdrop-filter: blur(30px);
+    border: 1px solid;
+    border-image: linear-gradient(94.01deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 54.02%, rgba(255, 255, 255, 0.25) 100%) 1 20%;
+}
+
+.authenticationHeader {
+    font: 700 48px $tertiaryFont;
+}
+
+.subtitle {
+    font: 400 16px $secondaryFont;
+}
+
+.input {
+    width: 80%;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    line-height: 200%;
+    background-color: transparent;
+    margin-top: 4px;
+    color: white;
+}
+
+.label {
+    font: 700 12px $tertiaryFont;
+    line-height: 16px;
+}

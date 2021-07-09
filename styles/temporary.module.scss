@@ -1,9 +1,9 @@
 @import "./variables.scss";
 
 .backgroundImage {
-    background: $bgLanding no-repeat center center;
+    background: $bgEvent no-repeat center center;
     background-size: cover;
-    height: calc(100vh - 64px);
+    height: 100vh;
 }
 
 .titleFont{
