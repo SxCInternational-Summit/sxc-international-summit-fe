@@ -19,10 +19,23 @@ a {
   box-sizing: border-box;
 }
 
+.primaryFont {
+  font-family: $primaryFont;
+}
+
 .secondaryFont {
   font-family: $secondaryFont;
 }
 
+.tertiaryFont {
+  font-family: $tertiaryFont;
+}
+
 .yellowButtonFont {
   font: 700 16px $tertiaryFont;
+}
+
+.sectionHeader {
+  font: 700 36px $tertiaryFont;
+  line-height: 42px;
 }
