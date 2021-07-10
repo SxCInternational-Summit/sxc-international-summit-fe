@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
-    <Temporary />
+    <Temporary/>
     <Footer />
     </>
   )
