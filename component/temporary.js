@@ -19,7 +19,7 @@ const Temporary = () => {
                     <Text className={styles.subtitleFont}>While waiting for us, why not check out this trailer?</Text>
                 </Center>
                 <Box>
-                    <AspectRatio maxW="600px" ratio={16/9} className={styles.video}>
+                    <AspectRatio maxW="525px" ratio={16/9} className={styles.video}>
                         <iframe
                             title="temporary video"
                             src="https://youtube.com/embed/LnCDBel2JV0"
