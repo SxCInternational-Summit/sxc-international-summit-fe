@@ -22,7 +22,7 @@ const Temporary = () => {
                     <AspectRatio maxW="80%" ratio={16/9} className={styles.video}>
                         <iframe
                             title="temporary video"
-                            src="https://youtube.com/embed/LnCDBel2JV0"
+                            src="https://www.youtube.com/watch?v=34D5DC_EhOI"
                             allowFullScreen
                         />
                     </AspectRatio>
