@@ -6,7 +6,7 @@ import Temporary from "../component/temporary";
 import Head from 'next/head';
 
 export default function Home() {
-  const [isDesktop] = useMediaQuery("(min-width: 30em)")
+  const [isDesktop] = useMediaQuery("(min-width: 48em)")
   return (
     <>
     <Head>
