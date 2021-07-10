@@ -11,7 +11,7 @@ import styles from "../styles/temporary.module.scss";
 
 const Temporary = () => {
     return(
-        <Center className={styles.backgroundImage} mt="64px">
+        <Center className={styles.backgroundImage} mt="4rem">
             <Stack>
                 <Image src="/images/temporaryLogo.svg" alt="title logo" height="128px" />
                 <Text className={styles.titleFont} mt="16px">Website Under Construction</Text>
@@ -19,7 +19,7 @@ const Temporary = () => {
                     <Text className={styles.subtitleFont}>While waiting for us, why not check out this trailer?</Text>
                 </Center>
                 <Box>
-                    <AspectRatio maxW="525px" ratio={16/9} className={styles.video}>
+                    <AspectRatio maxW="80%" ratio={16/9} className={styles.video}>
                         <iframe
                             title="temporary video"
                             src="https://youtube.com/embed/LnCDBel2JV0"
@@ -32,5 +32,4 @@ const Temporary = () => {
         </Center>
     )
 }
-
-export default Temporary;
+export default Temporary
