@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import styles from "../styles/navbar.module.scss";
 
-const Navbar = () => {
+const Navbar = ({isDesktop}) => {
     return(
         <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0} pos="fixed">
             <Link href="/">

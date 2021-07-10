@@ -9,11 +9,11 @@ import {
 
 import styles from "../styles/temporary.module.scss";
 
-const Temporary = () => {
+const Temporary = ({isDesktop}) => {
     return(
         <Center className={styles.backgroundImage} mt="4rem">
             <Stack pt="2rem" pb="32px">
-                <Image src="/images/temporaryLogo.svg" alt="title logo" height="128px" />
+                <Image src="/images/temporaryLogo.svg" alt="title logo" height={isDesktop ? "128px" : "16px"} />
                 <Text className={styles.titleFont} mt="64px">Website Under Construction</Text>
                 <Center mt="16px">
                     <Text className={styles.subtitleFont}>While waiting for us, why not check out this trailer?</Text>
