@@ -32,4 +32,4 @@ const Temporary = () => {
         </Center>
     )
 }
-export default Temporary
+export default Temporary;
