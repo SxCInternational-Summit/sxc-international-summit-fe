@@ -2,19 +2,35 @@ import {
     Image,
     Link,
     Flex,
-    Center
+    Center,
+    Button,
+    Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+  Input,
+  VStack,
+  HStack
 } from "@chakra-ui/react";
 import styles from "../styles/navbar.module.scss";
+import { HamburgerIcon, ChevronRightIcon } from "@chakra-ui/icons"
+import { useRef } from "react";
 
-const Navbar = () => {
+const Navbar = ({isDesktop}) => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = useRef()
     return(
         <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0} pos="fixed">
             <Link href="/">
-                <Image src="/images/navbarLogo.svg" alt="logo" ml="120px" cursor="pointer" />
+                <Image src="/images/navbarLogo.svg" alt="logo" ml={{base: "36px", md:"120px"}} cursor="pointer" />
             </Link>
             
             <Center color="white" className={styles.headerFont} >
-                <Flex justifyContent="space-evenly" w="640px">
+                {isDesktop ? <HStack spacing={16} mr="120px">
                     <Link color="#FF6941" href="/" cursor="pointer" alignSelf="center">
                         Home
                     </Link>
@@ -27,9 +43,49 @@ const Navbar = () => {
                     <Link href="/" cursor="pointer" bgColor="#F8C800" color="black" px="24px" borderRadius="4px" py="10px">
                             Register
                     </Link>
-                </Flex>
+                </HStack> : <Button onClick={onOpen} bgColor="#F8C800" color="black" mr="36px"><HamburgerIcon /></Button>}
+                <Drawer
+                    isOpen={isOpen}
+                    placement="right"
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
+                >
+                    <DrawerOverlay />
+                    <DrawerContent bgColor="#080818">
+                    <DrawerCloseButton color="white" />
+
+                    <DrawerBody  pt={12}>
+                        <Center>
+                            <VStack color="white" className={styles.headerFont} spacing={6}>
+                            <Link color="#FF6941" href="/" cursor="pointer" alignSelf="center">
+                                    Home
+                                </Link>
+                                <Link href="/" cursor="pointer" alignSelf="center">
+                                    Events
+                                </Link>
+                                <Link href="/" cursor="pointer" alignSelf="center">
+                                    Login
+                                </Link>
+                                <Link href="/" cursor="pointer" bgColor="#F8C800" color="black" px="24px" borderRadius="4px" py="10px">
+                                        Register
+                                </Link>
+                        </VStack>
+                        </Center>
+                        
+                    
+                    </DrawerBody>
+                    <DrawerFooter>
+                        <Center pb={12}>
+                            <Button size="md" color="white" bgColor="#0070f3" onClick={onClose}>
+                                <ChevronRightIcon fontSize="24px" />
+                            </Button>
+                        </Center>
+                    </DrawerFooter>
+                    </DrawerContent>
+                </Drawer>
                 
             </Center>
+            
         </Flex>
     );
 }

@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import styles from "../styles/footer.module.scss"
 
-const Footer = () => {
+const Footer = ({isDesktop}) => {
     return(
         <HStack h="192px" bgColor="#080818" w="100%" justifyContent="space-between" top={0}>
             <Link href="/">
