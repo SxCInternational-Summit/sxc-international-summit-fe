@@ -13,7 +13,7 @@ const Temporary = ({isDesktop}) => {
     return(
         <Center className={styles.backgroundImage} mt="4rem">
             <Stack pt="2rem" pb="32px">
-                <Image src="/images/temporaryLogo.svg" alt="title logo" height={{base:"48px", sm: "84px", md: "128px"}} />
+                <Image src="./images/temporaryLogo.svg" alt="title logo" height={{base:"48px", sm: "84px", md: "128px"}} />
                 <Text className={styles.titleFont} fontSize={{base: "22px", sm:"35px", md:"56px"}} mt="64px">Website Under Construction</Text>
                 <Center>
                     <Text className={styles.subtitleFont} fontSize={{base:"12px", md: "16px"}}>While waiting for us, why not check out this trailer?</Text>

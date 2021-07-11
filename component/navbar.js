@@ -7,12 +7,10 @@ import {
     Drawer,
   DrawerBody,
   DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
-  Input,
   VStack,
   HStack
 } from "@chakra-ui/react";
@@ -26,7 +24,7 @@ const Navbar = ({isDesktop}) => {
     return(
         <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0} pos="fixed">
             <Link href="/">
-                <Image src="/images/navbarLogo.svg" alt="logo" ml={{base: "36px", md:"120px"}} cursor="pointer" />
+                <Image src="./images/navbarLogo.svg" alt="logo" ml={{base: "36px", md:"120px"}} cursor="pointer" />
             </Link>
             
             <Center color="white" className={styles.headerFont} >
