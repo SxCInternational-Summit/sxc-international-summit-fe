@@ -25,19 +25,12 @@ const RegisterModal = () => {
     const handleClick = () => setShow(!show)
 
     return (
-<<<<<<< HEAD
         <>
         <Box href="/" cursor="pointer" bgColor="#F8C800" color="black" px="24px" borderRadius="4px" py="10px" onClick={onOpen}>
             Register
         </Box>
-        <Modal isOpen={isOpen} onClose={onClose}>
-=======
-        <Modal 
-            isOpen={isOpen} 
-            onClose={onClose}
-            motionPreset='slideInBottom'
-            >
->>>>>>> 251d58dee354f96db586e7f60d802b7765e7abf7
+        <Modal isOpen={isOpen} onClose={onClose} 
+            motionPreset='slideInBottom'>
             <ModalOverlay />
             <ModalContent>
                 <ModalHeader>Create an account</ModalHeader>
