@@ -4,7 +4,6 @@ import {
     InputLeftElement,
     InputRightElement,
     Modal, 
-    Icon,
     ModalBody, 
     ModalContent, 
     ModalHeader, 
@@ -37,7 +36,7 @@ const Login = () => {
         <Modal 
         isOpen={isOpen} 
         onClose={onClose} 
-        size="xl"
+        size={{base: "md", md:"xl"}}
         motionPreset='slideInBottom' >
             <ModalOverlay />
 
@@ -46,15 +45,15 @@ const Login = () => {
             backdropFilter="blur(30px)"
             position="absolute"
             top="10%"
-            left="30%"
             p="60px 72px"
             border="1px solid"
             border-image-source="linear-gradient(94.01deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 54.02%, rgba(255, 255, 255, 0.25) 100%)"
             borderRadius="24px">
 
                 <ModalHeader>
-                    <Text className={styles.authenticationHeader}
-                lineHeight="52px">
+                    <Text 
+                    className={styles.authenticationHeader}
+                    lineHeight="52px">
                         Log in
                     </Text>
                     
@@ -78,7 +77,7 @@ const Login = () => {
                             id="email" 
                             type='email' 
                             placeholder='Enter Email' 
-                            isRequired="true"
+                            isRequired={true}
                             onChange={(e) => setemail(e.target.value)}  />
                         </InputGroup>
                     </FormControl>
@@ -96,6 +95,7 @@ const Login = () => {
                             type={show ? "text" : "password" }
                             id="password" 
                             placeholder='Enter Password'
+                            isRequired={true}
                             onChange={(e) => setpassword(e.target.value)}  />
                             <InputRightElement>
                                 <Box

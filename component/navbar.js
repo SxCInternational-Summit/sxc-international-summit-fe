@@ -59,12 +59,8 @@ const Navbar = ({isDesktop}) => {
                                 <Link href="/" cursor="pointer" alignSelf="center">
                                     Events
                                 </Link>
-                                <Link href="/" cursor="pointer" alignSelf="center">
-                                    Login
-                                </Link>
-                                <Link href="/" cursor="pointer" bgColor="#F8C800" color="black" px="24px" borderRadius="4px" py="10px">
-                                        Register
-                                </Link>
+                                <Login />
+                                <RegisterModal />
                         </VStack>
                         </Center>
                         
