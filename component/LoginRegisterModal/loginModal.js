@@ -11,38 +11,99 @@ import {
     ModalOverlay,
     FormLabel,
     Input,
+    Box,
+    useDisclosure,
+    Button,
+    ModalFooter,
+    Text
 } from '@chakra-ui/react'
+import { useState } from 'react'
+import styles from "../../styles/authentication.module.scss"
+import {EmailIcon, LockIcon, ViewIcon, ViewOffIcon} from "@chakra-ui/icons"
 
-const login = ({ onOpen }) => {
+const Login = () => {
+    const [email, setemail] = useState("")
+    const [password, setpassword] = useState("")
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const [show, setShow] = React.useState(false)
+    const [show, setShow] = useState(false)
     const handleClick = () => setShow(!show)
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose} >
+        <>
+        <Box href="/" cursor="pointer" alignSelf="center" onClick={onOpen}>
+            Login
+        </Box>
+        <Modal 
+        isOpen={isOpen} 
+        onClose={onClose} 
+        size="xl">
             <ModalOverlay />
 
-            <ModalContent>
-                <ModalHeader>Login to Your Account</ModalHeader>
-                <ModalBody pb={6} >
+            <ModalContent 
+            bgColor="transparent" 
+            backdropFilter="blur(30px)"
+            position="absolute"
+            top="10%"
+            left="30%"
+            p="60px 72px"
+            border="1px solid"
+            border-image-source="linear-gradient(94.01deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 54.02%, rgba(255, 255, 255, 0.25) 100%)"
+            borderRadius="24px">
+
+                <ModalHeader>
+                    <Text className={styles.authenticationHeader}
+                lineHeight="52px">
+                        Log in
+                    </Text>
+                    
+                </ModalHeader>
+
+                <ModalBody 
+                pb={6}  
+                >
                     <FormControl>
-                        <FormLabel>Email</FormLabel>
-                        <InputGroup>
-                            <InputLeftElement children={<Icon name='email' />} />
-                            <Input type='email' placeholder='Enter Email' />
+                        <FormLabel 
+                        className={styles.label}>
+                            EMAIL
+                        </FormLabel>
+                        <InputGroup className={styles.input} >
+                        <InputLeftElement
+                            pointerEvents="none"
+                            // eslint-disable-next-line react/no-children-prop
+                            children={<EmailIcon color="gray.300" />}
+                            />
+                            <Input 
+                            id="email" 
+                            type='email' 
+                            placeholder='Enter Email' 
+                            isRequired="true"
+                            onChange={(e) => setemail(e.target.value)}  />
                         </InputGroup>
                     </FormControl>
 
-                    <FormControl mt={4} >
-                        <FormLabel>Password</FormLabel>
-                        <InputGroup>
-                            <InputLeftElement children={<Icon name='lock' />} />
-                            <Input type='password' placeholder='Enter Password' />
+                    <FormControl
+                    mt={6}>
+                        <FormLabel className={styles.label}>PASSWORD</FormLabel>
+                        <InputGroup className={styles.input} >
+                            <InputLeftElement
+                                pointerEvents="none"
+                                // eslint-disable-next-line react/no-children-prop
+                                children={<LockIcon color="gray.300" />}
+                            />
+                            <Input 
+                            type={show ? "text" : "password" }
+                            id="password" 
+                            placeholder='Enter Password'
+                            onChange={(e) => setpassword(e.target.value)}  />
                             <InputRightElement>
-                                <Button h='1.75rem' size='sm' onClick={handleClick}>
-                                    {show ? "Hide" : "Show"}
-                                </Button>
+                                <Box
+                                mr={4}
+                                onClick={handleClick}
+                                cursor="pointer"
+                                display={!password ? "none" : ""}>
+                                    {show ? <ViewOffIcon /> : <ViewIcon />}
+                                </Box>
                             </InputRightElement>
                         </InputGroup>
                     </FormControl>
@@ -51,18 +112,32 @@ const login = ({ onOpen }) => {
                 <ModalFooter>
                 <Button
                     type='submit'
-                    variant='solid'
-                    variantColor='green'
                     mr={3}
-                    _hover={{ boxShadow: 'md' }}
+                    cursor={(email === "" || password === "") ? "default" : "pointer"} 
+                    bgColor="#F8C800" 
+                    opacity={(email === "" || password === "") ? "0.6" : "1"} 
+                    color="black"
+                    p="10px 24px" 
+                    borderRadius="4px" 
+                    className="yellowButtonFont"
+                    border="none"
+                    isDisabled={email === "" || password === ""}
                     >
-                        Login
+                        Log In
                     </Button>
-                    <Button variant='ghost' onClick={onClose}>Cancel</Button>
+                    <Button 
+                    variant='ghost' 
+                    color="white" 
+                    onClick={onClose}
+                    _hover="none">
+                        Cancel
+                    </Button>
                 </ModalFooter>
             </ModalContent>
         </Modal>
+        </>
+        
     )
 }
 
-export default login
+export default Login

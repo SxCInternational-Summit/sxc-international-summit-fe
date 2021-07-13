@@ -9,19 +9,14 @@
     overflow: auto; 
 } 
 
-.glassBackground{
-    background: linear-gradient(93.73deg, rgba(255, 255, 255, 0.02) 20.02%, rgba(255, 255, 255, 0) 93.68%), rgba(8, 8, 24, 0.5);
-    backdrop-filter: blur(30px);
-    border: 1px solid;
-    border-image: linear-gradient(94.01deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 54.02%, rgba(255, 255, 255, 0.25) 100%) 1 20%;
-}
-
 .authenticationHeader {
     font: 700 48px $tertiaryFont;
+    color: #ffffff;
 }
 
 .subtitle {
     font: 400 16px $secondaryFont;
+    color: #ffffff;
 }
 
 .input {
@@ -37,4 +32,5 @@
 .label {
     font: 700 12px $tertiaryFont;
     line-height: 16px;
+    color: #ffffff;
 }

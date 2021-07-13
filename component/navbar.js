@@ -17,6 +17,8 @@ import {
 import styles from "../styles/navbar.module.scss";
 import { HamburgerIcon, ChevronRightIcon } from "@chakra-ui/icons"
 import { useRef } from "react";
+import Login from "./LoginRegisterModal/loginModal";
+import RegisterModal from "./LoginRegisterModal/registerModal";
 
 const Navbar = ({isDesktop}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -35,12 +37,8 @@ const Navbar = ({isDesktop}) => {
                     <Link href="/" cursor="pointer" alignSelf="center">
                         Events
                     </Link>
-                    <Link href="/" cursor="pointer" alignSelf="center">
-                        Login
-                    </Link>
-                    <Link href="/" cursor="pointer" bgColor="#F8C800" color="black" px="24px" borderRadius="4px" py="10px">
-                            Register
-                    </Link>
+                    <Login />
+                    <RegisterModal />
                 </HStack> : <Button onClick={onOpen} bgColor="#F8C800" color="black" mr="36px"><HamburgerIcon /></Button>}
                 <Drawer
                     isOpen={isOpen}

@@ -13,16 +13,22 @@ import {
     FormLabel,
     InputRightElement,
     Button,
+    Box,
+    Input
 } from "@chakra-ui/react"
-import React from "react"
+import { useState } from "react"
 
-const registerModal = ({ onOpen }) => {
+const RegisterModal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const [show, setShow] = React.useState(false)
+    const [show, setShow] = useState(false)
     const handleClick = () => setShow(!show)
 
     return (
+        <>
+        <Box href="/" cursor="pointer" bgColor="#F8C800" color="black" px="24px" borderRadius="4px" py="10px" onClick={onOpen}>
+            Register
+        </Box>
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent>
@@ -85,7 +91,9 @@ const registerModal = ({ onOpen }) => {
                 </ModalFooter>
             </ModalContent>
         </Modal>
+        </>
+        
     )
 }
 
-export default registerModal
+export default RegisterModal
