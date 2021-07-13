@@ -43,7 +43,7 @@ const RegisterModal = () => {
         isOpen={isOpen} 
         onClose={onClose} 
         motionPreset='slideInBottom'
-        size={{base: "xl", md:"2xl"}}>
+        size="2xl">
             <ModalOverlay />
             <ModalContent
             bgColor="transparent" 

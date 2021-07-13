@@ -36,7 +36,7 @@ const Login = () => {
         <Modal 
         isOpen={isOpen} 
         onClose={onClose} 
-        size={{base: "md", md:"xl"}}
+        size="xl"
         motionPreset='slideInBottom' >
             <ModalOverlay />
 
