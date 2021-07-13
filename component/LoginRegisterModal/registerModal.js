@@ -23,7 +23,11 @@ const registerModal = ({ onOpen }) => {
     const handleClick = () => setShow(!show)
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal 
+            isOpen={isOpen} 
+            onClose={onClose}
+            motionPreset='slideInBottom'
+            >
             <ModalOverlay />
             <ModalContent>
                 <ModalHeader>Create an account</ModalHeader>
