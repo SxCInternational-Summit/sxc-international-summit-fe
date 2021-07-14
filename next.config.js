@@ -1,5 +1,11 @@
+const path = require('path')
+require('dotenv').config()
+
 module.exports = {
-  //basePath: '/home',
-  reactStrictMode: true,
-  //trailingSlash: true,
+  	env: {
+		API_URL: process.env.API_URL
+  	},
+
+  	reactStrictMode: true,
+  	//trailingSlash: true,
 }
