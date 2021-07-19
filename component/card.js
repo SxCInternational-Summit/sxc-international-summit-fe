@@ -2,7 +2,8 @@ import {
   Box,
   Text,
   Link,
-  Image
+  Image,
+  Grid,
 } from '@chakra-ui/react';
 
 const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
@@ -74,4 +75,40 @@ const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
   );
 }
 
+const FlexCard = ({image, title, subtitle}) =>{
+    return(
+            <Grid
+            templateColumns="repeat(2, 1fr)"
+            mt="64px">
+                <Image 
+                src={image} 
+                alt="" 
+                borderRadius="12px" 
+                textAlign="right" 
+                w="100%" />
+                <Box ml="16%" alignSelf="center">
+                    <Text
+                    className="tertiaryFont"
+                    fontSize="36px"
+                    lineHeight="42px"
+                    fontWeight="700"
+                    color="#0FA1DB">
+                        {title}
+                    </Text>
+                    <Text
+                    mt="16px"
+                    fontSize="16px"
+                    lineHeight="150%"
+                    className="secondaryFont"
+                    color="white"
+                    fontWeight="400">
+                        {subtitle}
+                    </Text>
+                </Box>
+            </Grid>
+        
+    )
+}
+
 export default Card;
+export {FlexCard};

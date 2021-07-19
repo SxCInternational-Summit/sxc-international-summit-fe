@@ -39,3 +39,12 @@ a {
   font: 700 36px $tertiaryFont;
   line-height: 42px;
 }
+
+.gradientFont{
+  font-family: $tertiaryFont;
+  font-weight: 700;
+  background: $gradientColor;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: "";
+}
