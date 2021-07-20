@@ -33,6 +33,7 @@ a {
 
 .yellowButtonFont {
   font: 700 16px $tertiaryFont;
+  line-height: 20px;
 }
 
 .sectionHeader {
@@ -47,4 +48,25 @@ a {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: "";
+}
+
+.input {
+  border: 1px solid #666666;
+  border-radius: 6px;
+  line-height: 200%;
+  background-color: transparent;
+  margin-top: 4px;
+  color: white;
+}
+
+.label {
+  font: 700 12px $tertiaryFont;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.formHelper {
+  font: 400 12 $secondaryFont;
+  line-height: 16px;
+  color: #999999;
 }

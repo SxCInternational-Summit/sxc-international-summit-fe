@@ -1,6 +1,8 @@
 import { ChevronLeftIcon } from "@chakra-ui/icons"
 import { Button, Center, Text, Flex } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 const Hero = ({title, subtitle, image}) => {
+    const router = useRouter()
     return(
         <Center
             backgroundImage={`url(${image})`}
@@ -21,6 +23,7 @@ const Hero = ({title, subtitle, image}) => {
                 fontFamily="primaryFont"
                 fontWeight="900"
                 p="10px 12px"
+                onClick={() => router.push("/event")}
                 >
                 <Flex lineHeight="100%">
                     <ChevronLeftIcon />
