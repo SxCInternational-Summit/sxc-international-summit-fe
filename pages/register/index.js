@@ -8,130 +8,207 @@ import {
     Input,
     Button,
     Flex,
-    Link
+    InputGroup
   } from "@chakra-ui/react";
 import { useState } from "react";
 
 import { useRouter } from "next/router";
 
 import Navbar from "../../component/navbar"
-
-
-import styles from "../../styles/authentication.module.scss"
+import Footer from "../../component/footer";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 const RegisterPage = () => {
     const [email, setemail] = useState("")
-    const [password, setpassword] = useState("")
-    const [confirmpassword, setconfirmpassword] = useState("")
-    const router = useRouter()
-    
+    const [university, setuniversity] = useState("")
+    const [faculty, setfaculty] = useState("")
+    const [major, setmajor] = useState("")
 
     const handleSubmit = () => {
-        if(password.length > 16){
-            alert("panjang password tidak boleh lebih dari 16 karakter")
-        } else if(password !== confirmpassword){
-            alert("password tidak sama")
-        } else {
-            router.push("/register/success")
-        }
+        console.log([{email: email, university: university, faculty: faculty, major: major}]);
+        router.push("/register/success")
     }
+    const router = useRouter()
 
     return(
-        <Box className={styles.backgroundImage}>
+        <Box bgColor="#04040C">
             <Navbar />
-            <Center h="100%">
-                <Box 
-                w="50%" 
-                h="70%" 
-                className={styles.glassBackground} 
-                color="white">
-                    <Box ml="15%" color="white">
-                        <Text 
-                        className={styles.authenticationHeader} 
-                        lineHeight="52px">
-                            Register
-                        </Text>
-                        <Text 
-                        className={styles.subtitle} 
-                        mt="-40px" 
-                        lineHeight="150%">
-                            Join us on this Summit
-                        </Text>
-                        <FormControl>
-                            <FormLabel 
-                            className={styles.label}>
-                                EMAIL
-                            </FormLabel>
-                            <Input 
-                            type="email" 
-                            id="email" 
-                            className={styles.input} 
-                            isRequired="true" 
-                            onChange={(e) => setemail(e.target.value)} />
+                <Center 
+                    w="30%"
+                    mx="35%"
+                    mt="64px"
+                    flexDirection="column"
+                >
+                    <Button
+                        pos="absolute"
+                        top="20px"
+                        left="120px"
+                        color="white"
+                        bgColor="transparent"
+                        fontSize="1rem"
+                        lineHeight="150%"
+                        fontFamily="primaryFont"
+                        fontWeight="900"
+                        p="10px 12px"
+                        onClick={() => router.push("/")}
+                        >
+                        <Flex lineHeight="100%">
+                            <ChevronLeftIcon />
+                            <Text ml="6px">Go Back</Text>
+                        </Flex>
+                    </Button>
 
-                            <FormLabel 
-                            mt="16px" 
-                            className={styles.label}>
-                                PASSWORD
-                            </FormLabel>
-                            <Input 
-                            type="password" 
-                            id="password" 
-                            className={styles.input} 
-                            isRequired="true" 
-                            onChange={(e) => setpassword(e.target.value)} />
-                            <FormHelperText 
-                            fontSize="12px" 
-                            color="#999999" 
-                            className="secondaryFont" 
-                            lineHeight="16px">
-                                Max 16 characters, must include alphanumerical chars, dan case-sensitive
-                            </FormHelperText>
+                    <Text 
+                        className="gradientFont"
+                        fontSize="48px"
+                        lineHeight="52px"
+                        textAlign="left"
+                        mt="112px"
+                        >
+                        Confirm Your Seat
+                    </Text>
+                    <Text
+                        className="secondaryFont"
+                        fontSize="1rem"
+                        lineHeight="150%"
+                        color="white"
+                        textAlign="center"
+                    >
+                        Please make sure that the information provided is correct
+                    </Text>
 
-                            <FormLabel 
-                            mt="16px" 
-                            className={styles.label}>
-                                CONFIRM PASSWORD
-                            </FormLabel>
-                            <Input 
-                            type="password" 
-                            id="confirmPassword" 
-                            isDisabled={password === ""} 
-                            className={styles.input} 
-                            isRequired="true" 
-                            onChange={(e) => setconfirmpassword(e.target.value)} />
-                        </FormControl>
-                    </Box>
-                    <Center>
+                    <Box 
+                        color="white"
+                        lineHeight="150%"
+                        textAlign="left"
+                    >
+                        <Text
+                            className="tertiaryFont"
+                            fontSize="0.75rem"
+                            fontWeight="700"
+                            mt="60px"
+                        >
+                            Event Name
+                        </Text>
+                        <Text
+                            mt="0.25rem"
+                            className="secondaryFont"
+                            fontSize="1rem"
+                        >
+                            Pre-Event #1 Talkshow
+                        </Text>
+
+                        <Text
+                            className="tertiaryFont"
+                            fontSize="0.75rem"
+                            fontWeight="700"
+                            mt="36px"
+                        >
+                            Time and Date
+                        </Text>
+                        <Text
+                            mt="0.25rem"
+                            className="secondaryFont"
+                            fontSize="1rem"
+                        >
+                            8:00 PM (GMT+7), 24 July 2021
+                        </Text>
+
+                        <Text
+                            className="tertiaryFont"
+                            fontSize="0.75rem"
+                            fontWeight="700"
+                            mt="36px"
+                        >
+                            Platform
+                        </Text>
+                        <Text
+                            mt="0.25rem"
+                            className="secondaryFont"
+                            fontSize="1rem"
+                        >
+                            Zoom
+                        </Text>
+                            <FormControl>
+                                <FormLabel className="label" mt="36px" htmlFor="email">
+                                    E-MAIL ADDRESS
+                                </FormLabel>
+                                <InputGroup className="input" >
+                                    <Input 
+                                    id="email" 
+                                    type='email' 
+                                    placeholder='ex: email@address.com' 
+                                    isRequired={true}
+                                    onChange={(e) => setemail(e.target.value)} />
+                                </InputGroup>
+                                <FormHelperText className="formHelper">We will send the event’s detail to your e-mail. Make sure it’s correct.</FormHelperText>
+                                <FormLabel className="label" mt="36px" htmlFor="university">
+                                    YOUR UNIVERSITY
+                                </FormLabel>
+                                <InputGroup className="input" >
+                                    <Input 
+                                    id="university" 
+                                    type='text' 
+                                    placeholder='ex: Universitas Indonesia' 
+                                    isRequired={true}
+                                    onChange={(e) => setuniversity(e.target.value)} />
+                                </InputGroup>
+                                <FormHelperText className="formHelper">Please input your current or previous university name</FormHelperText>
+                                <FormLabel className="label" mt="36px" htmlFor="faculty">
+                                    YOUR FACULTY
+                                </FormLabel>
+                                <InputGroup className="input" >
+                                    <Input 
+                                    id="faculty" 
+                                    type='text' 
+                                    placeholder='ex: Computer Science' 
+                                    isRequired={true}
+                                    onChange={(e) => setfaculty(e.target.value)} />
+                                </InputGroup>
+                                <FormLabel className="label" mt="36px" htmlFor="major">
+                                    YOUR MAJOR
+                                </FormLabel>
+                                <InputGroup className="input" >
+                                    <Input 
+                                    id="major" 
+                                    type='text' 
+                                    placeholder='ex: Information System' 
+                                    isRequired={true}
+                                    onChange={(e) => setmajor(e.target.value)} />
+                                </InputGroup>
+                            </FormControl>
+                            </Box>
+                        <Text
+                                className="secondaryFont"
+                                fontSize="1rem"
+                                lineHeight="150%"
+                                color="white"
+                                textAlign="center"
+                                mt="60px"
+                            >
+                                We will send you an e-mail with the event’s detail prior to the event.
+                        </Text>
+                        <Flex justifyContent="flex-end" w="100%">
                             <Button
-                            mt="64px" 
-                            type="submit"
-                            cursor={(email === "" || password === "" || confirmpassword === "") ? "default" : "pointer"} 
-                            bgColor="#F8C800" 
-                            opacity={(email === "" || password === "" || confirmpassword === "") ? "0.6" : "1"} 
-                            color="black"
-                            p="10px 24px" 
-                            borderRadius="4px" 
-                            className="yellowButtonFont"
-                            border="none"
-                            onClick={handleSubmit}
-                            isDisabled={email === "" || password === "" || confirmpassword === ""}>
-                                Register
+                                mt="40px" 
+                                type="submit"
+                                cursor={(email === "" || university === "" || faculty === "" || major === "") ? "default" : "pointer"} 
+                                bgColor="#F8C800" 
+                                opacity={(email === "" || university === "" || faculty === "" || major === "") ? "0.6" : "1"} 
+                                color="black"
+                                p="10px 24px" 
+                                borderRadius="4px" 
+                                className="yellowButtonFont"
+                                border="none"
+                                onClick={handleSubmit}
+                                mb="36px"
+                                isDisabled={(email === "" || university === "" || faculty === "" || major === "")}>
+                                Confirm
                             </Button>
-                        </Center>
-                        <Center>
-                            <Flex>
-                                <Text>
-                                    Already have an account? 
-                                    <Link href="/login">
-                                        {" Log in"}
-                                    </Link>
-                                </Text>
-                                
-                            </Flex>
-                        </Center>
-                </Box>
-            </Center>
+                        </Flex>
+                        
+                </Center>
+            <Footer />
         </Box>
     )
 }

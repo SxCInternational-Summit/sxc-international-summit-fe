@@ -24,9 +24,9 @@ const Navbar = ({isDesktop}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
     return(
-        <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0} pos="fixed">
+        <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0} pos="fixed" zIndex="2">
             <Link href="/">
-                <Image src="./images/navbarLogo.svg" alt="logo" ml={{base: "36px", md:"120px"}} cursor="pointer" />
+                <Image src="/images/navbarLogo.svg" alt="logo" ml={{base: "36px", md:"120px"}} cursor="pointer" />
             </Link>
             
             <Center color="white" className={styles.headerFont} >
@@ -39,7 +39,7 @@ const Navbar = ({isDesktop}) => {
                     </Link>
                     <Login />
                     <RegisterModal />
-                </HStack> : <Button onClick={onOpen} bgColor="#F8C800" color="black" mr="36px"><HamburgerIcon /></Button>}
+                </HStack> : <Button onClick={onOpen} bgColor="transparent" color="white" mr="36px"><HamburgerIcon h="18px" /></Button>}
                 <Drawer
                     isOpen={isOpen}
                     placement="right"

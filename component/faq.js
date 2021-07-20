@@ -15,9 +15,9 @@ const Faq = () => {
         el.classList.toggle(styles.rotate)
     }
     return (
-        <Box p= "120px" bgColor="#04040C">
+        <Box p={{base: "16px", md:"120px"}} bgColor="#04040C">
             <Text color="white" className="sectionHeader">Frequently Asked Questions</Text>
-            <Accordion allowToggle allowMultiple>
+            <Accordion allowToggle allowMultiple borderColor="transparent">
                 <AccordionItem>
                     <AccordionButton 
                     bgColor="#080818" 

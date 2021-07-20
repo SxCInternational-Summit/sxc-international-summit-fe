@@ -1,8 +1,10 @@
 @import "/styles/variables.scss";
 .footerFont {
-    font-family: 400 16px $secondaryFont;
+    // font-family: 400 16px $secondaryFont;
+    font-family: $secondaryFont;
+    font-weight: 400;
     color: white;
-    font-size: 12px;
+    // font-size: 12px;
 }
 
 .footerLogo{

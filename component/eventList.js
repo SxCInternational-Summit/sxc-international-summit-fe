@@ -23,12 +23,17 @@ const EventList = ({events}) => {
     const currentItems = events.slice(indexOfFirstItems, indexOfLastItems)
 
     const handleClick = (pageNumber) => {
-        setcurrentPage(pageNumber)
+        if (pageNumber >= pages.length) {
+            setcurrentPage(pages.length)
+        } else {
+            setcurrentPage(pageNumber)
+        }
+        console.log(pageNumber);
     }
 
     let numOfPreEvent = 0
     return(
-        <Box p="120px" 
+        <Box p={{base: "16px", md:"120px"}} 
         bgColor="#04040C">
 
             <Text 
@@ -40,7 +45,7 @@ const EventList = ({events}) => {
             </Text>
 
             <Grid 
-            templateColumns="repeat(3, 1fr)" 
+            templateColumns={{base:"repeat(1, 1fr)", md:"repeat(2, 1fr)", lg:"repeat(3, 1fr)" }}
             rowGap="72px" 
             columnGap="84px">
                 {currentItems.map((el, index) => {
