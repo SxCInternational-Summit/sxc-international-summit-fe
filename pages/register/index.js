@@ -20,12 +20,13 @@ import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 const RegisterPage = () => {
     const [email, setemail] = useState("")
+    const [name, setname] = useState("")
     const [university, setuniversity] = useState("")
     const [faculty, setfaculty] = useState("")
     const [major, setmajor] = useState("")
 
     const handleSubmit = () => {
-        console.log([{email: email, university: university, faculty: faculty, major: major}]);
+        console.log([{email: email, name: name, university: university, faculty: faculty, major: major}]);
         router.push("/register/success")
     }
     const router = useRouter()
@@ -62,7 +63,7 @@ const RegisterPage = () => {
                         className="gradientFont"
                         fontSize="48px"
                         lineHeight="52px"
-                        textAlign="left"
+                        textAlign="center"
                         mt="112px"
                         >
                         Confirm Your Seat
@@ -73,6 +74,7 @@ const RegisterPage = () => {
                         lineHeight="150%"
                         color="white"
                         textAlign="center"
+                        mt="10px"
                     >
                         Please make sure that the information provided is correct
                     </Text>
@@ -131,7 +133,7 @@ const RegisterPage = () => {
                         </Text>
                             <FormControl>
                                 <FormLabel className="label" mt="36px" htmlFor="email">
-                                    E-MAIL ADDRESS
+                                    E-Mail Address
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -142,8 +144,20 @@ const RegisterPage = () => {
                                     onChange={(e) => setemail(e.target.value)} />
                                 </InputGroup>
                                 <FormHelperText className="formHelper">We will send the event’s detail to your e-mail. Make sure it’s correct.</FormHelperText>
+                                <FormLabel className="label" mt="36px" htmlFor="name">
+                                    Full Name
+                                </FormLabel>
+                                <InputGroup className="input">
+                                    <Input 
+                                        id="name"
+                                        type="text"
+                                        placeholder="ex: John Doe"
+                                        isRequired={true}
+                                        onChange={(e) => setname(e.target.value)}
+                                        />
+                                </InputGroup>
                                 <FormLabel className="label" mt="36px" htmlFor="university">
-                                    YOUR UNIVERSITY
+                                    University
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -155,7 +169,7 @@ const RegisterPage = () => {
                                 </InputGroup>
                                 <FormHelperText className="formHelper">Please input your current or previous university name</FormHelperText>
                                 <FormLabel className="label" mt="36px" htmlFor="faculty">
-                                    YOUR FACULTY
+                                    Faculty
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -166,7 +180,7 @@ const RegisterPage = () => {
                                     onChange={(e) => setfaculty(e.target.value)} />
                                 </InputGroup>
                                 <FormLabel className="label" mt="36px" htmlFor="major">
-                                    YOUR MAJOR
+                                    Major
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
