@@ -33,8 +33,10 @@ const EventList = ({events}) => {
 
             <Text 
             color="white" 
-            className="sectionHeader">
-                Our Event List
+            className="sectionHeader"
+            mb={6}
+            >
+                Events List
             </Text>
 
             <Grid 
