@@ -21,15 +21,45 @@ import { ChevronLeftIcon } from "@chakra-ui/icons";
 const RegisterPage = () => {
     const [email, setemail] = useState("")
     const [name, setname] = useState("")
+    const [number, setnumber] = useState("")
     const [university, setuniversity] = useState("")
     const [faculty, setfaculty] = useState("")
     const [major, setmajor] = useState("")
 
-    const handleSubmit = () => {
-        console.log([{email: email, name: name, university: university, faculty: faculty, major: major}]);
-        router.push("/register/success")
-    }
     const router = useRouter()
+
+    async function createNewRegistry() {
+        const { API_URL } = process.env
+
+        const registry = {
+            user_email: email,
+            user_name: name,
+            user_number: number,
+            user_university: university,
+            user_faculty: faculty,
+            user_major: major,
+        }
+
+        const add = await fetch(`${API_URL}/webinar-users`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(registry)
+        })
+
+        router.push('/register/success')
+
+        // const addRegistry = await add.json()
+
+        // console.log(addRegistry)
+    }
+
+    // const handleSubmit = () => {
+    //     console.log([{email: email, name: name, university: university, faculty: faculty, major: major}]);
+    //     router.push("/register/success")
+    // }
 
     return(
         <Box bgColor="#04040C">
@@ -156,6 +186,19 @@ const RegisterPage = () => {
                                         onChange={(e) => setname(e.target.value)}
                                         />
                                 </InputGroup>
+                                <FormLabel className="label" mt="36px" htmlFor="number">
+                                    Phone Number
+                                </FormLabel>
+                                <InputGroup className="input">
+                                    <Input 
+                                        id="number"
+                                        type="text"
+                                        placeholder="ex: +62 8132239xxxx"
+                                        isRequired={true}
+                                        onChange={(e) => setnumber(e.target.value)}
+                                        />
+                                </InputGroup>
+                                <FormHelperText className="formHelper">For International registerer, Please insert country code before your number.</FormHelperText>
                                 <FormLabel className="label" mt="36px" htmlFor="university">
                                     University
                                 </FormLabel>
@@ -214,7 +257,7 @@ const RegisterPage = () => {
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 border="none"
-                                onClick={handleSubmit}
+                                onClick={ () => createNewRegistry() }
                                 mb="36px"
                                 isDisabled={(email === "" || university === "" || faculty === "" || major === "")}>
                                 Confirm
