@@ -8,8 +8,8 @@ import {
     Icon,
     Image
   } from "@chakra-ui/react";
-import Footer from "../../component/footer";
-import Navbar from "../../component/navbar";
+import Footer from "../../../component/footer";
+import Navbar from "../../../component/navbar";
 import { FaWhatsapp, FaRegAddressBook } from "react-icons/fa"
 import { useRouter } from "next/router";
 
