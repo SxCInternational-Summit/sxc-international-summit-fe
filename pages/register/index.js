@@ -18,6 +18,24 @@ import Navbar from "../../component/navbar"
 import Footer from "../../component/footer";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 
+const parseJSON = resp => (resp.json ? resp.json() : resp)
+
+const checkStatus = resp => {
+    if (resp.status >= 200 && resp.status < 300) {
+        return resp
+    }
+    return parseJSON(resp).then(resp => {
+        throw resp
+    })
+}
+
+const headers = {
+    'Accept': 'application/json',
+    'Content-type': 'application/json'
+}
+
+const { API_URL } = process.env
+
 const RegisterPage = () => {
     const [email, setemail] = useState("")
     const [name, setname] = useState("")
@@ -26,10 +44,12 @@ const RegisterPage = () => {
     const [faculty, setfaculty] = useState("")
     const [major, setmajor] = useState("")
 
+    const [errorRegister, setErrorRegister] = useState(null)
+
     const router = useRouter()
 
-    async function createNewRegistry() {
-        const { API_URL } = process.env
+    const handleSubmit = async e => {
+        e.preventDefault()
 
         const registry = {
             user_email: email,
@@ -40,20 +60,23 @@ const RegisterPage = () => {
             user_major: major,
         }
 
-        const add = await fetch(`${API_URL}/webinar-users`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(registry)
-        })
+        try {
+            const add = await fetch(`${API_URL}/webinars`, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify(registry)
+            })
+                .then(checkStatus)
+                .then(parseJSON)
+        } catch (error) {
+            setErrorRegister(error)
+        }
 
-        router.push('/register/success')
-
-        // const addRegistry = await add.json()
-
-        // console.log(addRegistry)
+        if (errorRegister) {
+            return <div>An error occured (register): {errorRegister.message} </div>
+        } else {
+            router.push('/register/success')
+        }
     }
 
     // const handleSubmit = () => {
@@ -257,7 +280,7 @@ const RegisterPage = () => {
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 border="none"
-                                onClick={ () => createNewRegistry() }
+                                onClick={ handleSubmit }
                                 mb="36px"
                                 isDisabled={(email === "" || university === "" || faculty === "" || major === "")}>
                                 Confirm
