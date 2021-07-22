@@ -75,7 +75,7 @@ const RegisterPage = () => {
         if (errorRegister) {
             return <div>An error occured (register): {errorRegister.message} </div>
         } else {
-            router.push('pre-event/register/success')
+            router.push('register/success')
         }
     }
 
