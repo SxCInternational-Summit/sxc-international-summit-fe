@@ -1,10 +1,10 @@
-import EventComponent from "../../component/eventComponent"
-import EventList from "../../component/eventList"
-import EventsHeld from "../../component/eventsHeld"
-import Faq from "../../component/faq"
-import Footer from "../../component/footer"
-import Hero from "../../component/hero"
-import Navbar from "../../component/navbar"
+import EventComponent from "../../../component/eventComponent"
+import EventList from "../../../component/eventList"
+import EventsHeld from "../../../component/eventsHeld"
+import Faq from "../../../component/faq"
+import Footer from "../../../component/footer"
+import Hero from "../../../component/hero"
+import Navbar from "../../../component/navbar"
 
 const PreEventPage = () => {
     const backgroundImageURL = "/images/preEventBackground.svg"
