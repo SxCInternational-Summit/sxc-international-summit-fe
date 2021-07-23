@@ -14,21 +14,74 @@ import { useState } from "react";
 
 import { useRouter } from "next/router";
 
-import Navbar from "../../component/navbar"
-import Footer from "../../component/footer";
+import Navbar from "../../../component/navbar"
+import Footer from "../../../component/footer";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
+
+const parseJSON = resp => (resp.json ? resp.json() : resp)
+
+const checkStatus = resp => {
+    if (resp.status >= 200 && resp.status < 300) {
+        return resp
+    }
+    return parseJSON(resp).then(resp => {
+        throw resp
+    })
+}
+
+const headers = {
+    'Accept': 'application/json',
+    'Content-type': 'application/json'
+}
+
+const { API_URL } = process.env
 
 const RegisterPage = () => {
     const [email, setemail] = useState("")
+    const [name, setname] = useState("")
+    const [number, setnumber] = useState("")
     const [university, setuniversity] = useState("")
     const [faculty, setfaculty] = useState("")
     const [major, setmajor] = useState("")
 
-    const handleSubmit = () => {
-        console.log([{email: email, university: university, faculty: faculty, major: major}]);
-        router.push("/register/success")
-    }
+    const [errorRegister, setErrorRegister] = useState(null)
+
     const router = useRouter()
+
+    const handleSubmit = async e => {
+        e.preventDefault()
+        let success = false
+
+        const registry = {
+            user_email: email,
+            user_name: name,
+            user_number: number,
+            user_university: university,
+            user_faculty: faculty,
+            user_major: major,
+        }
+
+        try {
+            const add = await fetch(`${API_URL}/webinars`, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify(registry)
+            })
+                .then(checkStatus)
+                .then(parseJSON)
+                success = true
+        } catch (error) {
+            setErrorRegister(error)
+            success = false
+        }
+
+        if (errorRegister && !success) {
+            window.alert(`An error occured (register): {errorRegister.message}`)
+            window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
+        } else {
+            router.push('register/success')
+        }
+    }
 
     return(
         <Box bgColor="#04040C">
@@ -62,7 +115,7 @@ const RegisterPage = () => {
                         className="gradientFont"
                         fontSize="48px"
                         lineHeight="52px"
-                        textAlign="left"
+                        textAlign="center"
                         mt="112px"
                         >
                         Confirm Your Seat
@@ -73,6 +126,7 @@ const RegisterPage = () => {
                         lineHeight="150%"
                         color="white"
                         textAlign="center"
+                        mt="10px"
                     >
                         Please make sure that the information provided is correct
                     </Text>
@@ -131,7 +185,7 @@ const RegisterPage = () => {
                         </Text>
                             <FormControl>
                                 <FormLabel className="label" mt="36px" htmlFor="email">
-                                    E-MAIL ADDRESS
+                                    E-Mail Address
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -142,8 +196,33 @@ const RegisterPage = () => {
                                     onChange={(e) => setemail(e.target.value)} />
                                 </InputGroup>
                                 <FormHelperText className="formHelper">We will send the event’s detail to your e-mail. Make sure it’s correct.</FormHelperText>
+                                <FormLabel className="label" mt="36px" htmlFor="name">
+                                    Full Name
+                                </FormLabel>
+                                <InputGroup className="input">
+                                    <Input 
+                                        id="name"
+                                        type="text"
+                                        placeholder="ex: John Doe"
+                                        isRequired={true}
+                                        onChange={(e) => setname(e.target.value)}
+                                        />
+                                </InputGroup>
+                                <FormLabel className="label" mt="36px" htmlFor="number">
+                                    Phone Number
+                                </FormLabel>
+                                <InputGroup className="input">
+                                    <Input 
+                                        id="number"
+                                        type="text"
+                                        placeholder="ex: +62 8132239xxxx"
+                                        isRequired={true}
+                                        onChange={(e) => setnumber(e.target.value)}
+                                        />
+                                </InputGroup>
+                                <FormHelperText className="formHelper">For International registerer, Please insert country code before your number.</FormHelperText>
                                 <FormLabel className="label" mt="36px" htmlFor="university">
-                                    YOUR UNIVERSITY
+                                    University
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -155,7 +234,7 @@ const RegisterPage = () => {
                                 </InputGroup>
                                 <FormHelperText className="formHelper">Please input your current or previous university name</FormHelperText>
                                 <FormLabel className="label" mt="36px" htmlFor="faculty">
-                                    YOUR FACULTY
+                                    Faculty
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -166,7 +245,7 @@ const RegisterPage = () => {
                                     onChange={(e) => setfaculty(e.target.value)} />
                                 </InputGroup>
                                 <FormLabel className="label" mt="36px" htmlFor="major">
-                                    YOUR MAJOR
+                                    Major
                                 </FormLabel>
                                 <InputGroup className="input" >
                                     <Input 
@@ -200,7 +279,7 @@ const RegisterPage = () => {
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 border="none"
-                                onClick={handleSubmit}
+                                onClick={ handleSubmit }
                                 mb="36px"
                                 isDisabled={(email === "" || university === "" || faculty === "" || major === "")}>
                                 Confirm

@@ -84,16 +84,17 @@ const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
 const FlexCard = ({image, title, subtitle}) =>{
     return(
             <Grid
-            templateColumns={{base: "repeat(1, 1fr)", md:"repeat(2, 1fr)"}}
-            mt={{base:"24px", md:"64px"}}
-            w={{base:"60%", md:""}}>
+                templateColumns={{base: "repeat(1, 1fr)", md:"repeat(2, 1fr)"}}
+                mt={{base:"24px", md:"64px"}}
+                w="100%">
                 <Image 
-                src={image} 
-                alt="" 
-                borderRadius="12px" 
-                textAlign="right" 
-                w="100%" />
-                <Box ml={{base: "", md:"16%"}} mt={{base: "12px", md:""}} alignSelf="center" textAlign={{base: "center", md: ""}}>
+                    src={image} 
+                    alt="" 
+                    borderRadius="12px" 
+                    w={{base:"160px", md:"256px"}}
+                    minW={{base:"160px", md:"256px"}}
+                    placeSelf="center" />
+                <Box ml={{base: "", md:"87px"}} mt="12px" alignSelf="center" textAlign={{base: "center", md: "left"}}>
                     <Text
                     className="tertiaryFont"
                     fontSize={{base:"24px", md:"36px"}}
@@ -117,5 +118,40 @@ const FlexCard = ({image, title, subtitle}) =>{
     )
 }
 
+const RoundCard = ({image, title, subtitle}) => {
+    return (
+        <Grid
+            templateColumns="repeat(2, 1fr)"
+            mt="64px">
+                <Image 
+                src={image} 
+                alt="" 
+                borderRadius="full" 
+                boxSize="150px"
+                textAlign="right" 
+                w="100%" />
+                <Box ml="16%" alignSelf="center">
+                    <Text
+                    className="tertiaryFont"
+                    fontSize="36px"
+                    lineHeight="42px"
+                    fontWeight="700"
+                    color="#0FA1DB">
+                        {title}
+                    </Text>
+                    <Text
+                    mt="16px"
+                    fontSize="16px"
+                    lineHeight="150%"
+                    className="secondaryFont"
+                    color="white"
+                    fontWeight="400">
+                        {subtitle}
+                    </Text>
+                </Box>
+        </Grid>
+    )
+}
+
 export default Card;
-export {FlexCard};
+export {FlexCard, RoundCard};

@@ -45,8 +45,9 @@ const EventList = ({events}) => {
             color="white" 
             className="sectionHeader"
             fontSize={{base: "16px", md:""}}
-            lineHeight={{base:"20px", md:""}}>
-                Our Event List
+            lineHeight={{base:"20px", md:""}}
+            mb={6}>
+                Events List
             </Text>
 
             <Grid 

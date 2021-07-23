@@ -5,7 +5,7 @@ import {
   } from "@chakra-ui/react";
 
 import Navbar from "../component/navbar"
-import styles from "../../styles/authentication.module.scss"
+import styles from "../styles/authentication.module.scss"
 
 const RegisterSuccess = () => {
     return(

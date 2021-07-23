@@ -8,9 +8,9 @@ import {
     Icon,
     Image
   } from "@chakra-ui/react";
-import Footer from "../../component/footer";
-import Navbar from "../../component/navbar";
-import { FaWhatsapp, FaInstagram } from "react-icons/fa"
+import Footer from "../../../component/footer";
+import Navbar from "../../../component/navbar";
+import { FaWhatsapp, FaRegAddressBook } from "react-icons/fa"
 import { useRouter } from "next/router";
 
 const RegisterSuccess = () => {
@@ -98,21 +98,21 @@ const RegisterSuccess = () => {
                             lineHeight="150%"
                             color="white"
                             textAlign="center">
-                                0819275393479
+                                +628121898977 (Phylicia)
                             </Text>
                         </Flex>
                         <Flex
                         color="white"
                         alignItems="center"
                         mt="20px">
-                            <Icon as={FaInstagram} fontSize="24px" />
+                            <Icon as={FaRegAddressBook} fontSize="24px" />
                             <Text ml="0.75rem"
                             className="secondaryFont"
                             fontSize="1rem"
                             lineHeight="150%"
                             color="white"
                             textAlign="center">
-                                sxcintersummit
+                                Email us at: inreg@sxcintersummit.com
                             </Text>
                         </Flex>
                         <Button

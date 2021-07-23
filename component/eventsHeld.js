@@ -1,8 +1,9 @@
 import { Center, Text } from "@chakra-ui/react"
 import { FlexCard } from "./card"
 
-const EventsHeld = ({events}) => {
+const EventsHeld = ({props}) => {
     return(
+        <>
         <Center
         bgColor="#04040C"
         flexDirection="column"
@@ -16,18 +17,44 @@ const EventsHeld = ({events}) => {
                 fontWeight="700"
                 mt={{base:"24px", md:"80px"}}
             >
-                What are the held events?
+                Meet The Speakers
             </Text>
-            {events.map((event, index) => {
+            {props.map((prop, index) => {
                 return(
                     <FlexCard 
                     key={index} 
-                    image={event.src} 
-                    title={event.title}
-                    subtitle={event.caption} />
+                    image={prop.src} 
+                    title={prop.speaker}
+                    subtitle={prop.title} />
                 )
             })}
         </Center>
+        {/* <Center
+        bgColor="#04040C"
+        flexDirection="column"
+        px="20%"
+        >
+            <Text
+            color="yellow"
+            className="tertiaryFont"
+            fontSize="36px"
+            lineHeight="42px"
+            fontWeight="700"
+            mt="80px"
+            >
+                Webinar Brought By
+            </Text>
+            {props.map((prop, index) => {
+                return(
+                    <FlexCard 
+                    key={index} 
+                    image={prop.src} 
+                    title={prop.speaker}
+                    subtitle={prop.title} />
+                )
+            })}
+        </Center> */}
+        </>
     )
 }
 export default EventsHeld
