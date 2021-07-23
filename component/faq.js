@@ -15,8 +15,15 @@ const Faq = () => {
         el.classList.toggle(styles.rotate)
     }
     return (
-        <Box p={{base: "16px", md:"120px"}} bgColor="#04040C">
-            <Text color="white" className="sectionHeader">Frequently Asked Questions</Text>
+        <Box p={{base: "20px", md:"120px"}} bgColor="#04040C">
+            <Text 
+                color="white" 
+                className="sectionHeader"
+                fontSize={{base: "16px", md:""}}
+                lineHeight={{base:"20px", md:""}}
+                >
+                    Frequently Asked Questions
+            </Text>
             <Accordion allowToggle allowMultiple borderColor="transparent">
                 <AccordionItem>
                     <AccordionButton 
@@ -30,8 +37,8 @@ const Faq = () => {
                         flex="1" 
                         textAlign="left" 
                         color="#0FA1DB" 
-                        fontSize="24px" 
-                        lineHeight="28px" 
+                        fontSize={{base:"16px", md:"24px"}} 
+                        lineHeight={{base:"20px", md:"28px" }}
                         className="tertiaryFont" 
                         fontWeight="700" 
                         ml="16px">
@@ -59,8 +66,8 @@ const Faq = () => {
                         flex="1" 
                         textAlign="left" 
                         color="#0FA1DB" 
-                        fontSize="24px" 
-                        lineHeight="28px" 
+                        fontSize={{base:"16px", md:"24px"}} 
+                        lineHeight={{base:"20px", md:"28px" }}
                         className="tertiaryFont" 
                         fontWeight="700" 
                         ml="16px">
@@ -89,8 +96,8 @@ const Faq = () => {
                         flex="1" 
                         textAlign="left" 
                         color="#0FA1DB" 
-                        fontSize="24px" 
-                        lineHeight="28px" 
+                        fontSize={{base:"16px", md:"24px"}} 
+                        lineHeight={{base:"20px", md:"28px" }}
                         className="tertiaryFont" 
                         fontWeight="700" ml="16px">
                         What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?

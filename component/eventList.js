@@ -2,7 +2,8 @@ import {
     Box,
     Text,
     Grid,
-    Center
+    Center,
+    useMediaQuery
   } from '@chakra-ui/react';
 import { useState } from 'react';
 import Card from './card';
@@ -10,10 +11,12 @@ import { IoMdArrowDropdownCircle } from "react-icons/io"
 import styles from "../styles/event.module.scss"
   
 const EventList = ({events}) => {
+    const [isMobile] = useMediaQuery("(max-width: 48em)")
+    let numOfEvents = isMobile ? 3 : 6
     const [currentPage, setcurrentPage] = useState(1)
-    let indexOfLastItems = currentPage * 6
-    let indexOfFirstItems = (currentPage - 1) * 6
-    const pages = Array.apply(null, Array(Math.ceil(events.length / 6))).map(function(currentValue, index) { return index;});
+    let indexOfLastItems = currentPage * numOfEvents
+    let indexOfFirstItems = (currentPage - 1) * numOfEvents
+    const pages = Array.apply(null, Array(Math.ceil(events.length / numOfEvents ))).map(function(currentValue, index) { return index;});
     console.log(pages);
 
     
@@ -33,19 +36,24 @@ const EventList = ({events}) => {
 
     let numOfPreEvent = 0
     return(
-        <Box p={{base: "16px", md:"120px"}} 
-        bgColor="#04040C">
+        <Box 
+        p={{base: "20px", md:"120px"}} 
+        bgColor="#04040C"
+        pt={{base: "60px", md:""}}>
 
             <Text 
             color="white" 
-            className="sectionHeader">
+            className="sectionHeader"
+            fontSize={{base: "16px", md:""}}
+            lineHeight={{base:"20px", md:""}}>
                 Our Event List
             </Text>
 
             <Grid 
             templateColumns={{base:"repeat(1, 1fr)", md:"repeat(2, 1fr)", lg:"repeat(3, 1fr)" }}
             rowGap="72px" 
-            columnGap="84px">
+            columnGap="84px"
+            mt={{base:"40px", md:"72px"}}>
                 {currentItems.map((el, index) => {
                     if(el.type === "Pre-Event"){
                         numOfPreEvent++

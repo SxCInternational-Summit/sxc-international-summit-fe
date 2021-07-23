@@ -11,7 +11,7 @@ import styles from "../styles/temporary.module.scss";
 
 const Temporary = ({isDesktop}) => {
     return(
-        <Center className={styles.backgroundImage} mt="4rem">
+        <Center className={styles.backgroundImage} mt="4rem" h="100vh">
             <Stack pt="2rem" pb="32px">
                 <Image src="./images/temporaryLogo.svg" alt="title logo" height={{base:"48px", sm: "84px", md: "128px"}} />
                 <Text className={styles.titleFont} fontSize={{base: "22px", sm:"35px", md:"56px"}} mt="64px">Website Under Construction</Text>

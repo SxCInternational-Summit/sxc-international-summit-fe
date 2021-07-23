@@ -6,15 +6,15 @@ const EventsHeld = ({events}) => {
         <Center
         bgColor="#04040C"
         flexDirection="column"
-        px="20%"
+        px={{base: "36px", md:"20%"}}
         >
             <Text
-            color="yellow"
-            className="tertiaryFont"
-            fontSize="36px"
-            lineHeight="42px"
-            fontWeight="700"
-            mt="80px"
+                color="yellow"
+                className="tertiaryFont"
+                fontSize={{base:"24px", md:"36px"}}
+                lineHeight={{base:"28px", md:"42px"}}
+                fontWeight="700"
+                mt={{base:"24px", md:"80px"}}
             >
                 What are the held events?
             </Text>
