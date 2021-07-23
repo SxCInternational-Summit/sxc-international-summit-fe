@@ -50,6 +50,7 @@ const RegisterPage = () => {
 
     const handleSubmit = async e => {
         e.preventDefault()
+        let success = false
 
         const registry = {
             user_email: email,
@@ -68,12 +69,15 @@ const RegisterPage = () => {
             })
                 .then(checkStatus)
                 .then(parseJSON)
+                success = true
         } catch (error) {
             setErrorRegister(error)
+            success = false
         }
 
-        if (errorRegister) {
-            return <div>An error occured (register): {errorRegister.message} </div>
+        if (errorRegister && !success) {
+            <div>An error occured (register): {errorRegister.message} </div>
+            window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
         } else {
             router.push('register/success')
         }
