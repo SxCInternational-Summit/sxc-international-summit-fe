@@ -83,11 +83,6 @@ const RegisterPage = () => {
         }
     }
 
-    // const handleSubmit = () => {
-    //     console.log([{email: email, name: name, university: university, faculty: faculty, major: major}]);
-    //     router.push("/register/success")
-    // }
-
     return(
         <Box bgColor="#04040C">
             <Navbar />
