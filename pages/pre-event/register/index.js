@@ -76,7 +76,7 @@ const RegisterPage = () => {
         }
 
         if (errorRegister && !success) {
-            <div>An error occured (register): {errorRegister.message} </div>
+            window.alert(`An error occured (register): {errorRegister.message}`)
             window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
         } else {
             router.push('register/success')
