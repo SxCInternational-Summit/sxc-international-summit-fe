@@ -25,7 +25,7 @@ const CompetitionPage = () => {
         title="SxC International Summit Competition"
         subtitle="Case based competition that will encourage each participant to see themself as a leader, who is responsible for solving a business problem of a company in a creative and innovative way with a high level of realization and practice."
         image={backgroundImageURL} />
-        <EventsHeld events={events}/>
+        <EventsHeld props={events}/>
         <EventList events={events} />
         <Faq />
         <EventComponent />
