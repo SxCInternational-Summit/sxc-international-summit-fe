@@ -6,6 +6,8 @@ import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 
+import Head from 'next/Head'
+
 const PreEventPage = () => {
     const backgroundImageURL = "/images/preEventBackground.svg"
     const events = [
@@ -44,6 +46,9 @@ const PreEventPage = () => {
     ]
     return(
     <>
+        <Head>
+          <title>Pre-Event | SxCIntersummit 2021</title>
+        </Head>
         <Navbar />
         <Hero 
         title="SxC International Summit Pre-Event"
