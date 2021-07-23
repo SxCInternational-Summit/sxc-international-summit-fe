@@ -10,20 +10,21 @@ import {
 import { IoMdArrowDropdownCircle } from "react-icons/io"
 import styles from "../styles/event.module.scss"
 
-const Faq = () => {
+const Faq = ({faqList, title}) => {
     const rotateIcon = (el) => {
         el.classList.toggle(styles.rotate)
     }
     return (
-        <Box p={{base: "20px", md:"120px"}} bgColor="#04040C">
-            <Text 
+        <Box p={{base: "20px", md:"100px"}} bgColor="#04040C">
+            {title ? <Text 
                 color="white" 
                 className="sectionHeader"
                 fontSize={{base: "16px", md:""}}
                 lineHeight={{base:"20px", md:""}}
                 >
                     Frequently Asked Questions
-            </Text>
+            </Text> : <></>}
+            
             <Accordion allowToggle allowMultiple borderColor="transparent">
                 <AccordionItem>
                     <AccordionButton 
@@ -42,16 +43,13 @@ const Faq = () => {
                         className="tertiaryFont" 
                         fontWeight="700" 
                         ml="16px">
-                        What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?
+                        {faqList[0].question}
                         </Box>
                     </AccordionButton>
                     <AccordionPanel 
                     p="8px 36px 24px 36px" 
                     color="white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
+                    {faqList[0].answer}
                     </AccordionPanel>
                 </AccordionItem>
 
@@ -71,16 +69,13 @@ const Faq = () => {
                         className="tertiaryFont" 
                         fontWeight="700" 
                         ml="16px">
-                        What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?
+                        {faqList[1].question}
                         </Box>
                     </AccordionButton>
                     <AccordionPanel 
                     p="8px 36px 24px 36px" 
                     color="white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
+                    {faqList[1].answer}
                     </AccordionPanel>
                 </AccordionItem>
                 
@@ -100,16 +95,13 @@ const Faq = () => {
                         lineHeight={{base:"20px", md:"28px" }}
                         className="tertiaryFont" 
                         fontWeight="700" ml="16px">
-                        What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?
+                        {faqList[1].question}
                         </Box>
                     </AccordionButton>
                     <AccordionPanel 
                     p="8px 36px 24px 36px" 
                     color="white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
+                    {faqList[1].answer}
                     </AccordionPanel>
                 </AccordionItem>
                 </Accordion>

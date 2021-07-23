@@ -9,9 +9,19 @@ import {
     Button,
     Flex,
     InputGroup,
-    Spacer,
     Stack,
-    HStack
+    HStack,
+    Divider,
+    UnorderedList,
+    ListItem,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure
   } from "@chakra-ui/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -20,6 +30,7 @@ import Navbar from "../../component/navbar"
 import Footer from "../../component/footer";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import Stepper from "../../component/stepper";
+import Faq from "../../component/faq";
 
 
 const RegisterTeamPage = () => {
@@ -58,7 +69,7 @@ const RegisterTeamPage = () => {
     const [thirdMemberMajor, setthirdMemberMajor] = useState("")
 
     const [activeStep, setActiveStep] = useState(1);
-
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const router = useRouter()
 
     const handleNext = () => {
@@ -68,6 +79,64 @@ const RegisterTeamPage = () => {
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
+
+    const handleSubmit = () => {
+        console.log([
+            {
+                teamName : teamName,
+                leaderName: leaderName,
+                leaderID : leaderID,
+                leaderPhone : leaderPhone,
+                leaderAddress: leaderAddress,
+                leaderCity : leaderCity,
+                leaderUniversity : leaderUniversity,
+                leaderFaculty : leaderFaculty,
+                leaderMajor : leaderMajor,
+            },
+            {
+                name: firstMemberName,
+                phone: firstMemberPhone,
+                address: firstMemberAddress,
+                city: firstMemberCity, 
+                university: firstMemberUniversity,
+                faculty: firstMemberFaculty,
+                major: firstMemberMajor
+            },
+            {
+                name: secondMemberName,
+                phone: secondMemberPhone,
+                address: secondMemberAddress,
+                city: secondMemberCity, 
+                university: secondMemberUniversity,
+                faculty: secondMemberFaculty,
+                major: secondMemberMajor
+            },
+            {
+                name: thirdMemberName,
+                phone: thirdMemberPhone,
+                address: thirdMemberAddress,
+                city: thirdMemberCity, 
+                university: thirdMemberUniversity,
+                faculty: thirdMemberFaculty,
+                major: thirdMemberMajor
+            }
+        ]);
+    }
+
+    const faq =[
+		{
+			question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
+			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		},
+		{
+			question: "When will the Pre-Events take place?",
+			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		},
+		{
+			question: "What will I get?",
+			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	]
 
     return(
         <Box bgColor="#04040C">
@@ -1089,8 +1158,130 @@ const RegisterTeamPage = () => {
                                 )
                             } else if(activeStep == 4) {
                                 return (
-                                    <>Please proceed to pay the registration fee. If you need help, check out the payment FAQ below the 
-                                    register and previous button, or contact us at 081292138924</>
+                                    <>
+                                        <Box 
+                                            color="white"
+                                            lineHeight="150%"
+                                            textAlign="left"
+                                            mt="60px"
+                                            w="25vw">
+                                            <Text 
+                                                className="tertiaryFont"
+                                                fontWeight="700"
+                                                fontSize="0.75rem"
+                                            >
+                                                Competition Name
+                                            </Text>
+                                            <Text
+                                                mt="0.25rem"
+                                                className="secondaryFont"
+                                                fontSize="1rem"
+                                            >
+                                                SxC Business Case Competition
+                                            </Text>
+                                        </Box>
+                                        <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
+                                            <Text fontWeight="700">
+                                                DOMESTIC
+                                            </Text>
+                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
+                                        </Flex>
+                                        <Box
+                                            lineHeight="125%"
+                                            className="tertiaryFont"
+                                            fontWeight="700">
+                                            <Box mt="20px">
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Registration Fee
+                                                </Text>
+                                                <Text
+                                                    mt="0.25rem"
+                                                    fontSize="1rem"
+                                                    color="#F8C800"
+                                                >
+                                                    Rp30.000,-
+                                                </Text>
+                                            </Box>
+                                            <Box mt="20px">
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Payment Option
+                                                </Text>
+                                                <UnorderedList color="white">
+                                                    <ListItem>
+                                                        <Flex fontSize="1rem" align="center">
+                                                            <Text color="#F8C800">
+                                                                BCA - 01234567
+                                                            </Text>
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                a.n. Antonius Prolionjo
+                                                            </Text>
+                                                        </Flex>
+                                                    </ListItem>
+                                                    <ListItem>
+                                                    <Flex fontSize="1rem" align="center">
+                                                            <Text color="#F8C800">
+                                                                Jenius - 13481943
+                                                            </Text>
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                a.n. Antonius Prolionjo
+                                                            </Text>
+                                                        </Flex>
+                                                    </ListItem>
+                                                </UnorderedList>
+                                            </Box>
+                                        </Box>
+                                        <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
+                                            <Text fontWeight="700">
+                                                INTERNATIONAL
+                                            </Text>
+                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
+                                        </Flex>
+                                        <Box
+                                            lineHeight="125%"
+                                            className="tertiaryFont"
+                                            fontWeight="700">
+                                            <Box mt="20px">
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Registration Fee
+                                                </Text>
+                                                <Text
+                                                    mt="0.25rem"
+                                                    fontSize="1rem"
+                                                    color="#F8C800"
+                                                >
+                                                    US$2.49
+                                                </Text>
+                                            </Box>
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                    mt="20px"
+                                                >
+                                                    Payment Option
+                                                </Text>
+                                                <UnorderedList color="white">
+                                                    <ListItem>
+                                                        <Flex fontSize="1rem" align="center">
+                                                            <Text color="#F8C800">
+                                                                Paypal - 01234567
+                                                            </Text>
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                (Antonius Prolionjo)
+                                                            </Text>
+                                                        </Flex>
+                                                    </ListItem>
+                                                </UnorderedList>
+                                        </Box>
+                                    </>
                                 )
                             } else {
                                 return (
@@ -1099,7 +1290,60 @@ const RegisterTeamPage = () => {
                                 )
                             }
                         })()}
-                    
+                        <Modal isOpen={isOpen} onClose={onClose}>
+                            <ModalOverlay />
+                            <ModalContent bgColor="#080818" pos="absolute" top="30%" borderRadius="20px" p="12px">
+                            <ModalCloseButton color="#080818" bgColor="gray" borderRadius="50%" />
+                            <ModalBody p="20px 40px">
+                                <Center>
+                                    <Text
+                                    mt="8px"
+                                    textAlign="center"
+                                    className="tertiaryFont"
+                                    fontWeight="700"
+                                    fontSize="24px"
+                                    lineHeight="28px"
+                                    color="#F8C800">
+                                        Make sure you’ve saved the payment information!
+                                    </Text>
+                                </Center>
+                                <Center>
+                                    <Text
+                                        mt="12px"
+                                        textAlign="center"
+                                        className="secondaryFont"
+                                        fontSize="1rem"
+                                        lineHeight="150%"
+                                        color="white">
+                                        Once you’ve left this page, you won’t be able to go back and view the payment detail.
+                                    </Text>
+                                </Center>
+                                <Flex justify="center" mt="12px">
+                                    <Button 
+                                        bgColor="black"
+                                        color="white"
+                                        p="10px 24px" 
+                                        borderRadius="4px"
+                                        border="1px solid #F8C800"
+                                        onClick={onClose}>
+                                        Go Back
+                                    </Button>
+                                    <Button
+                                        bgColor="#F8C800" 
+                                        color="black"
+                                        p="10px 24px" 
+                                        borderRadius="4px" 
+                                        className="yellowButtonFont"
+                                        border="none"
+                                        ml="20px"
+                                        onClick={() => {onClose();handleSubmit(); handleNext();}}
+                                    >
+                                        Continue
+                                    </Button>
+                                </Flex>
+                            </ModalBody>
+                            </ModalContent>
+                        </Modal>
                         <Flex justify="space-between" w="100%" mt="48px">
                             <Button
                                 border="1px solid #F8C800"
@@ -1124,13 +1368,14 @@ const RegisterTeamPage = () => {
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 border="none"
-                                onClick={handleNext}
+                                onClick={activeStep != 4 ? handleNext :onOpen}
                                 mb="36px">
                                 {activeStep != 4 ? "Next" : "Register"}
+                                {/* handleNext :() => {handleSubmit(); handleNext();}} */}
                             </Button>
                         </Flex>
-                        
                 </Center>
+                {activeStep == 4 ? <Faq faqList={faq} title={false} /> : <></>}
             <Footer />
         </Box>
     )
