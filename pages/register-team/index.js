@@ -17,11 +17,11 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton,
-    useDisclosure
+    useDisclosure,
+    Image,
+    Icon
   } from "@chakra-ui/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -31,6 +31,8 @@ import Footer from "../../component/footer";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import Stepper from "../../component/stepper";
 import Faq from "../../component/faq";
+
+import { FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 
 const RegisterTeamPage = () => {
@@ -197,7 +199,14 @@ const RegisterTeamPage = () => {
                                 )
                             } else {
                                 return (
-                                    <>Registration Process Completed</>
+                                    <>
+                                        <Center>
+                                            <Image src="/images/registerEventSuccess.svg" alt="" fontSize="96px" />
+                                        </Center>
+                                        <Center>
+                                            Registration Process Completed
+                                        </Center>
+                                    </>
                                 )
                             }
                         })()}
@@ -230,8 +239,26 @@ const RegisterTeamPage = () => {
                                 )
                             } else {
                                 return (
-                                    <>Thank you for registering! We’ll review your payment and we’ll give you the event details soon!
-                                    We’re looking forward to your participation!</>
+                                    <>
+                                    <Text>
+                                        Thank you for registering! We’ll review your payment and we’ll give you the event details soon! We’re looking forward to your participation!
+                                    </Text>
+                                    <Text mt="24px">
+                                        If you need help, feel free to contact us at
+                                    </Text>
+                                    <Flex mt="20px" justify="center">
+                                        <Icon as={FaWhatsapp} fontSize="24px" />
+                                        <Text ml="0.75rem">
+                                            0819275393479
+                                        </Text>
+                                    </Flex>
+                                    <Flex mt="20px" justify="center">
+                                        <Icon as={FaInstagram} fontSize="24px" />
+                                        <Text ml="0.75rem">
+                                            sxcintersummit
+                                        </Text>
+                                    </Flex>
+                                    </>
                                 )
                             }
                         })()}
@@ -1285,8 +1312,19 @@ const RegisterTeamPage = () => {
                                 )
                             } else {
                                 return (
-                                    <>Thank you for registering! We’ll review your payment and we’ll give you the event details soon!
-                                    We’re looking forward to your participation!</>
+                                    <Button
+                                    mt="60px" 
+                                    cursor="pointer"
+                                    bgColor="#F8C800" 
+                                    color="black"
+                                    p="10px 24px" 
+                                    borderRadius="4px" 
+                                    className="yellowButtonFont"
+                                    border="none"
+                                    onClick={() => router.push("/event")}
+                                    mb="125px">
+                                        Back to Events
+                                    </Button>
                                 )
                             }
                         })()}
@@ -1344,7 +1382,7 @@ const RegisterTeamPage = () => {
                             </ModalBody>
                             </ModalContent>
                         </Modal>
-                        <Flex justify="space-between" w="100%" mt="48px">
+                        {activeStep != 5 ? <Flex justify="space-between" w="100%" mt="48px">
                             <Button
                                 border="1px solid #F8C800"
                                 mt="40px" 
@@ -1371,9 +1409,9 @@ const RegisterTeamPage = () => {
                                 onClick={activeStep != 4 ? handleNext :onOpen}
                                 mb="36px">
                                 {activeStep != 4 ? "Next" : "Register"}
-                                {/* handleNext :() => {handleSubmit(); handleNext();}} */}
                             </Button>
-                        </Flex>
+                        </Flex> : <></>}
+                        
                 </Center>
                 {activeStep == 4 ? <Faq faqList={faq} title={false} /> : <></>}
             <Footer />
