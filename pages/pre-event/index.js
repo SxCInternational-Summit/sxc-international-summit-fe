@@ -6,7 +6,7 @@ import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 
-import Head from 'next/Head'
+import Head from 'next/head'
 
 const PreEventPage = () => {
     const backgroundImageURL = "/images/preEventBackground.svg"
@@ -44,6 +44,28 @@ const PreEventPage = () => {
             fee: "Free"
           }
     ]
+
+    const speakers = [
+      {
+        title: "Senior Product Manager Bukalapak",
+        src: "/images/wimala_puspa.png",
+        speaker: "Wimala Puspa Enggaringtyas",
+      },
+      {
+        title: "Brand Manager Unilever",
+        src: "/images/rifka_aulia.png",
+        speaker: "Rifka Auliya",
+      },
+    ]
+
+    const mods = [
+      {
+        speaker: 'Bagastama Aulia Mahardika',
+        title: 'FET and Corporate Finance Intern at Unilever| Undergraduate Accounting Student at Universitas Indonesia',
+        src: '',
+      },
+    ]
+
     return(
     <>
         <Head>
@@ -51,10 +73,11 @@ const PreEventPage = () => {
         </Head>
         <Navbar />
         <Hero 
-        title="SxC International Summit Pre-Event"
-        subtitle="With a series of inspiring events, the Pre-Event aims to provide highly motivated individuals to gain insights from various renowned speakers covering a wide range of topics such as soft skills tips, in-depth information on SDGs and many more." 
-        image={backgroundImageURL}/>
-        <EventsHeld events={events} />
+          title="SxC International Summit Pre-Event"
+          subtitle='"Maintain product existence in the middle of global pandemic"'
+          image={backgroundImageURL}
+          />
+        <EventsHeld props={speakers} />
         <EventList events={events} />
         <Faq />
         <EventComponent />
