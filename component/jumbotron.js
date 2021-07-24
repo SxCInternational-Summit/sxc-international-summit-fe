@@ -10,7 +10,7 @@ import styles from "../styles/landing.module.scss";
 
 const Jumbotron = () => {
     return(
-            <Box ml="126px" fontSize="64px" mt="200px">
+            <Box pl="126px" fontSize="64px" pt="267px" className={styles.backgroundImage}>
                 <Text 
                     className={styles.titleFont} 
                     color="white">

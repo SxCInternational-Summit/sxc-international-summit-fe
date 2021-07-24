@@ -3,10 +3,10 @@
 .backgroundImage {
     background: $bgLanding no-repeat center center;
     background-size: cover;
-    height: 100vh !important; 
+    height: 780px !important; 
     top: 0;
-    width: 100vw !important;
-    overflow: auto; 
+    width: 100% !important;
+    overflow-x: hidden; 
 } 
 
 .gradientBlue{
