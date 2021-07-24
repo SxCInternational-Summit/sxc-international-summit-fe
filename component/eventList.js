@@ -42,8 +42,8 @@ const EventList = ({events}) => {
             <Text 
             color="white" 
             className="sectionHeader"
-            fontSize={{base: "16px", md:""}}
-            lineHeight={{base:"20px", md:""}}
+            fontSize={{base: "16px", md:"36px"}}
+            lineHeight={{base:"20px", md:"42px"}}
             mb={6}>
                 Events List
             </Text>
@@ -57,11 +57,11 @@ const EventList = ({events}) => {
                     if(el.type === "Pre-Event"){
                         numOfPreEvent++
                         return(
-                            <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={numOfPreEvent} linkTo={el.linkTo} />
+                            <Card title={el.title} image={el.src} subtitle={el.subtitle} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={numOfPreEvent} linkTo={el.linkTo} />
                         )
                     }
                     return(
-                        <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={0} linkTo={el.linkTo} />
+                        <Card title={el.title} image={el.src} subtitle={el.subtitle} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={0} linkTo={el.linkTo} />
                     )
                 })}
             </Grid>
