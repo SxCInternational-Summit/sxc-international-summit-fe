@@ -280,7 +280,7 @@ const RegisterTeamPage = () => {
                                 )
                             } else if(activeStep == 4) {
                                 return (
-                                    <>Please insert the instagram links to team member's twibbon post as requirement to participate</>
+                                    <>Please insert the instagram links to team member twibbon post as requirement to participate</>
                                 )
                             } else if(activeStep == 5) {
                                 return (
