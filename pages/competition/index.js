@@ -7,6 +7,8 @@ import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 import Timeline from "../../component/timeline"
 
+const { PROD_URL } = process.env
+
 const CompetitionPage = () => {
     const backgroundImageURL = "/images/competitionBackground.svg"
     const events = [
@@ -17,7 +19,7 @@ const CompetitionPage = () => {
             type: "Competition",
             date: "27-29 June 2021",
             fee: "Free",
-            linkTo: 'http://localhost:3000/competition/register-team'
+            linkTo: `${PROD_URL}/competition/register-team`
           }
     ]
 

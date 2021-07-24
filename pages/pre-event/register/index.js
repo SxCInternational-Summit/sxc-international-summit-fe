@@ -17,6 +17,7 @@ import { useRouter } from "next/router";
 import Navbar from "../../../component/navbar"
 import Footer from "../../../component/footer";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
+import { FaInstagram } from "react-icons/fa";
 
 const parseJSON = resp => (resp.json ? resp.json() : resp)
 
@@ -43,6 +44,7 @@ const RegisterPage = () => {
     const [university, setuniversity] = useState("")
     const [faculty, setfaculty] = useState("")
     const [major, setmajor] = useState("")
+    const [instagram, setInstagram] = useState("")
 
     const [errorRegister, setErrorRegister] = useState(null)
 
@@ -59,6 +61,7 @@ const RegisterPage = () => {
             user_university: university,
             user_faculty: faculty,
             user_major: major,
+            user_instagram: instagram,
         }
 
         try {
@@ -79,7 +82,6 @@ const RegisterPage = () => {
             if (errorRegister.message != null) {
                 window.alert(`An error occured (register): ${errorRegister.message}`)
             }
-            
             window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
         } else {
             router.push('register/success')
@@ -258,6 +260,17 @@ const RegisterPage = () => {
                                     isRequired={true}
                                     onChange={(e) => setmajor(e.target.value)} />
                                 </InputGroup>
+                                <FormLabel className="label" mt="36px" htmlFor="instagram">
+                                    Instagram
+                                </FormLabel>
+                                <InputGroup className="input" >
+                                    <Input 
+                                    id="instagram" 
+                                    type='text' 
+                                    placeholder='ex: sxcintersummit' 
+                                    isRequired={true}
+                                    onChange={(e) => setInstagram(e.target.value)} />
+                                </InputGroup>
                             </FormControl>
                             </Box>
                         <Text
@@ -268,15 +281,15 @@ const RegisterPage = () => {
                                 textAlign="center"
                                 mt="60px"
                             >
-                                We will send you an e-mail with the event’s detail prior to the event.
+                                We value your privacy and your information will be used for event purposes.
                         </Text>
                         <Flex justifyContent="flex-end" w="100%">
                             <Button
                                 mt="40px" 
                                 type="submit"
-                                cursor={(email === "" || university === "" || faculty === "" || major === "") ? "default" : "pointer"} 
+                                cursor={(email === "" || university === "" || faculty === "" || major === "" || instagram === "") ? "default" : "pointer"} 
                                 bgColor="#F8C800" 
-                                opacity={(email === "" || university === "" || faculty === "" || major === "") ? "0.6" : "1"} 
+                                opacity={(email === "" || university === "" || faculty === "" || major === "" || instagram === "") ? "0.6" : "1"} 
                                 color="black"
                                 p="10px 24px" 
                                 borderRadius="4px" 
@@ -284,11 +297,10 @@ const RegisterPage = () => {
                                 border="none"
                                 onClick={ handleSubmit }
                                 mb="36px"
-                                isDisabled={(email === "" || university === "" || faculty === "" || major === "")}>
+                                isDisabled={(email === "" || university === "" || faculty === "" || major === "" || instagram === "")}>
                                 Confirm
                             </Button>
                         </Flex>
-                        
                 </Center>
             <Footer />
         </Box>
