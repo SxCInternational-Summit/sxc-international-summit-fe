@@ -6,7 +6,7 @@ import {
   Grid,
 } from '@chakra-ui/react';
 
-const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
+const Card = ({title, image, caption, type, date, fee, numOfPreEvent, linkTo}) => {
   return (
     <Box borderRadius="16px" bgColor="#080818" overflow="hidden" h="fit-content">
         <Image src={image} alt="" w="100%"/>
@@ -67,7 +67,8 @@ const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
             </Box>
             
             <Link 
-                cursor="pointer" 
+                cursor="pointer"
+                href={linkTo}
                 bgColor="#F8C800" 
                 p="10px 24px" 
                 borderRadius="4px"

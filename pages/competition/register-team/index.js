@@ -9,9 +9,19 @@ import {
     Button,
     Flex,
     InputGroup,
-    Spacer,
     Stack,
-    HStack
+    HStack,
+    Divider,
+    UnorderedList,
+    ListItem,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
+    Image,
+    Icon
   } from "@chakra-ui/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -20,6 +30,9 @@ import Navbar from "../../../component/navbar"
 import Footer from "../../../component/footer";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import Stepper from "../../../component/stepper";
+import Faq from "../../../component/faq";
+
+import { FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 const parseJSON = resp => (resp.json ? resp.json() : resp)
 
@@ -70,14 +83,12 @@ const RegisterTeamPage = () => {
     const [leaderTwibbonLink, setLeaderTwibbonLink] = useState("")
     const [leaderFollowLink, setLeaderFollowLink] = useState("")
     const [firstMemberTwibbonLink, setFirstMemberTwibbonLink] = useState("")
-    const [firstMemberFollowLink, setFirstMemberFollowLink] = useState("")
     const [secondMemberTwibbonLink, setSecondMemberTwibbonLink] = useState("")
-    const [secondMemberFollowLink, setSecondMemberFollowLink] = useState("")
-
     const [activeStep, setActiveStep] = useState(1);
 
     const [errorRegister, setErrorRegister] = useState(null)
 
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const router = useRouter()
 
     const handleNext = () => {
@@ -89,7 +100,7 @@ const RegisterTeamPage = () => {
     };
 
     const handleSubmit = async e => {
-        e.preventDefault()
+        //e.preventDefault()
         let success = false
 
         const registry = {
@@ -123,9 +134,7 @@ const RegisterTeamPage = () => {
             leader_twibbon: leaderTwibbonLink,
             leader_follow: leaderFollowLink,
             member1_twibbon: firstMemberTwibbonLink,
-            member1_follow: firstMemberFollowLink,
             member2_twibbon: secondMemberTwibbonLink,
-            member2_follow: secondMemberFollowLink,
         }
 
         try {
@@ -140,10 +149,6 @@ const RegisterTeamPage = () => {
                 .then(checkStatus)
                 .then(parseJSON)
                 success = true
-
-                const addResponse = await add.json()
-
-                console.log(addResponse)
         } catch (error) {
             setErrorRegister(error)
             success = false
@@ -152,7 +157,7 @@ const RegisterTeamPage = () => {
         if (errorRegister || !success) {
             // Kalau error munculin error messagenya apa, trus suruh user kontak admin
             // Jangan lanjutin dia ke page payment karena datanya engga masuk
-            window.alert(`An error occured (register): ${errorRegister.message}`)
+            //window.alert(`An error occured (register): ${errorRegister.message}`)
             window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
         } else {
             // Berhasil maka lanjut ke payment?
@@ -161,6 +166,21 @@ const RegisterTeamPage = () => {
             // ini udah kan ya .-.
         }
     }
+
+    const faq =[
+		{
+			question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
+			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		},
+		{
+			question: "When will the Pre-Events take place?",
+			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		},
+		{
+			question: "What will I get?",
+			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
+	]
 
     return(
         <Box bgColor="#04040C">
@@ -225,7 +245,14 @@ const RegisterTeamPage = () => {
                                 )
                             } else {
                                 return (
-                                    <>Registration Process Completed</>
+                                    <>
+                                        <Center>
+                                            <Image src="/images/registerEventSuccess.svg" alt="" fontSize="96px" />
+                                        </Center>
+                                        <Center>
+                                            Registration Process Completed
+                                        </Center>
+                                    </>
                                 )
                             }
                         })()}
@@ -258,12 +285,30 @@ const RegisterTeamPage = () => {
                             } else if(activeStep == 5) {
                                 return (
                                     <>Please proceed to pay the registration fee. If you need help, check out the payment FAQ below the 
-                                    register and previous button, or contact us at 081292138924</>
+                                    register and previous button, or contact us at +6281218989775</>
                                 )
                             } else {
                                 return (
-                                    <>Thank you for registering! We’ll review your payment and we’ll give you the event details soon!
-                                    We’re looking forward to your participation!</>
+                                    <>
+                                    <Text>
+                                        Thank you for registering! We’ll review your payment and we’ll give you the event details soon! We’re looking forward to your participation!
+                                    </Text>
+                                    <Text mt="24px">
+                                        If you need help, feel free to contact us at
+                                    </Text>
+                                    <Flex mt="20px" justify="center">
+                                        <Icon as={FaWhatsapp} fontSize="24px" />
+                                        <Text ml="0.75rem">
+                                            +6281218989775 (Phylicia)
+                                        </Text>
+                                    </Flex>
+                                    <Flex mt="20px" justify="center">
+                                        <Icon as={FaInstagram} fontSize="24px" />
+                                        <Text ml="0.75rem">
+                                            sxcintersummit
+                                        </Text>
+                                    </Flex>
+                                    </>
                                 )
                             }
                         })()}
@@ -322,7 +367,7 @@ const RegisterTeamPage = () => {
                                         <Input 
                                         id="leaderDateOfBirth" 
                                         type='text' 
-                                        placeholder='format: dd/mm/yyyy (ex: 16-01-2001)' 
+                                        placeholder='format: dd-mm-yyyy (ex: 16-01-2001)' 
                                         isRequired={true}
                                         onChange={(e) => setLeaderDateOfBirth(e.target.value)} />
                                     </InputGroup>
@@ -1044,17 +1089,6 @@ const RegisterTeamPage = () => {
                                                     isRequired={true}
                                                     onChange={(e) => setFirstMemberTwibbonLink(e.target.value)} />
                                                 </InputGroup>
-                                                <FormLabel className="label" mt="36px" htmlFor="firstMemberFollowLink">
-                                                    First Member Follow Link
-                                                </FormLabel>
-                                                <InputGroup className="input" >
-                                                    <Input 
-                                                    id="firstMemberFollowLink" 
-                                                    type='text' 
-                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
-                                                    isRequired={true}
-                                                    onChange={(e) => setFirstMemberFollowLink(e.target.value)} />
-                                                </InputGroup>
                                                 <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
                                                     Second Member Twibbon Link
                                                 </FormLabel>
@@ -1066,35 +1100,210 @@ const RegisterTeamPage = () => {
                                                     isRequired={true}
                                                     onChange={(e) => setSecondMemberTwibbonLink(e.target.value)} />
                                                 </InputGroup>
-                                                <FormLabel className="label" mt="36px" htmlFor="secondMemberFollowLink">
-                                                    Second Member Follow Link
-                                                </FormLabel>
-                                                <InputGroup className="input" >
-                                                    <Input 
-                                                    id="secondMemberFollowLink" 
-                                                    type='text'
-                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
-                                                    isRequired={true}
-                                                    onChange={(e) => setSecondMemberFollowLink(e.target.value)} />
-                                                </InputGroup>
                                             </FormControl>
                                         </Box>
                                     </>
                                 )
                             } else if(activeStep == 5) {
                                 return (
-                                    <>Please proceed to pay the registration fee. If you need help, check out the payment FAQ below the 
-                                    register and previous button, or contact us at 081292138924</>
+                                    <>
+                                        <Box 
+                                            color="white"
+                                            lineHeight="150%"
+                                            textAlign="left"
+                                            mt="60px"
+                                            w="25vw">
+                                            <Text 
+                                                className="tertiaryFont"
+                                                fontWeight="700"
+                                                fontSize="0.75rem"
+                                            >
+                                                Competition Name
+                                            </Text>
+                                            <Text
+                                                mt="0.25rem"
+                                                className="secondaryFont"
+                                                fontSize="1rem"
+                                            >
+                                                SxC Business Case Competition
+                                            </Text>
+                                        </Box>
+                                        <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
+                                            <Text fontWeight="700">
+                                                DOMESTIC
+                                            </Text>
+                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
+                                        </Flex>
+                                        <Box
+                                            lineHeight="125%"
+                                            className="tertiaryFont"
+                                            fontWeight="700">
+                                            <Box mt="20px">
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Registration Fee
+                                                </Text>
+                                                <Text
+                                                    mt="0.25rem"
+                                                    fontSize="1rem"
+                                                    color="#F8C800"
+                                                >
+                                                    Rp30.000,-
+                                                </Text>
+                                            </Box>
+                                            <Box mt="20px">
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Payment Option
+                                                </Text>
+                                                <UnorderedList color="white">
+                                                    <ListItem>
+                                                        <Flex fontSize="1rem" align="center">
+                                                            <Text color="#F8C800">
+                                                                BCA - 01234567
+                                                            </Text>
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                a.n. Antonius Prolionjo
+                                                            </Text>
+                                                        </Flex>
+                                                    </ListItem>
+                                                    <ListItem>
+                                                    <Flex fontSize="1rem" align="center">
+                                                            <Text color="#F8C800">
+                                                                Jenius - 13481943
+                                                            </Text>
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                a.n. Antonius Prolionjo
+                                                            </Text>
+                                                        </Flex>
+                                                    </ListItem>
+                                                </UnorderedList>
+                                            </Box>
+                                        </Box>
+                                        <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
+                                            <Text fontWeight="700">
+                                                INTERNATIONAL
+                                            </Text>
+                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
+                                        </Flex>
+                                        <Box
+                                            lineHeight="125%"
+                                            className="tertiaryFont"
+                                            fontWeight="700">
+                                            <Box mt="20px">
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Registration Fee
+                                                </Text>
+                                                <Text
+                                                    mt="0.25rem"
+                                                    fontSize="1rem"
+                                                    color="#F8C800"
+                                                >
+                                                    US$2.49
+                                                </Text>
+                                            </Box>
+                                                <Text 
+                                                    color="white"
+                                                    fontSize="0.75rem"
+                                                    mt="20px"
+                                                >
+                                                    Payment Option
+                                                </Text>
+                                                <UnorderedList color="white">
+                                                    <ListItem>
+                                                        <Flex fontSize="1rem" align="center">
+                                                            <Text color="#F8C800">
+                                                                Paypal - 01234567
+                                                            </Text>
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                (Antonius Prolionjo)
+                                                            </Text>
+                                                        </Flex>
+                                                    </ListItem>
+                                                </UnorderedList>
+                                        </Box>
+                                    </>
                                 )
                             } else {
                                 return (
-                                    <>Thank you for registering! We’ll review your payment and we’ll give you the event details soon!
-                                    We’re looking forward to your participation!</>
+                                    <Button
+                                    mt="60px" 
+                                    cursor="pointer"
+                                    bgColor="#F8C800" 
+                                    color="black"
+                                    p="10px 24px" 
+                                    borderRadius="4px" 
+                                    className="yellowButtonFont"
+                                    border="none"
+                                    onClick={() => router.push("/event")}
+                                    mb="125px">
+                                        Back to Events
+                                    </Button>
                                 )
                             }
                         })()}
-                    
-                        <Flex justify="space-between" w="100%" mt="48px">
+                        <Modal isOpen={isOpen} onClose={onClose}>
+                            <ModalOverlay />
+                            <ModalContent bgColor="#080818" pos="absolute" top="30%" borderRadius="20px" p="12px">
+                            <ModalCloseButton color="#080818" bgColor="gray" borderRadius="50%" />
+                            <ModalBody p="20px 40px">
+                                <Center>
+                                    <Text
+                                    mt="8px"
+                                    textAlign="center"
+                                    className="tertiaryFont"
+                                    fontWeight="700"
+                                    fontSize="24px"
+                                    lineHeight="28px"
+                                    color="#F8C800">
+                                        Make sure you’ve saved the payment information!
+                                    </Text>
+                                </Center>
+                                <Center>
+                                    <Text
+                                        mt="12px"
+                                        textAlign="center"
+                                        className="secondaryFont"
+                                        fontSize="1rem"
+                                        lineHeight="150%"
+                                        color="white">
+                                        Once you’ve left this page, you won’t be able to go back and view the payment detail.
+                                    </Text>
+                                </Center>
+                                <Flex justify="center" mt="12px">
+                                    <Button 
+                                        bgColor="black"
+                                        color="white"
+                                        p="10px 24px" 
+                                        borderRadius="4px"
+                                        border="1px solid #F8C800"
+                                        onClick={onClose}>
+                                        Go Back
+                                    </Button>
+                                    <Button
+                                        bgColor="#F8C800" 
+                                        color="black"
+                                        p="10px 24px" 
+                                        borderRadius="4px" 
+                                        className="yellowButtonFont"
+                                        border="none"
+                                        ml="20px"
+                                        onClick={() => {onClose();handleSubmit(); handleNext();}}
+                                    >
+                                        Continue
+                                    </Button>
+                                </Flex>
+                            </ModalBody>
+                            </ModalContent>
+                        </Modal>
+                        {activeStep != 6 ? <Flex justify="space-between" w="100%" mt="48px">
                             <Button
                                 border="1px solid #F8C800"
                                 mt="40px" 
@@ -1110,7 +1319,7 @@ const RegisterTeamPage = () => {
                                 Previous
                             </Button>
                             <Button
-                                mt="40px" 
+                                mt="40px"
                                 type="submit"
                                 bgColor="#F8C800" 
                                 color="black"
@@ -1118,13 +1327,14 @@ const RegisterTeamPage = () => {
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 border="none"
-                                onClick={activeStep != 5 ? handleNext : handleSubmit}
+                                onClick={activeStep != 5 ? handleNext : onOpen}
                                 mb="36px">
                                 {activeStep != 5 ? "Next" : "Register"}
                             </Button>
-                        </Flex>
+                        </Flex> : <></>}
                         
                 </Center>
+                {activeStep == 4 ? <Faq faqList={faq} title={false} /> : <></>}
             <Footer />
         </Box>
     )

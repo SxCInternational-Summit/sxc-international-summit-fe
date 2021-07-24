@@ -17,8 +17,6 @@ const EventList = ({events}) => {
     let indexOfLastItems = currentPage * numOfEvents
     let indexOfFirstItems = (currentPage - 1) * numOfEvents
     const pages = Array.apply(null, Array(Math.ceil(events.length / numOfEvents ))).map(function(currentValue, index) { return index;});
-    console.log(pages);
-
     
     if(events.length < indexOfLastItems){
         indexOfLastItems = events.length
@@ -59,11 +57,11 @@ const EventList = ({events}) => {
                     if(el.type === "Pre-Event"){
                         numOfPreEvent++
                         return(
-                            <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={numOfPreEvent}/>
+                            <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={numOfPreEvent} linkTo={el.linkTo} />
                         )
                     }
                     return(
-                        <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={0} />
+                        <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={0} linkTo={el.linkTo} />
                     )
                 })}
             </Grid>
