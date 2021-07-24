@@ -6,7 +6,7 @@ import {
   Grid,
 } from '@chakra-ui/react';
 
-const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
+const Card = ({title, image, subtitle, type, date, fee, numOfPreEvent}) => {
   return (
     <Box borderRadius="16px" bgColor="#080818" overflow="hidden" h="fit-content">
         <Image src={image} alt="" w="100%"/>
@@ -62,7 +62,7 @@ const Card = ({title, image, caption, type, date, fee, numOfPreEvent}) => {
                 lineHeight="24px"
                 fontWeight="400"
                 mb="12px">
-                    {caption}
+                    {subtitle}
                 </Text>
             </Box>
             

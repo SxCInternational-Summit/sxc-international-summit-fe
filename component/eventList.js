@@ -59,11 +59,11 @@ const EventList = ({events}) => {
                     if(el.type === "Pre-Event"){
                         numOfPreEvent++
                         return(
-                            <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={numOfPreEvent}/>
+                            <Card title={el.title} image={el.src} subtitle={el.subtitle} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={numOfPreEvent}/>
                         )
                     }
                     return(
-                        <Card title={el.title} image={el.src} caption={el.caption} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={0} />
+                        <Card title={el.title} image={el.src} subtitle={el.subtitle} type={el.type} date={el.date} fee={el.fee} key={index} numOfPreEvent={0} />
                     )
                 })}
             </Grid>

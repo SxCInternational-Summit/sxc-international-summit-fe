@@ -144,8 +144,8 @@ const RegisterTeamPage = () => {
         <Box bgColor="#04040C">
             <Navbar />
                 <Center 
-                    w="36%"
-                    mx="32%"
+                    w={{base:"90%", md:"36%"}}
+                    mx={{base:"5%", md:"32%"}}
                     mt="64px"
                     flexDirection="column"
                 >
@@ -168,7 +168,7 @@ const RegisterTeamPage = () => {
                         </Flex>
                     </Button>
 
-                    <Box mt="90px">
+                    <Box mt="90px" display={{base:"none", md:"block"}}>
                         <Stepper activeStep={activeStep} />
                     </Box>
                     
@@ -272,7 +272,7 @@ const RegisterTeamPage = () => {
                                     color="white"
                                     lineHeight="150%"
                                     textAlign="left"
-                                    w="30vw"
+                                    w={{base:"90vw",md:"30vw"}}
                                 >
                             
                                 <FormControl>
