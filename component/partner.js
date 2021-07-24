@@ -12,7 +12,7 @@ import styles from "../styles/landing.module.scss";
 
 const Partner = () => {
     return(
-        <Center bgColor="black" flexDirection="column" mt="200px">
+        <Center bgColor="black" flexDirection="column" pt="200px">
             <Center>
                 <Text className={styles.sectionFont}>What is StudentxCEOs International Summit?</Text>
             </Center>

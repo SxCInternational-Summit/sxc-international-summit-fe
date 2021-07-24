@@ -12,7 +12,7 @@ export default function Home() {
     <Head>
       <title>SxcIntersummit 2021</title>
     </Head>
-    <Navbar isDesktop={isDesktop} />
+    <Navbar />
     <Temporary isDesktop={isDesktop} />
     <Footer isDesktop={isDesktop} />
     </>

@@ -17,7 +17,7 @@ const Jumbotron = () => {
                         StudentsxCEOs<br/>International
                 </Text>
 
-                <Flex mt="-128px">
+                <Flex>
                     <Text 
                         className={styles.titleFont} 
                         color="white">
@@ -30,33 +30,9 @@ const Jumbotron = () => {
                     </Text>
                 </Flex>
 
-                <Text 
-                    className={styles.sloganFont} 
-                    mt="-48px">
+                <Text className={styles.sloganFont} mt="15px" mb="210px">
                         Jaya Jaya Jaya
                 </Text>
-
-                <Stack spacing="24px" direction="row" mt="120px">
-                    <Button 
-                        borderRadius="4px" 
-                        p="10px 24px"
-                        bgColor="#F8C800" 
-                        border="none" 
-                        className={styles.buttonFont}
-                        cursor="pointer">
-                            Register
-                    </Button>
-                    <Button 
-                        borderRadius="4px" 
-                        p="10px 24px" 
-                        border="1px solid #F8C800" 
-                        bgColor="transparent" 
-                        color="white" 
-                        className={styles.buttonFont}
-                        cursor="pointer">
-                            Sign In
-                    </Button>
-                </Stack>
             </Box>
     )
 }

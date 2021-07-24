@@ -12,16 +12,16 @@ import {
   DrawerCloseButton,
   useDisclosure,
   VStack,
-  HStack
+  HStack,
+  useMediaQuery
 } from "@chakra-ui/react";
 import styles from "../styles/navbar.module.scss";
 import { HamburgerIcon, ChevronRightIcon } from "@chakra-ui/icons"
 import { useRef } from "react";
-import Login from "./LoginRegisterModal/loginModal";
-import RegisterModal from "./LoginRegisterModal/registerModal";
 
-const Navbar = ({isDesktop}) => {
+const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [isDesktop] = useMediaQuery("(min-width: 48em)")
     const btnRef = useRef()
     return(
         <Flex h="64px" bgColor="#080818" w="100%" justifyContent="space-between" top={0} pos="fixed" zIndex="2">
@@ -37,8 +37,6 @@ const Navbar = ({isDesktop}) => {
                     <Link href="/" cursor="pointer" alignSelf="center">
                         Events
                     </Link>
-                    <Login />
-                    <RegisterModal />
                 </HStack> : <Button onClick={onOpen} bgColor="transparent" color="white" mr="36px"><HamburgerIcon h="18px" /></Button>}
                 <Drawer
                     isOpen={isOpen}
@@ -59,8 +57,6 @@ const Navbar = ({isDesktop}) => {
                                 <Link href="/" cursor="pointer" alignSelf="center">
                                     Events
                                 </Link>
-                                <Login />
-                                <RegisterModal />
                         </VStack>
                         </Center>
                         
