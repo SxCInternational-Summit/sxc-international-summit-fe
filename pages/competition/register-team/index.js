@@ -32,7 +32,7 @@ const checkStatus = resp => {
     })
 }
 
-const headers = {
+const head = {
     'Accept': 'application/json',
     'Content-type': 'application/json'
 }
@@ -66,6 +66,13 @@ const RegisterTeamPage = () => {
     const [secondMemberUniversity, setsecondMemberUniversity] = useState("")
     const [secondMemberFaculty, setsecondMemberFaculty] = useState("")
     const [secondMemberMajor, setsecondMemberMajor] = useState("")
+
+    const [leaderTwibbonLink, setLeaderTwibbonLink] = useState("")
+    const [leaderFollowLink, setLeaderFollowLink] = useState("")
+    const [firstMemberTwibbonLink, setFirstMemberTwibbonLink] = useState("")
+    const [firstMemberFollowLink, setFirstMemberFollowLink] = useState("")
+    const [secondMemberTwibbonLink, setSecondMemberTwibbonLink] = useState("")
+    const [secondMemberFollowLink, setSecondMemberFollowLink] = useState("")
 
     const [activeStep, setActiveStep] = useState(1);
 
@@ -111,22 +118,37 @@ const RegisterTeamPage = () => {
             member2_city: secondMemberCity,
             member2_university: secondMemberUniversity,
             member2_faculty: secondMemberFaculty,
-            member2_major: secondMemberMajor
+            member2_major: secondMemberMajor,
+
+            leader_twibbon: leaderTwibbonLink,
+            leader_follow: leaderFollowLink,
+            member1_twibbon: firstMemberTwibbonLink,
+            member1_follow: firstMemberFollowLink,
+            member2_twibbon: secondMemberTwibbonLink,
+            member2_follow: secondMemberFollowLink,
         }
 
         try {
-            const response = await fetch(`${API_URL}/competition-users`, {
+            const add = await fetch(`${API_URL}/competitions`, {
                 method: 'POST',
-                headers,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(registry)
             })
                 .then(checkStatus)
                 .then(parseJSON)
                 success = true
+
+                const addResponse = await add.json()
+
+                console.log(addResponse)
         } catch (error) {
             setErrorRegister(error)
+            success = false
         }
-
+        
         if (errorRegister || !success) {
             // Kalau error munculin error messagenya apa, trus suruh user kontak admin
             // Jangan lanjutin dia ke page payment karena datanya engga masuk
@@ -135,6 +157,8 @@ const RegisterTeamPage = () => {
         } else {
             // Berhasil maka lanjut ke payment?
             handleNext()
+
+            // ini udah kan ya .-.
         }
     }
 
@@ -193,7 +217,11 @@ const RegisterTeamPage = () => {
                                 )
                             } else if(activeStep == 4) {
                                 return (
-                                    <>Registration Payment</>
+                                    <>Registration Requirement</>
+                                )
+                            } else if (activeStep == 5) {
+                                return (
+                                    <>Confirm Payment</>
                                 )
                             } else {
                                 return (
@@ -224,6 +252,10 @@ const RegisterTeamPage = () => {
                                     <>Please make sure that the information you have entered is correct</>
                                 )
                             } else if(activeStep == 4) {
+                                return (
+                                    <>Please insert the instagram links to team member's twibbon post as requirement to participate</>
+                                )
+                            } else if(activeStep == 5) {
                                 return (
                                     <>Please proceed to pay the registration fee. If you need help, check out the payment FAQ below the 
                                     register and previous button, or contact us at 081292138924</>
@@ -301,7 +333,7 @@ const RegisterTeamPage = () => {
                                     <InputGroup className="input" >
                                         <Input 
                                         id="leaderPhone" 
-                                        type='number' 
+                                        type='text' 
                                         placeholder='ex: 0891204123' 
                                         isRequired={true}
                                         onChange={(e) => setleaderPhone(e.target.value)} />
@@ -969,7 +1001,87 @@ const RegisterTeamPage = () => {
                                     </HStack>
                                     </>
                                 )
-                            } else if(activeStep == 4) {
+                            } else if (activeStep == 4) {
+                                return (
+                                    <>
+                                        <Box 
+                                            color="white"
+                                            lineHeight="150%"
+                                            textAlign="left"
+                                            w="30vw"
+                                        >
+                                            <FormControl>
+                                                <FormLabel className="label" mt="36px" htmlFor="leaderTwibbonLink">
+                                                    Leader Twibbon Link
+                                                </FormLabel>
+                                                <InputGroup className="input" >
+                                                    <Input 
+                                                    id="leaderTwibbonLink" 
+                                                    type='text' 
+                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
+                                                    isRequired={true}
+                                                    onChange={(e) => setLeaderTwibbonLink(e.target.value)} />
+                                                </InputGroup>
+                                                <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
+                                                    Leader Follow Accounts Link
+                                                </FormLabel>
+                                                <InputGroup className="input" >
+                                                    <Input 
+                                                    id="leaderFollowLink" 
+                                                    type='text' 
+                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
+                                                    isRequired={true}
+                                                    onChange={(e) => setLeaderFollowLink(e.target.value)} />
+                                                </InputGroup>
+                                                <FormLabel className="label" mt="36px" htmlFor="firstMemberTwibbonLink">
+                                                    First Member Twibbon Link
+                                                </FormLabel>
+                                                <InputGroup className="input" >
+                                                    <Input 
+                                                    id="firstMemberTwibbonLink" 
+                                                    type='text' 
+                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
+                                                    isRequired={true}
+                                                    onChange={(e) => setFirstMemberTwibbonLink(e.target.value)} />
+                                                </InputGroup>
+                                                <FormLabel className="label" mt="36px" htmlFor="firstMemberFollowLink">
+                                                    First Member Follow Link
+                                                </FormLabel>
+                                                <InputGroup className="input" >
+                                                    <Input 
+                                                    id="firstMemberFollowLink" 
+                                                    type='text' 
+                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
+                                                    isRequired={true}
+                                                    onChange={(e) => setFirstMemberFollowLink(e.target.value)} />
+                                                </InputGroup>
+                                                <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
+                                                    Second Member Twibbon Link
+                                                </FormLabel>
+                                                <InputGroup className="input" >
+                                                    <Input 
+                                                    id="secondMemberTwibbonLink" 
+                                                    type='text' 
+                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
+                                                    isRequired={true}
+                                                    onChange={(e) => setSecondMemberTwibbonLink(e.target.value)} />
+                                                </InputGroup>
+                                                <FormLabel className="label" mt="36px" htmlFor="secondMemberFollowLink">
+                                                    Second Member Follow Link
+                                                </FormLabel>
+                                                <InputGroup className="input" >
+                                                    <Input 
+                                                    id="secondMemberFollowLink" 
+                                                    type='text'
+                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
+                                                    isRequired={true}
+                                                    onChange={(e) => setSecondMemberFollowLink(e.target.value)} />
+                                                </InputGroup>
+                                            </FormControl>
+                                        </Box>
+                                    </>
+                                )
+                            } else if(activeStep == 5) {
                                 return (
                                     <>Please proceed to pay the registration fee. If you need help, check out the payment FAQ below the 
                                     register and previous button, or contact us at 081292138924</>
@@ -1006,9 +1118,9 @@ const RegisterTeamPage = () => {
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 border="none"
-                                onClick={activeStep != 4 ? handleNext : handleSubmit}
+                                onClick={activeStep != 5 ? handleNext : handleSubmit}
                                 mb="36px">
-                                {activeStep != 4 ? "Next" : "Register"}
+                                {activeStep != 5 ? "Next" : "Register"}
                             </Button>
                         </Flex>
                         
