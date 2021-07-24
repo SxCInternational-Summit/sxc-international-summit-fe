@@ -4,7 +4,6 @@ import {
 
 import Navbar from "../../component/navbar"
 import Jumbotron from "../../component/jumbotron";
-import styles from "../../styles/landing.module.scss"
 import Partner from "../../component/partner";
 import { useState } from "react";
 import Footer from "../../component/footer";

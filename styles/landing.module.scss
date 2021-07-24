@@ -3,7 +3,6 @@
 .backgroundImage {
     background: $bgLanding no-repeat center center;
     background-size: cover;
-    height: 780px !important; 
     top: 0;
     width: 100% !important;
     overflow-x: hidden; 
@@ -14,11 +13,6 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: "";
-}
-
-.titleFont{
-    font: 700 64px $tertiaryFont;
-    line-height: 100%;
 }
 
 .sloganFont{

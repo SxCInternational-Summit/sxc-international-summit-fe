@@ -3,11 +3,13 @@ import {
     Flex,
     Text,
     Stack,
-    Center
+    Center,
+    useMediaQuery
 } from "@chakra-ui/react";
 import styles from "../styles/footer.module.scss"
 
-const Footer = ({isDesktop}) => {
+const Footer = () => {
+    const [isDesktop] = useMediaQuery("(min-width: 48em)")
     return(
         <Center w="100%" h="192px" bgColor="#080818">
             {isDesktop ? <Image src="/images/footerLogo.svg" className={styles.footerLogo} height={{base:"48px", sm: "92px", md: "128px"}} alt=""/> : <Image src="/images/footerLogo.svg" className={styles.footerLogo2} alt=""/>}
