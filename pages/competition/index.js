@@ -17,7 +17,7 @@ const CompetitionPage = () => {
             type: "Competition",
             date: "27-29 June 2021",
             fee: "Free",
-            linkTo: 'http://localhost:3000/competition/product-branding'
+            linkTo: 'http://localhost:3000/competition/register-team'
           }
     ]
 
