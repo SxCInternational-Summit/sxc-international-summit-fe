@@ -70,3 +70,25 @@ a {
   line-height: 16px;
   color: #999999;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  max-width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333333;
+  border-radius: 4px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F8C800; 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F8C800; 
+}

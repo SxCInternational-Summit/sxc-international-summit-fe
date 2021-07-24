@@ -10,7 +10,7 @@ const EventsHeld = ({props}) => {
         px={{base: "36px", md:"20%"}}
         >
             <Text
-                color="yellow"
+                color="#F8C800"
                 className="tertiaryFont"
                 fontSize={{base:"24px", md:"36px"}}
                 lineHeight={{base:"28px", md:"42px"}}

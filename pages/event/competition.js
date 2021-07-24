@@ -5,6 +5,7 @@ import Faq from "../../component/faq"
 import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
+import Timeline from "../../component/timeline"
 
 const CompetitionPage = () => {
     const backgroundImageURL = "/images/competitionBackground.svg"
@@ -34,6 +35,46 @@ const CompetitionPage = () => {
 		}
 	]
 
+    const timelines = [
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Instagram Takeover #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        },
+        {
+            title : "Pre-Event Talkshow #1",
+            date: "19 June 2021"
+        }
+        
+    ]
+
     return(
     <>
         <Navbar />
@@ -42,6 +83,7 @@ const CompetitionPage = () => {
         subtitle="Case based competition that will encourage each participant to see themself as a leader, who is responsible for solving a business problem of a company in a creative and innovative way with a high level of realization and practice."
         image={backgroundImageURL} />
         <EventsHeld props={events}/>
+        <Timeline type="Competition" events={timelines} />
         <EventList events={events} />
         <Faq faqList={faq} title={true} />
         <EventComponent />
