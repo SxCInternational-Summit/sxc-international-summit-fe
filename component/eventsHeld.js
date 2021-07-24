@@ -24,8 +24,8 @@ const EventsHeld = ({props}) => {
                     <FlexCard 
                     key={index} 
                     image={prop.src} 
-                    title={prop.title}
-                    subtitle={prop.caption} />
+                    title={prop.speaker ? prop.speaker : prop.title}
+                    subtitle={prop.subtitle} />
                 )
             })}
         </Center>

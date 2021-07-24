@@ -62,7 +62,7 @@ const Card = ({title, image, caption, type, date, fee, numOfPreEvent, linkTo}) =
                 lineHeight="24px"
                 fontWeight="400"
                 mb="12px">
-                    {caption}
+                    {subtitle}
                 </Text>
             </Box>
             

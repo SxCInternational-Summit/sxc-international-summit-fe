@@ -13,7 +13,7 @@ const CompetitionPage = () => {
         {
             title: "Business Case Competition",
             src: "/images/event1.svg",
-            caption: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
             type: "Competition",
             date: "27-29 June 2021",
             fee: "Free",

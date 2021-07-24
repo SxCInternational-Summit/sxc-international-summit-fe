@@ -14,7 +14,7 @@ const PreEventPage = () => {
         {
             title: "Talkshow",
             src: "/images/event1.svg",
-            caption: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
             type: "Pre-Event",
             date: "27-29 June 2021",
             fee: "Free"
@@ -22,7 +22,7 @@ const PreEventPage = () => {
           {
             title: "Talkshow",
             src: "/images/event1.svg",
-            caption: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
             type: "Pre-Event",
             date: "27-29 June 2021",
             fee: "Free"
@@ -30,7 +30,7 @@ const PreEventPage = () => {
           {
             title: "Talkshow",
             src: "/images/event1.svg",
-            caption: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
             type: "Pre-Event",
             date: "27-29 June 2021",
             fee: "Free"
@@ -38,7 +38,7 @@ const PreEventPage = () => {
           {
             title: "Talkshow",
             src: "/images/event1.svg",
-            caption: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
             type: "Pre-Event",
             date: "27-29 June 2021",
             fee: "Free"
@@ -47,12 +47,12 @@ const PreEventPage = () => {
 
     const speakers = [
       {
-        caption: "Senior Product Manager Bukalapak",
+        subtitle: "Senior Product Manager Bukalapak",
         src: "/images/wimala_puspa.png",
         title: "Wimala Puspa Enggaringtyas",
       },
       {
-        caption: "Brand Manager Unilever",
+        subtitle: "Brand Manager Unilever",
         src: "/images/rifka_aulia.png",
         title: "Rifka Auliya",
       },
