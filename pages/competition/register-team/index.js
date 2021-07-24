@@ -127,9 +127,14 @@ const RegisterTeamPage = () => {
             setErrorRegister(error)
         }
 
-        if (errorRegister && !success) {
+        if (errorRegister || !success) {
+            // Kalau error munculin error messagenya apa, trus suruh user kontak admin
+            // Jangan lanjutin dia ke page payment karena datanya engga masuk
             window.alert(`An error occured (register): ${errorRegister.message}`)
             window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
+        } else {
+            // Berhasil maka lanjut ke payment?
+            handleNext()
         }
     }
 

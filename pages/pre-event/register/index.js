@@ -75,7 +75,7 @@ const RegisterPage = () => {
             success = false
         }
 
-        if (errorRegister && !success) {
+        if (errorRegister || !success) {
             window.alert(`An error occured (register): ${errorRegister.message}`)
             window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
         } else {
