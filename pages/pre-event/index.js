@@ -47,21 +47,21 @@ const PreEventPage = () => {
 
     const speakers = [
       {
-        title: "Senior Product Manager Bukalapak",
+        caption: "Senior Product Manager Bukalapak",
         src: "/images/wimala_puspa.png",
-        speaker: "Wimala Puspa Enggaringtyas",
+        title: "Wimala Puspa Enggaringtyas",
       },
       {
-        title: "Brand Manager Unilever",
+        caption: "Brand Manager Unilever",
         src: "/images/rifka_aulia.png",
-        speaker: "Rifka Auliya",
+        title: "Rifka Auliya",
       },
     ]
 
     const mods = [
       {
-        speaker: 'Bagastama Aulia Mahardika',
-        title: 'FET and Corporate Finance Intern at Unilever| Undergraduate Accounting Student at Universitas Indonesia',
+        title: 'Bagastama Aulia Mahardika',
+        caption: 'FET and Corporate Finance Intern at Unilever| Undergraduate Accounting Student at Universitas Indonesia',
         src: '',
       },
     ]

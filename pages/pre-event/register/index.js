@@ -31,7 +31,7 @@ const checkStatus = resp => {
 
 const head = {
     'Accept': 'application/json',
-    'Content-type': 'application/json'
+    'Content-Type': 'application/json'
 }
 
 const { API_URL } = process.env
@@ -64,7 +64,7 @@ const RegisterPage = () => {
         try {
             const add = await fetch(`${API_URL}/webinars`, {
                 method: 'POST',
-                headers,
+                headers: head,
                 body: JSON.stringify(registry)
             })
                 .then(checkStatus)
@@ -76,7 +76,10 @@ const RegisterPage = () => {
         }
 
         if (errorRegister || !success) {
-            window.alert(`An error occured (register): ${errorRegister.message}`)
+            if (errorRegister.message != null) {
+                window.alert(`An error occured (register): ${errorRegister.message}`)
+            }
+            
             window.alert('An error has occured! Please reload this page. If this continues, please contact: admin@sxcintersummit.com')
         } else {
             router.push('register/success')
