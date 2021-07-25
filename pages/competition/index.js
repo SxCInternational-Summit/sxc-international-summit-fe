@@ -22,7 +22,7 @@ const CompetitionPage = () => {
             type: "Competition",
             date: "26 July 2021 - 10 October 2021",
             fee: "IDR 279.000",
-            linkTo: `${PROD_URL}/competition/register-team`
+            linkTo: 'https://sxcinternationalsummit.vercel.app/competition/register-team'
           }
     ]
 

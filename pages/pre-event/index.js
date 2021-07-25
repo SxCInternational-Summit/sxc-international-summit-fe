@@ -6,43 +6,26 @@ import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 
-import Head from 'next/head'
+//import Head from 'next/head'
+
+import { NextSeo } from "next-seo"
 
 const PreEventPage = () => {
+    const title = "Pre-Event | SxCInternational Summit 2021"
+    const description = "SxC International Summit Pre-Event"
+
     const backgroundImageURL = "/images/preEventBackground.svg"
     const events = [
         {
-            title: "Talkshow",
+            title: "Maintain product existence in the middle of global pandemic",
             src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "To engage and reach more of aspiring Gen-Zs that are interested in developing their own brand.  The webinar will cover how to maintain product existence 101, especially through the challenges in this uncertain era of global pandemic",
             type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
+            date: "28 August 2021",
+            fee: "Free",
+            linkTo: "https://sxcinternationalsummit.vercel.app/pre-event/register"
           },
-          {
-            title: "Talkshow",
-            src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
-            type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
-          },
-          {
-            title: "Talkshow",
-            src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
-            type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
-          },
-          {
-            title: "Talkshow",
-            src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
-            type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
-          }
+          
     ]
 
     const speakers = [
@@ -83,9 +66,10 @@ const PreEventPage = () => {
 
     return(
     <>
-        <Head>
-          <title>Pre-Event | SxCIntersummit 2021</title>
-        </Head>
+        <NextSeo
+          title={title}
+          description={description}
+        />
         <Navbar />
         <Hero 
           title="SxC International Summit Pre-Event"
