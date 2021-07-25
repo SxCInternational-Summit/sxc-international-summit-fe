@@ -16,10 +16,10 @@ const CompetitionPage = () => {
         {
             title: "Product Branding Competition",
             src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "StudentsxCEOs International Summit Competition is a case-based competition consisting of two stages, proposal stage and pitching stage.",
             type: "Competition",
             date: "26 July 2021 - 10 October 2021",
-            fee: "IDR ",
+            fee: "IDR 279.000",
             linkTo: `${PROD_URL}/competition/register-team`
           }
     ]
@@ -28,17 +28,17 @@ const CompetitionPage = () => {
         {
             title: "Interactive Coaching Clinics",
             subtitle: "We are going to hold three coaching clinics in a workshop fashion with experienced professionals to facilitate the participants in facing the competition and give the best results possible for the case that needs to be solved.",
-            src: "/images/event1.svg"
+            src: "/images/coaching.jfif"
         },
         {
             title: "Proposal Formulation and Submission",
             subtitle: "Putting ideas into a structurized plan, this is the time for participants to bring their best solutions, and propose them in a proposal format. The top 10 standing out proposals will be selected to present in the grand final stage.",
-            src: "/images/event1.svg"
+            src: "/images/proposal.jfif"
         },
         {
             title: "The Grand Final",
             subtitle: "Speak confidently and pitch eloquently. The final stage will present the top 10 finalists to present their proposed ideas in front of the professional judges and the public streamers to determine who's going to be the one taking the winner title in the awarding ceremony.",
-            src: "/images/event1.svg"
+            src: "/images/presentation.jfif"
         },
     ]
 
@@ -121,8 +121,8 @@ const CompetitionPage = () => {
     <>
         <Navbar />
         <Hero 
-        title="SxC International Summit Competition"
-        subtitle="Case based competition that will encourage each participant to see themself as a leader, who is responsible for solving a business problem of a company in a creative and innovative way with a high level of realization and practice."
+        title=" International Product Branding Competition"
+        subtitle="StudentsxCEOs International Summit Competition is a case-based competition consisting of two stages, proposal stage and pitching stage."
         image={backgroundImageURL}
         buttons={true}
         guidebookURL="https://drive.google.com/file/d/1O0_n4O6nhL4o6fV_sQlEm6BJksRk5LZ-/view"
