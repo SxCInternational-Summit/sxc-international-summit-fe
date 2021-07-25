@@ -21,7 +21,7 @@ import {
     ModalCloseButton,
     useDisclosure,
     Image,
-    Icon
+    Icon,
   } from "@chakra-ui/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -1152,7 +1152,7 @@ const RegisterTeamPage = () => {
                                                     fontSize="1rem"
                                                     color="#F8C800"
                                                 >
-                                                    Rp30.000,-
+                                                    Rp279.000,- <Text color="#FF6941">(Early Bird)</Text>
                                                 </Text>
                                             </Box>
                                             <Box mt="20px">
@@ -1166,14 +1166,14 @@ const RegisterTeamPage = () => {
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                BCA - 01234567
+                                                                BCA - 5215131189
                                                             </Text>
                                                             <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
-                                                                a.n. Antonius Prolionjo
+                                                                a.n. Phylicia Febian
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
-                                                    <ListItem>
+                                                    {/* <ListItem>
                                                     <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
                                                                 Jenius - 13481943
@@ -1182,7 +1182,7 @@ const RegisterTeamPage = () => {
                                                                 a.n. Antonius Prolionjo
                                                             </Text>
                                                         </Flex>
-                                                    </ListItem>
+                                                    </ListItem> */}
                                                 </UnorderedList>
                                             </Box>
                                         </Box>
@@ -1208,7 +1208,7 @@ const RegisterTeamPage = () => {
                                                     fontSize="1rem"
                                                     color="#F8C800"
                                                 >
-                                                    US$2.49
+                                                    USD 21.00 <Text color="#FF6941">(Early Bird)</Text>
                                                 </Text>
                                             </Box>
                                                 <Text 
@@ -1220,12 +1220,12 @@ const RegisterTeamPage = () => {
                                                 </Text>
                                                 <UnorderedList color="white">
                                                     <ListItem>
-                                                        <Flex fontSize="1rem" align="center">
+                                                        <Flex fontSize="0.85rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Paypal - 01234567
+                                                                +6281218989775 <br /> phyliciafebian@gmail.com
                                                             </Text>
-                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
-                                                                (Antonius Prolionjo)
+                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="10px">
+                                                                (Phylicia Febian)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
@@ -1308,16 +1308,17 @@ const RegisterTeamPage = () => {
                         {activeStep != 6 ? <Flex justify="space-between" w="100%" mt="48px">
                             <Button
                                 border="1px solid #F8C800"
-                                mt="40px" 
+                                mt="40px"
                                 type="submit"
                                 bgColor="black"
                                 color="white"
-                                p="10px 24px" 
+                                p="10px 24px"
                                 borderRadius="4px" 
                                 className="yellowButtonFont"
                                 onClick={handleBack}
                                 mb="36px"
-                                isDisabled={activeStep == 1}>
+                                isDisabled={activeStep == 1}
+                                >
                                 Previous
                             </Button>
                             <Button
@@ -1330,7 +1331,9 @@ const RegisterTeamPage = () => {
                                 className="yellowButtonFont"
                                 border="none"
                                 onClick={activeStep != 5 ? handleNext : onOpen}
-                                mb="36px">
+                                mb="36px"
+                                //isDisabled={}
+                                >
                                 {activeStep != 5 ? "Next" : "Register"}
                             </Button>
                         </Flex> : <></>}
