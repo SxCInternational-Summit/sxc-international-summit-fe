@@ -20,9 +20,9 @@ const EventTab = () => {
     const router = useRouter()
     
 
-    const preEventCaption = "There are three events highlighted in this year's international summit which consist of Pre-Event, Product Branding Competition, and Main Events. Additionally, there will be webinars and coaching clinics conducted to further upgrade your skill in managing as well as maintaining your product idea. We can't wait to see you in our events. Click the button below to learn more."
-    const competitionCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    const mainEventCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    const preEventCaption = "The opening ceremony of the International Summit series in the form of a webinar with 2 inspiring speakers to elaborate our theme. The pre-event will be held on 28th of August 2021 and will be fully conducted in english. "
+    const competitionCaption = "Product Branding Competition which comes with Interactive Coaching Clinic and Main Conference."
+    const mainEventCaption = "Elaborate and further improve yourself by participating in company visits from several reputable companies. More information Coming Soon!"
 
     const [activeCaption, setactiveCaption] = useState(preEventCaption)
     return(
@@ -100,7 +100,7 @@ const EventTab = () => {
                             lineHeight="150%"
                             color="white"
                         >
-                            11-12 June
+                            28 August 2021
                         </Text>
                     </Box>
                     <Box>
@@ -124,7 +124,7 @@ const EventTab = () => {
                             lineHeight="150%"
                             color="white"
                         >
-                            11-12 June
+                            26 July - 10 October 2021
                         </Text>
                     </Box>
                     <Box>
@@ -148,7 +148,7 @@ const EventTab = () => {
                             lineHeight="150%"
                             color="white"
                         >
-                            11-12 June
+                            16 October 2021
                         </Text>
                     </Box>
                 </Flex>

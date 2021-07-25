@@ -1167,146 +1167,148 @@ const RegisterTeamPage = () => {
                             } else if(activeStep == 5) {
                                 return (
                                     <>
-                                        <Box 
+                                        <Center>
+                                            <Box 
+                                                color="white"
+                                                lineHeight="150%"
+                                                textAlign="left"
+                                                mt="60px"
+                                                w="80vw">
+                                                <Text 
+                                                    className="tertiaryFont"
+                                                    fontWeight="700"
+                                                    fontSize="0.75rem"
+                                                >
+                                                    Item Name
+                                                </Text>
+                                                <Text
+                                                    mt="0.25rem"
+                                                    className="secondaryFont"
+                                                    fontSize="1rem"
+                                                >
+                                                    Product Branding Competition
+                                                </Text>
+                                            </Box>
+                                            <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
+                                                <Text fontWeight="700">
+                                                    DOMESTIC
+                                                </Text>
+                                                <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
+                                            </Flex>
+                                            <Box
+                                                w="80vw"
+                                                lineHeight="125%"
+                                                className="tertiaryFont"
+                                                fontWeight="700">
+                                                <Box mt="20px">
+                                                    <Text 
+                                                        color="white"
+                                                        fontSize="0.75rem"
+                                                    >
+                                                        Registration Fee
+                                                    </Text>
+                                                    <Text
+                                                        mt="0.25rem"
+                                                        fontSize="1rem"
+                                                        color="#F8C800"
+                                                    >
+                                                        Rp279.000,- <Text color="#FF6941">(Early Bird)</Text>
+                                                    </Text>
+                                                </Box>
+                                                <Box mt="20px">
+                                                    <Text 
+                                                        color="white"
+                                                        fontSize="0.75rem"
+                                                    >
+                                                        Payment Option
+                                                    </Text>
+                                                    <UnorderedList color="white">
+                                                        <ListItem>
+                                                            <Flex fontSize="1rem" align="center">
+                                                                <Text color="#F8C800">
+                                                                    BCA - 5215131189
+                                                                </Text>
+                                                                <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                    a.n. Phylicia Febian
+                                                                </Text>
+                                                            </Flex>
+                                                        </ListItem>
+                                                        {/* <ListItem>
+                                                        <Flex fontSize="1rem" align="center">
+                                                                <Text color="#F8C800">
+                                                                    Jenius - 13481943
+                                                                </Text>
+                                                                <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                    a.n. Antonius Prolionjo
+                                                                </Text>
+                                                            </Flex>
+                                                        </ListItem> */}
+                                                    </UnorderedList>
+                                                </Box>
+                                            </Box>
+                                            <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
+                                                <Text fontWeight="700">
+                                                    INTERNATIONAL
+                                                </Text>
+                                                <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
+                                            </Flex>
+                                            <Box
+                                                w="80vw"
+                                                lineHeight="125%"
+                                                className="tertiaryFont"
+                                                fontWeight="700">
+                                                <Box mt="20px">
+                                                    <Text 
+                                                        color="white"
+                                                        fontSize="0.75rem"
+                                                    >
+                                                        Registration Fee
+                                                    </Text>
+                                                    <Text
+                                                        mt="0.25rem"
+                                                        fontSize="1rem"
+                                                        color="#F8C800"
+                                                    >
+                                                        USD 21.00 <Text color="#FF6941">(Early Bird)</Text>
+                                                    </Text>
+                                                </Box>
+                                                    <Text 
+                                                        color="white"
+                                                        fontSize="0.75rem"
+                                                        mt="20px"
+                                                    >
+                                                        Payment Option
+                                                    </Text>
+                                                    <UnorderedList color="white">
+                                                        <ListItem>
+                                                            <Flex fontSize="0.75rem" align="center">
+                                                                <Text color="#F8C800">
+                                                                    PayPal - phyliciafebian@gmail.com
+                                                                </Text>
+                                                                <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="10px">
+                                                                    (Phylicia Febian)
+                                                                </Text>
+                                                            </Flex>
+                                                        </ListItem>
+                                                    </UnorderedList>
+                                            </Box>
+                                            <Box 
                                             color="white"
                                             lineHeight="150%"
-                                            textAlign="left"
+                                            textAlign="center"
                                             mt="60px"
                                             w="80vw">
-                                            <Text 
-                                                className="tertiaryFont"
-                                                fontWeight="700"
-                                                fontSize="0.75rem"
-                                            >
-                                                Item Name
-                                            </Text>
                                             <Text
                                                 mt="0.25rem"
                                                 className="secondaryFont"
-                                                fontSize="1rem"
+                                                fontSize="1.5rem"
+                                                textAlign="center"
+                                                fontWeight="600"
                                             >
-                                                Product Branding Competition
+                                                Please send each person a copy of member`s student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
                                             </Text>
                                         </Box>
-                                        <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
-                                            <Text fontWeight="700">
-                                                DOMESTIC
-                                            </Text>
-                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
-                                        </Flex>
-                                        <Box
-                                            w="80vw"
-                                            lineHeight="125%"
-                                            className="tertiaryFont"
-                                            fontWeight="700">
-                                            <Box mt="20px">
-                                                <Text 
-                                                    color="white"
-                                                    fontSize="0.75rem"
-                                                >
-                                                    Registration Fee
-                                                </Text>
-                                                <Text
-                                                    mt="0.25rem"
-                                                    fontSize="1rem"
-                                                    color="#F8C800"
-                                                >
-                                                    Rp279.000,- <Text color="#FF6941">(Early Bird)</Text>
-                                                </Text>
-                                            </Box>
-                                            <Box mt="20px">
-                                                <Text 
-                                                    color="white"
-                                                    fontSize="0.75rem"
-                                                >
-                                                    Payment Option
-                                                </Text>
-                                                <UnorderedList color="white">
-                                                    <ListItem>
-                                                        <Flex fontSize="1rem" align="center">
-                                                            <Text color="#F8C800">
-                                                                BCA - 5215131189
-                                                            </Text>
-                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
-                                                                a.n. Phylicia Febian
-                                                            </Text>
-                                                        </Flex>
-                                                    </ListItem>
-                                                    {/* <ListItem>
-                                                    <Flex fontSize="1rem" align="center">
-                                                            <Text color="#F8C800">
-                                                                Jenius - 13481943
-                                                            </Text>
-                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
-                                                                a.n. Antonius Prolionjo
-                                                            </Text>
-                                                        </Flex>
-                                                    </ListItem> */}
-                                                </UnorderedList>
-                                            </Box>
-                                        </Box>
-                                        <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
-                                            <Text fontWeight="700">
-                                                INTERNATIONAL
-                                            </Text>
-                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
-                                        </Flex>
-                                        <Box
-                                            w="80vw"
-                                            lineHeight="125%"
-                                            className="tertiaryFont"
-                                            fontWeight="700">
-                                            <Box mt="20px">
-                                                <Text 
-                                                    color="white"
-                                                    fontSize="0.75rem"
-                                                >
-                                                    Registration Fee
-                                                </Text>
-                                                <Text
-                                                    mt="0.25rem"
-                                                    fontSize="1rem"
-                                                    color="#F8C800"
-                                                >
-                                                    USD 21.00 <Text color="#FF6941">(Early Bird)</Text>
-                                                </Text>
-                                            </Box>
-                                                <Text 
-                                                    color="white"
-                                                    fontSize="0.75rem"
-                                                    mt="20px"
-                                                >
-                                                    Payment Option
-                                                </Text>
-                                                <UnorderedList color="white">
-                                                    <ListItem>
-                                                        <Flex fontSize="0.75rem" align="center">
-                                                            <Text color="#F8C800">
-                                                                PayPal - phyliciafebian@gmail.com
-                                                            </Text>
-                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="10px">
-                                                                (Phylicia Febian)
-                                                            </Text>
-                                                        </Flex>
-                                                    </ListItem>
-                                                </UnorderedList>
-                                        </Box>
-                                        <Box 
-                                        color="white"
-                                        lineHeight="150%"
-                                        textAlign="center"
-                                        mt="60px"
-                                        w="80vw">
-                                        <Text
-                                            mt="0.25rem"
-                                            className="secondaryFont"
-                                            fontSize="1.5rem"
-                                            textAlign="center"
-                                            fontWeight="600"
-                                        >
-                                            Please send each person a copy of member`s student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
-                                        </Text>
-                                    </Box>
+                                    </Center>
                                     </>
                                 )
                             } else {
