@@ -53,7 +53,10 @@ const Jumbotron = () => {
                 </>}
                 
 
-                <Text className={styles.sloganFont} mt="15px">
+                <Text 
+                    className={styles.sloganFont} 
+                    mt="15px"
+                    fontSize="16px">
                         Stand Up, Stand Out, Be The One
                 </Text>
             </Box>
