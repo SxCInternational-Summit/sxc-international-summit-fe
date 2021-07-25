@@ -301,7 +301,7 @@ const CompetitionPage = () => {
                             lineHeight="28px"
                             color="#F8C800"
                         >
-                            Manager
+                            All Package
                         </Text>
                         <UnorderedList 
                             mt="12px" 
@@ -310,9 +310,8 @@ const CompetitionPage = () => {
                             fontSize="16px"
                             lineHeight="150%"
                         >
-                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                            <ListItem>Consectetur adipiscing elit</ListItem>
-                            <ListItem>Integer molestie lorem at massa</ListItem>
+                            <ListItem>Get Access to All Events</ListItem>
+                            <ListItem>Applies to all team members</ListItem>
                         </UnorderedList>
                         <Text
                             mt="12px"
@@ -322,7 +321,7 @@ const CompetitionPage = () => {
                             lineHeight="20px"
                             color="white"
                         >
-                            Rp85.000,-
+                            Rp309.000,- (Early Bird)
                         </Text>
                         <Button
                             color="black"
