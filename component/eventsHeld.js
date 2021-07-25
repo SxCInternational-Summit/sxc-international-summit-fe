@@ -1,7 +1,7 @@
 import { Center, Text } from "@chakra-ui/react"
 import { FlexCard } from "./card"
 
-const EventsHeld = ({props}) => {
+const EventsHeld = ({title, props}) => {
     return(
         <>
         <Center
@@ -17,7 +17,7 @@ const EventsHeld = ({props}) => {
                 fontWeight="700"
                 mt={{base:"24px", md:"80px"}}
             >
-                Meet The Speakers
+                {title}
             </Text>
             {props.map((prop, index) => {
                 return(
