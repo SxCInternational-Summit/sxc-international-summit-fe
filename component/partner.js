@@ -25,7 +25,7 @@ const Partner = () => {
                     </Circle>
                     <Box w="90%">
                         <Text color="white" className={[styles.descriptionBox, styles.firstBox].join(" ")}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit pellentesque habitant. Facilisi nullam vehicula ipsum a arcu. Malesuada proin libero nunc consequat interdum varius sit amet. Id velit ut tortor pretium viverra. Nibh cras pulvinar mattis nunc sed blandit. Nunc pulvinar sapien et ligula ullamcorper
+                        A grand event organized by StudentsxCEOs Jakarta that will be held in October 2021. Aiming to be a catalyst for students all across the globe to help prepare themselves to enter the work environment and distinct themselves from their competitors. Hoping participants can learn necessary qualities needed to excel in the work environment by holding meaningful events and inviting insightful speakers, especially during post-pandemic recovery.
                         </Text>
                     </Box>
                 </Box>
@@ -35,7 +35,7 @@ const Partner = () => {
                     </Circle>
                     <Box w="90%" h="90%">
                         <Text color="white" className={[styles.descriptionBox, styles.secondBox].join(" ")}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit pellentesque habitant. Facilisi nullam vehicula ipsum a arcu. Malesuada proin libero nunc consequat interdum varius sit amet. Id velit ut tortor pretium viverra. Nibh cras pulvinar mattis nunc sed blandit. Nunc pulvinar sapien et ligula ullamcorper
+                        Aiming to offer a place for our committees, volunteers, and participants to develop and prepare themselves to enter the work environment. StudentsxCEOs Summit invited the participants to see the continuous changes of the business world and showed them how to respond appropriately.
                         </Text>
                     </Box>
                 </Box>
@@ -45,7 +45,7 @@ const Partner = () => {
                     </Circle>
                     <Box w="90%" h="90%">
                         <Text color="white" className={[styles.descriptionBox, styles.thirdBox].join(" ")}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit pellentesque habitant. Facilisi nullam vehicula ipsum a arcu. Malesuada proin libero nunc consequat interdum varius sit amet. Id velit ut tortor pretium viverra. Nibh cras pulvinar mattis nunc sed blandit. Nunc pulvinar sapien et ligula ullamcorper
+                        1. Organize events that are meaningful and insightful to prepare us to enter the work environment. 2. Provide networking sessions between committees, between participants, and between committees and participants. 3. Facilitate and maintain a conducive, harmonious, disciplined, and responsible committee situation.
                         </Text>
                     </Box>
                 </Box>
