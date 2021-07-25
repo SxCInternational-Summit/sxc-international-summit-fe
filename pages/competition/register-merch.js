@@ -1219,79 +1219,81 @@ const RegisterTeamPage = () => {
                             } else if(activeStep == 5) {
                                 return (
                                     <>
-                                        <Box 
-                                            color="white"
-                                            lineHeight="150%"
-                                            textAlign="left"
-                                            mt="60px"
-                                            w="80vw">
-                                            <Text 
-                                                className="tertiaryFont"
-                                                fontWeight="700"
-                                                fontSize="0.75rem"
-                                            >
-                                                Item Name
-                                            </Text>
-                                            <Text
-                                                mt="0.25rem"
-                                                className="secondaryFont"
-                                                fontSize="1rem"
-                                            >
-                                                Product Branding Competition
-                                            </Text>
-                                        </Box>
-                                        <Box
-                                            lineHeight="125%"
-                                            className="tertiaryFont"
-                                            fontWeight="700"
-                                            w="80vw"
-                                            >
-                                            <Box mt="20px">
+                                        <Center>
+                                            <Box 
+                                                color="white"
+                                                lineHeight="150%"
+                                                textAlign="left"
+                                                mt="60px"
+                                                w="80vw">
                                                 <Text 
-                                                    color="white"
+                                                    className="tertiaryFont"
+                                                    fontWeight="700"
                                                     fontSize="0.75rem"
                                                 >
-                                                    Registration Fee
+                                                    Item Name
                                                 </Text>
                                                 <Text
                                                     mt="0.25rem"
+                                                    className="secondaryFont"
                                                     fontSize="1rem"
-                                                    color="#F8C800"
                                                 >
-                                                    Rp319.000,- <Text color="#FF6941">(Early Bird)</Text>
+                                                    Product Branding Competition
                                                 </Text>
                                             </Box>
-                                            <Box mt="20px">
-                                                <Text 
-                                                    color="white"
-                                                    fontSize="0.75rem"
+                                            <Box
+                                                lineHeight="125%"
+                                                className="tertiaryFont"
+                                                fontWeight="700"
+                                                w="80vw"
                                                 >
-                                                    Payment Option
-                                                </Text>
-                                                <UnorderedList color="white">
-                                                    <ListItem>
+                                                <Box mt="20px">
+                                                    <Text 
+                                                        color="white"
+                                                        fontSize="0.75rem"
+                                                    >
+                                                        Registration Fee
+                                                    </Text>
+                                                    <Text
+                                                        mt="0.25rem"
+                                                        fontSize="1rem"
+                                                        color="#F8C800"
+                                                    >
+                                                        Rp319.000,- <Text color="#FF6941">(Early Bird)</Text>
+                                                    </Text>
+                                                </Box>
+                                                <Box mt="20px">
+                                                    <Text 
+                                                        color="white"
+                                                        fontSize="0.75rem"
+                                                    >
+                                                        Payment Option
+                                                    </Text>
+                                                    <UnorderedList color="white">
+                                                        <ListItem>
+                                                            <Flex fontSize="1rem" align="center">
+                                                                <Text color="#F8C800">
+                                                                    BCA - 5215131189
+                                                                </Text>
+                                                                <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                    a.n. Phylicia Febian
+                                                                </Text>
+                                                            </Flex>
+                                                        </ListItem>
+                                                        {/* <ListItem>
                                                         <Flex fontSize="1rem" align="center">
-                                                            <Text color="#F8C800">
-                                                                BCA - 5215131189
-                                                            </Text>
-                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
-                                                                a.n. Phylicia Febian
-                                                            </Text>
-                                                        </Flex>
-                                                    </ListItem>
-                                                    {/* <ListItem>
-                                                    <Flex fontSize="1rem" align="center">
-                                                            <Text color="#F8C800">
-                                                                Jenius - 13481943
-                                                            </Text>
-                                                            <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
-                                                                a.n. Antonius Prolionjo
-                                                            </Text>
-                                                        </Flex>
-                                                    </ListItem> */}
-                                                </UnorderedList>
+                                                                <Text color="#F8C800">
+                                                                    Jenius - 13481943
+                                                                </Text>
+                                                                <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="0.25rem">
+                                                                    a.n. Antonius Prolionjo
+                                                                </Text>
+                                                            </Flex>
+                                                        </ListItem> */}
+                                                    </UnorderedList>
+                                                </Box>
                                             </Box>
-                                        </Box>
+                                        </Center>
                                         {/* <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
                                             <Text fontWeight="700">
                                                 INTERNATIONAL
