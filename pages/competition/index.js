@@ -1,4 +1,4 @@
-import { Button, Center } from "@chakra-ui/react"
+import { Button, Center, Flex, Box, Image, Text, UnorderedList, ListItem } from "@chakra-ui/react"
 import EventComponent from "../../component/eventComponent"
 import EventList from "../../component/eventList"
 import EventsHeld from "../../component/eventsHeld"
@@ -127,6 +127,275 @@ const CompetitionPage = () => {
         buttons={true}
         guidebookURL="https://drive.google.com/file/d/1O0_n4O6nhL4o6fV_sQlEm6BJksRk5LZ-/view"
         />
+        <Box bgColor="#04040C">
+            <Center 
+                pt="120px"
+                className="tertiaryFont"
+                fontWeight="700"
+                fontSize="36px"
+                lineHeight="42px"
+                color="#F8C800"
+            >
+                Total Prize
+            </Center>
+            <Center>
+                <Flex align="center" mt="60px">
+                    <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
+                        <Image src="/images/secondPlace.svg" alt="" />
+                        <Center
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="#0FA1DB"
+                            mt="48px"
+                        >
+                            2nd Place
+                        </Center>   
+                        <Center
+                            className="secondaryFont"
+                            fontWeight="400"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="white"
+                            mb="12px"
+                        >
+                            Rp1.500.000
+                        </Center>
+                    </Box>
+                    <Box p="24px 35px" bgColor="#080818" borderRadius="16px" mx="87px">
+                        <Image src="/images/firstPlace.svg" alt="" />
+                        <Center
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="36px"
+                            lineHeight="42px"
+                            color="#F8C800"
+                            mt="48px"
+                        >
+                            1st Place
+                        </Center>   
+                        <Center
+                            className="secondaryFont"
+                            fontWeight="400"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="white"
+                            mb="12px"
+                        >
+                            Rp2.500.000
+                        </Center>
+                    </Box>
+                    <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
+                        <Image src="/images/thirdPlace.svg" alt="" />
+                        <Center
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="#0FA1DB"
+                            mt="48px"
+                        >
+                            3rd Place
+                        </Center>   
+                        <Center
+                            className="secondaryFont"
+                            fontWeight="400"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="white"
+                            mb="12px"
+                        >
+                            Rp1.00.000
+                        </Center>
+                    </Box>
+                </Flex>
+            </Center>
+        </Box>
+        <Box bgColor="#04040C" px="20%">
+            <Center
+                pt="120px"
+                className="tertiaryFont"
+                fontWeight="700"
+                fontSize="36px"
+                lineHeight="42px"
+                color="#F8C800"
+            >
+                Case Collaborator
+            </Center>
+            <Center mt="60px">
+                <Image src="/images/bukalapak.svg" alt="" />
+            </Center>
+            <Text
+                className="secondaryFont"
+                fontWeight="400"
+                fontSize="16px"
+                lineHeight="150%"
+                color="white"
+                textAlign="center"
+                mt="40px"
+            >
+                Bukalapak is an Indonesian e-commerce company with a mission to create a fair economy for all. It was founded in 2010 as an online marketplace to enable small and medium enterprises to expand online and has now also grown to support smaller traditional family-owned businesses (warungs). Through its online and offline platforms, Bukalapak provides opportunities and choices for everyone to achieve a better life.
+            </Text>
+        </Box>
+        <Box bgColor="#04040C" px="20%">
+            <Center 
+                className="gradientOrange"
+                fontSize="48px"
+                lineHeight="52px"
+                pt="120px"
+                >
+                Buy Bundle Packs
+            </Center>
+            <Center
+                mt="16px"
+                className="secondaryFont"
+                fontWeight="400"
+                fontSize="16px"
+                lineHeight="150%"
+                color="white"
+            >
+                Save some time and money by buying our bundle packs!
+            </Center>
+            <Center>
+                <Flex mt="70px">
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="33%">
+                        <Text
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="#F8C800"
+                        >
+                            Manager
+                        </Text>
+                        <UnorderedList 
+                            mt="12px" 
+                            color="white"
+                            fontWeight="400"
+                            fontSize="16px"
+                            lineHeight="150%"
+                        >
+                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
+                            <ListItem>Consectetur adipiscing elit</ListItem>
+                            <ListItem>Integer molestie lorem at massa</ListItem>
+                        </UnorderedList>
+                        <Text
+                            mt="12px"
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="16px"
+                            lineHeight="20px"
+                            color="white"
+                        >
+                            Rp85.000,-
+                        </Text>
+                        <Button
+                            color="black"
+                            bgColor="#F8C800"
+                            p="10px 24px"
+                            className="tertiaryFont"
+                            fontWeight="bold"
+                            fontSize="16px"
+                            lineHeight="20px"
+                            mt="12px"
+                        >
+                            Get Bundle
+                        </Button>
+                    </Box>
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="33%" mx="48px">
+                        <Text
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="#F8C800"
+                        >
+                            Manager
+                        </Text>
+                        <UnorderedList 
+                            mt="12px" 
+                            color="white"
+                            fontWeight="400"
+                            fontSize="16px"
+                            lineHeight="150%"
+                        >
+                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
+                            <ListItem>Consectetur adipiscing elit</ListItem>
+                            <ListItem>Integer molestie lorem at massa</ListItem>
+                        </UnorderedList>
+                        <Text
+                            mt="12px"
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="16px"
+                            lineHeight="20px"
+                            color="white"
+                        >
+                            Rp85.000,-
+                        </Text>
+                        <Button
+                            color="black"
+                            bgColor="#F8C800"
+                            p="10px 24px"
+                            className="tertiaryFont"
+                            fontWeight="bold"
+                            fontSize="16px"
+                            lineHeight="20px"
+                            mt="12px"
+                        >
+                            Get Bundle
+                        </Button>
+                    </Box>
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="33%">
+                        <Text
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="24px"
+                            lineHeight="28px"
+                            color="#F8C800"
+                        >
+                            Manager
+                        </Text>
+                        <UnorderedList 
+                            mt="12px" 
+                            color="white"
+                            fontWeight="400"
+                            fontSize="16px"
+                            lineHeight="150%"
+                        >
+                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
+                            <ListItem>Consectetur adipiscing elit</ListItem>
+                            <ListItem>Integer molestie lorem at massa</ListItem>
+                        </UnorderedList>
+                        <Text
+                            mt="12px"
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            fontSize="16px"
+                            lineHeight="20px"
+                            color="white"
+                        >
+                            Rp85.000,-
+                        </Text>
+                        <Button
+                            color="black"
+                            bgColor="#F8C800"
+                            p="10px 24px"
+                            className="tertiaryFont"
+                            fontWeight="bold"
+                            fontSize="16px"
+                            lineHeight="20px"
+                            mt="12px"
+                        >
+                            Get Bundle
+                        </Button>
+                    </Box>
+                </Flex>
+            </Center>
+            
+        </Box>
+        
         <EventsHeld title="Competition Highlights" props={eventHeld}/>
         <Timeline type="Competition" events={timelines} />
         <EventList events={events} />

@@ -92,3 +92,12 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #F8C800; 
 }
+
+.gradientOrange {
+  font-family: $tertiaryFont;
+  font-weight: 700;
+  background: linear-gradient(135deg, #F8C800 0%, #FF6941 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: "";
+}
