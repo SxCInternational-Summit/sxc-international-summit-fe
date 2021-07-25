@@ -79,7 +79,7 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                         p="10px 24px"
                         className="tertiaryFont"
                         fontWeight="bold"
-                        fontSize="16px"
+                        fontSize={{base:"12px", md:"16px"}}
                         lineHeight="20px"
                         >
                         Event Guidebook
@@ -93,7 +93,7 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                         p="10px 24px"
                         className="tertiaryFont"
                         fontWeight="bold"
-                        fontSize="16px"
+                        fontSize={{base:"12px", md:"16px"}}
                         lineHeight="20px"
                         >
                         Register Now

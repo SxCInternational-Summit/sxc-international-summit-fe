@@ -225,6 +225,7 @@ const CompetitionPage = () => {
                 fontSize="36px"
                 lineHeight="42px"
                 color="#F8C800"
+                textAlign="center"
             >
                 Case Collaborator
             </Center>
