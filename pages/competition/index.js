@@ -165,7 +165,7 @@ const CompetitionPage = () => {
                             color="white"
                             mb="12px"
                         >
-                            Rp1.500.000
+                            Rp3.500.000
                         </Center>
                     </Box>
                     <Box p="24px 35px" bgColor="#080818" borderRadius="16px" mx="87px">
@@ -188,7 +188,7 @@ const CompetitionPage = () => {
                             color="white"
                             mb="12px"
                         >
-                            Rp2.500.000
+                            Rp5.000.000
                         </Center>
                     </Box>
                     <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
@@ -211,7 +211,7 @@ const CompetitionPage = () => {
                             color="white"
                             mb="12px"
                         >
-                            Rp1.00.000
+                            Rp2.500.000
                         </Center>
                     </Box>
                 </Flex>
@@ -229,7 +229,7 @@ const CompetitionPage = () => {
                 Case Collaborator
             </Center>
             <Center mt="60px">
-                <Image src="/images/bukalapak.svg" alt="" />
+                <Image src="/images/nutrifood2.png" alt="" />
             </Center>
             <Text
                 className="secondaryFont"
@@ -240,7 +240,7 @@ const CompetitionPage = () => {
                 textAlign="center"
                 mt="40px"
             >
-                Bukalapak is an Indonesian e-commerce company with a mission to create a fair economy for all. It was founded in 2010 as an online marketplace to enable small and medium enterprises to expand online and has now also grown to support smaller traditional family-owned businesses (warungs). Through its online and offline platforms, Bukalapak provides opportunities and choices for everyone to achieve a better life.
+                Nutrifood is a Fast Moving Consumer Goods (FMCG) company that has been established for 40 years that operates in healthy necesities. In accordance to their mission "Inspiring You a Nutritious Life", Nutrifood has been striving in accomodating everyone a healthy and joyful life through their public presence and also products including L-Men, Hilo, Tropicana Slim, W-Dank, Nutrisari and also newly established Lokalate products. Furthermore their implementation of eco-friendly business practices based on their commitment towards UN Sustainable Development Goals, Nutrifood present a chance for everyone to have a healthy, nutritious and joyful life.
             </Text>
         </Box>
         <Box bgColor="#04040C" px="20%">
