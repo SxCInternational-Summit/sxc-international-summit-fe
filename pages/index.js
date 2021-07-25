@@ -12,7 +12,6 @@ import EventTab from "../component/eventTab";
 import { NextSeo } from "next-seo";
 
 const LandingPage = () => {
-    const [activeTabe, setactiveTabe] = useState("preEvent")
     return(
         <>
             <NextSeo 

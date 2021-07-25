@@ -19,8 +19,9 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
             </Head>
             <Center
                 backgroundImage={`url(${image})`}
+                p={{base: "20px", md: "0"}}
                 mt="64px"
-                h={{base: "242px", md:"488px"}}
+                h={{base: "100%", md:"488px"}}
                 bgRepeat="no-repeat" 
                 bgSize="cover"
                 flexDirection="column">
@@ -50,16 +51,16 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                     className="gradientFont"
                     fontSize={{base: "24px", md:"64px"}}
                     lineHeight={{base:"28px", md:"68px"}}
-                    w="40%"
+                    w={{base: "80%", md: "40%"}}
                     textAlign="center"
                     >
                     {title}
                 </Text>
 
                 <Text
-                    w="40%"
                     className="secondaryFont"
                     color="white"
+                    w={{base: "80%", md: "40%"}}
                     fontSize={{base: "0.75rem", md:"1rem"}}
                     lineHeight="150%"
                     fontWeight="400"
