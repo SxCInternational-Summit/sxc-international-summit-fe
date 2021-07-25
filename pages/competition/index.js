@@ -241,7 +241,7 @@ const CompetitionPage = () => {
                 textAlign="center"
                 mt="40px"
             >
-                Nutrifood is a Fast Moving Consumer Goods (FMCG) company that has been established for 40 years that operates in healthy necesities. In accordance to their mission "Inspiring You a Nutritious Life", Nutrifood has been striving in accomodating everyone a healthy and joyful life through their public presence and also products including L-Men, Hilo, Tropicana Slim, W-Dank, Nutrisari and also newly established Lokalate products. Furthermore their implementation of eco-friendly business practices based on their commitment towards UN Sustainable Development Goals, Nutrifood present a chance for everyone to have a healthy, nutritious and joyful life.
+                {`Nutrifood is a Fast Moving Consumer Goods (FMCG) company that has been established for 40 years that operates in healthy necesities. In accordance to their mission "Inspiring You a Nutritious Life", Nutrifood has been striving in accomodating everyone a healthy and joyful life through their public presence and also products including L-Men, Hilo, Tropicana Slim, W-Dank, Nutrisari and also newly established Lokalate products. Furthermore their implementation of eco-friendly business practices based on their commitment towards UN Sustainable Development Goals, Nutrifood present a chance for everyone to have a healthy, nutritious and joyful life.`}
             </Text>
         </Box>
         <Box bgColor="#04040C" px="20%">

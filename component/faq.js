@@ -50,7 +50,6 @@ const Faq = ({faqList, title}) => {
                             })}>
                                 <IoMdArrowDropdownCircle id={`arrow${index}`} fontSize="24px" color="#0FA1DB" />
                                 <Box 
-                                    key={index}
                                     flex="1" 
                                     textAlign="left" 
                                     color="#0FA1DB" 
@@ -63,7 +62,6 @@ const Faq = ({faqList, title}) => {
                                 </Box>
                             </AccordionButton>
                             <AccordionPanel
-                                key={index} 
                                 p="8px 36px 24px 36px" 
                                 color="white">
                                     {list.answer}
