@@ -13,9 +13,15 @@ import Navbar from "../../../component/navbar";
 import { FaWhatsapp, FaRegAddressBook } from "react-icons/fa"
 import { useRouter } from "next/router";
 
+import Head from 'next/head'
+
 const RegisterSuccess = () => {
     const router = useRouter()
     return(
+        <>
+        <Head>
+            <title>Registration Process Complete</title>
+        </Head>
         <Box bgColor="#04040C" >
             <Navbar />
             <Center 
@@ -62,7 +68,7 @@ const RegisterSuccess = () => {
                         textAlign="center"
                         mt="24px"
                     >
-                        Thank you for registering! Don’t forget to keep an eye out on your e-mail’s inbox for the event’s details, and don’t forget to join the whatsapp group for the event!
+                        Thank you for registering! Don’t forget to join the whatsapp group for we will inform you through whatsapp.
                     </Text>
                     <Flex
                         color="#F8C800"
@@ -74,7 +80,7 @@ const RegisterSuccess = () => {
                             lineHeight="28px"
                             className="tertiaryFont"
                             fontWeight="700">
-                                whats.app/me/group-invite-link
+                                https://chat.whatsapp.com/E5msaBzu2yM31VOTGdchfC
                             </Text>
                         </Flex>
                         <Text
@@ -131,6 +137,7 @@ const RegisterSuccess = () => {
                 </Center>
             <Footer />
         </Box>
+        </>
     )
 }
 

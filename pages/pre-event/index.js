@@ -6,43 +6,26 @@ import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 
-import Head from 'next/head'
+//import Head from 'next/head'
+
+import { NextSeo } from "next-seo"
 
 const PreEventPage = () => {
+    const title = "Pre-Event | SxCInternational Summit 2021"
+    const description = "SxC International Summit Pre-Event"
+
     const backgroundImageURL = "/images/preEventBackground.svg"
     const events = [
         {
-            title: "Talkshow",
+            title: "Maintain product existence in the middle of global pandemic",
             src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
+            subtitle: "To engage and reach more of aspiring Gen-Zs that are interested in developing their own brand.  The webinar will cover how to maintain product existence 101, especially through the challenges in this uncertain era of global pandemic",
             type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
+            date: "28 August 2021",
+            fee: "Free",
+            linkTo: ""
           },
-          {
-            title: "Talkshow",
-            src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
-            type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
-          },
-          {
-            title: "Talkshow",
-            src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
-            type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
-          },
-          {
-            title: "Talkshow",
-            src: "/images/event1.svg",
-            subtitle: "“Utilizing The Pandemic as an Opportunity to Improve in Self Development” with speakers Founder of LAKKE, Founder of Social Kreatif, News Anchor at CNN Indonesia and Community Manager at 1000 Guru",
-            type: "Pre-Event",
-            date: "27-29 June 2021",
-            fee: "Free"
-          }
+          
     ]
 
     const speakers = [
@@ -68,24 +51,25 @@ const PreEventPage = () => {
 
     const faq =[
       {
-        question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        question: "How do I attend the webinar?",
+        answer: "You can participate in the webinar simply by clicking the register now button when the registration period has started."
       },
       {
-        question: "When will the Pre-Events take place?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        question: "Who are eligible to participate?",
+        answer: "Everyone is welcomed."
       },
       {
-        question: "What will I get?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        question: "Where will the event be held?",
+        answer: "SxCInternational 2021 events are 100% online, it will take place in zoom platform from your home."
       }
     ]
 
     return(
     <>
-        <Head>
-          <title>Pre-Event | SxCIntersummit 2021</title>
-        </Head>
+        <NextSeo
+          title={title}
+          description={description}
+        />
         <Navbar />
         <Hero 
           title="SxC International Summit Pre-Event"

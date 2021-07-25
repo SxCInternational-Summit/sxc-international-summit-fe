@@ -19,7 +19,7 @@ const EventTab = () => {
     const router = useRouter()
     
 
-    const preEventCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    const preEventCaption = "There are three events highlighted in this year's international summit which consist of Pre-Event, Product Branding Competition, and Main Events. Additionally, there will be webinars and coaching clinics conducted to further upgrade your skill in managing as well as maintaining your product idea. We can't wait to see you in our events. Click the button below to learn more."
     const competitionCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     const mainEventCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
@@ -29,11 +29,11 @@ const EventTab = () => {
             <Center
                 className="tertiaryFont"
                 fontWeight="700"
-                fontSize="48px"
+                fontSize="36px"
                 lineHeight="52px"
                 color="white"
             >
-                Events
+                What's up with this year's International Summit?
             </Center>
             {/* <Flex direction={{base:"row", md:"column"}}>
                 <Flex 
@@ -161,16 +161,19 @@ const EventTab = () => {
             gap="87px" 
             mt='126px'
             overflow="hidden">
-                <Text
-                    className="secondaryFont"
-                    fontWeight="400"
-                    fontSize="24px"
-                    lineHeight="28px"
-                    color="white"
-                    m={{base:"16px 36px", md:""}}
-                >
-                    {activeCaption}
-                </Text>
+                <Center>    
+                    <Text
+                        className="secondaryFont"
+                        fontWeight="400"
+                        fontSize="24px"
+                        lineHeight="28px"
+                        color="white"
+                        textAlign="justify"
+                        m={{base:"16px 36px", md:""}}
+                    >
+                        {activeCaption}
+                    </Text>
+                </Center>
                 <Image src="/images/eventLanding.svg" w="100%" alt=""/>
             </Grid>
             <Flex
@@ -197,7 +200,7 @@ const EventTab = () => {
                     <Button
                         bgColor="#F8C800" 
                         color="black"
-                        p="10px 24px" 
+                        p={{base:"24px 24px"}} 
                         borderRadius="4px" 
                         className="yellowButtonFont"
                         border="none"

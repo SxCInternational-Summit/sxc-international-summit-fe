@@ -73,11 +73,11 @@ const Partner = () => {
                 <Image src="/images/sponsor4.svg" alt="sponsor 4" />
                 {isDesktop ? <Image src="/images/sponsor5.svg" alt="sponsor 5" /> : <></>}
             </Flex> */}
-            {isDesktop ? <></> : 
+            {/* {isDesktop ? <></> : 
                 <Flex>
                     <Image src="/images/sponsor5.svg" alt="sponsor 5" />
                 </Flex>
-            }
+            } */}
         </Center>
         </>
     )

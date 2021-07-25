@@ -8,6 +8,8 @@ import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 import Timeline from "../../component/timeline"
 
+import Head from 'next/head'
+
 const { PROD_URL } = process.env
 
 const CompetitionPage = () => {
@@ -20,7 +22,7 @@ const CompetitionPage = () => {
             type: "Competition",
             date: "26 July 2021 - 10 October 2021",
             fee: "IDR 279.000",
-            linkTo: `${PROD_URL}/competition/register-team`
+            linkTo: 'https://sxcinternationalsummit.vercel.app/competition/register-team'
           }
     ]
 
@@ -37,7 +39,7 @@ const CompetitionPage = () => {
         },
         {
             title: "The Grand Final",
-            subtitle: "Speak confidently and pitch eloquently. The final stage will present the top 10 finalists to present their proposed ideas in front of the professional judges and the public streamers to determine who's going to be the one taking the winner title in the awarding ceremony.",
+            subtitle: "Speak confidently and pitch eloquently. The final stage will present the top 10 finalists to present their proposed ideas in front of the professional judges and the public streamers to determine who is going to be the one taking the winner title in the awarding ceremony.",
             src: "/images/presentation.jfif"
         },
     ]
@@ -119,6 +121,9 @@ const CompetitionPage = () => {
 
     return(
     <>
+        <Head>
+            <title>Competition | SxCIntersummit 2021</title>
+        </Head>
         <Navbar />
         <Hero 
         title=" International Product Branding Competition"
