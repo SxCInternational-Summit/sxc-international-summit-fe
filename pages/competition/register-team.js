@@ -451,9 +451,9 @@ const RegisterTeamPage = () => {
                             } else if (activeStep == 2) {
                             return (
                                 <>
-                                    <HStack w="80vw" spacing="80px" mt="80px">
+                                    <Stack w="80vw" spacing="80px" mt="80px"  direction={{base:"column", md:"row"}}>
                                         <Box 
-                                        w="50%" 
+                                        w="100%" 
                                         bgColor="#080818" 
                                         p="50px"
                                         color="white"
@@ -542,7 +542,7 @@ const RegisterTeamPage = () => {
                                             </FormControl>
                                         </Box>
                                         <Box 
-                                        w="50%" 
+                                        w="100%" 
                                         bgColor="#080818" 
                                         p="50px"
                                         color="white"
@@ -630,7 +630,7 @@ const RegisterTeamPage = () => {
                                                 </InputGroup>
                                             </FormControl>
                                         </Box>
-                                    </HStack>
+                                    </Stack>
                                 </>
                             )
                             } else if(activeStep == 3){
