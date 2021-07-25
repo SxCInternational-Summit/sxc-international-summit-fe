@@ -35,7 +35,7 @@ const EventTab = () => {
             >
                 What's up with this year's International Summit?
             </Center>
-            {/* <Flex direction={{base:"row", md:"column"}}>
+            <Flex direction={{base:"row", md:"column"}}>
                 <Flex 
                 mt="40px" 
                 justify="space-between" 
@@ -151,7 +151,7 @@ const EventTab = () => {
                         </Text>
                     </Box>
                 </Flex>
-            </Flex> */}
+            </Flex>
             <Grid 
             px={{base:"0", md:"121px"}} 
             mx={{base:"30px", md:"0"}} 
