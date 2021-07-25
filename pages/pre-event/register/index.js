@@ -200,7 +200,6 @@ const RegisterPage = () => {
                                     isRequired={true}
                                     onChange={(e) => setemail(e.target.value)} />
                                 </InputGroup>
-                                <FormHelperText className="formHelper">We will send the event’s detail to your e-mail. Make sure it’s correct.</FormHelperText>
                                 <FormLabel className="label" mt="36px" htmlFor="name">
                                     Full Name
                                 </FormLabel>
