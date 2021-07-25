@@ -9,10 +9,13 @@ import Navbar from "../../component/navbar"
 import Timeline from "../../component/timeline"
 
 import Head from 'next/head'
+import { useRouter } from "next/router"
 
 const { PROD_URL } = process.env
 
 const CompetitionPage = () => {
+    const router = useRouter()
+
     const backgroundImageURL = "/images/competitionBackground.svg"
     const events = [
         {
@@ -290,7 +293,7 @@ const CompetitionPage = () => {
                                     >
                                         Save
                                     </Text>
-                                    50%
+                                    60k
                                 </Text>
                             </Flex>
                         </Circle>
@@ -309,22 +312,29 @@ const CompetitionPage = () => {
                             fontWeight="400"
                             fontSize="16px"
                             lineHeight="150%"
+                            mb="120px"
                         >
                             <ListItem>Get Access to All Events</ListItem>
                             <ListItem>Applies to all team members</ListItem>
+                            <ListItem>Indonesia region only</ListItem>
                         </UnorderedList>
                         <Text
+                            bottom="80px"
                             mt="12px"
+                            position="absolute"
                             className="tertiaryFont"
                             fontWeight="700"
                             fontSize="16px"
                             lineHeight="20px"
                             color="white"
                         >
-                            Rp309.000,- (Early Bird)
+                            Rp309.000,- <Text color="#FF6941">(Early Bird)</Text>
                         </Text>
                         <Button
                             color="black"
+                            position="absolute"
+                            bottom="20px"
+                            onClick={() => router.push('/competition/register-bundle')}
                             bgColor="#F8C800"
                             p="10px 24px"
                             className="tertiaryFont"
@@ -359,7 +369,7 @@ const CompetitionPage = () => {
                                     >
                                         Save
                                     </Text>
-                                    50%
+                                    20k
                                 </Text>
                             </Flex>
                         </Circle>
@@ -370,7 +380,7 @@ const CompetitionPage = () => {
                             lineHeight="28px"
                             color="#F8C800"
                         >
-                            Manager
+                            Competition + Totebags
                         </Text>
                         <UnorderedList 
                             mt="12px" 
@@ -378,23 +388,29 @@ const CompetitionPage = () => {
                             fontWeight="400"
                             fontSize="16px"
                             lineHeight="150%"
+                            mb="120px"
                         >
-                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                            <ListItem>Consectetur adipiscing elit</ListItem>
-                            <ListItem>Integer molestie lorem at massa</ListItem>
+                            <ListItem>Competition Access</ListItem>
+                            <ListItem>Also comes with a totebag for each member</ListItem>
+                            <ListItem>Indonesia region only</ListItem>
                         </UnorderedList>
                         <Text
+                            bottom="80px"
                             mt="12px"
                             className="tertiaryFont"
                             fontWeight="700"
                             fontSize="16px"
                             lineHeight="20px"
                             color="white"
+                            position="absolute"
                         >
-                            Rp85.000,-
+                            Rp319.000,- <Text color="#FF6941">(Early Bird)</Text>
                         </Text>
                         <Button
                             color="black"
+                            position="absolute"
+                            bottom="20px"
+                            onClick={() => router.push('/competition/register-merch')}
                             bgColor="#F8C800"
                             p="10px 24px"
                             className="tertiaryFont"
@@ -407,7 +423,7 @@ const CompetitionPage = () => {
                         </Button>
                     </Box>
                     <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" position="relative">
-                    <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
+                    {/* <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
                             <Flex direction="column">
                                 <Text
                                     className="tertiaryFont"
@@ -432,7 +448,7 @@ const CompetitionPage = () => {
                                     50%
                                 </Text>
                             </Flex>
-                        </Circle>
+                        </Circle> */}
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
@@ -440,7 +456,7 @@ const CompetitionPage = () => {
                             lineHeight="28px"
                             color="#F8C800"
                         >
-                            Manager
+                            Competition Only
                         </Text>
                         <UnorderedList 
                             mt="12px" 
@@ -448,23 +464,29 @@ const CompetitionPage = () => {
                             fontWeight="400"
                             fontSize="16px"
                             lineHeight="150%"
+                            mb="120px"
                         >
-                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                            <ListItem>Consectetur adipiscing elit</ListItem>
-                            <ListItem>Integer molestie lorem at massa</ListItem>
+                            <ListItem>Only Competition</ListItem>
+                            <ListItem>3 Members per team</ListItem>
+                            <ListItem>International</ListItem>
                         </UnorderedList>
                         <Text
                             mt="12px"
+                            bottom="80px"
                             className="tertiaryFont"
                             fontWeight="700"
                             fontSize="16px"
                             lineHeight="20px"
                             color="white"
+                            pos="absolute"
                         >
-                            Rp85.000,-
+                            Rp279.000,- <Text color="#FF6941">(Early Bird)</Text>
                         </Text>
                         <Button
                             color="black"
+                            position="absolute"
+                            bottom="20px"
+                            onClick={() => router.push('/competition/register-team')}
                             bgColor="#F8C800"
                             p="10px 24px"
                             className="tertiaryFont"
