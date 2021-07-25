@@ -1,4 +1,4 @@
-import { Button, Center, Flex, Box, Image, Text, UnorderedList, ListItem } from "@chakra-ui/react"
+import { Button, Center, Flex, Box, Image, Text, UnorderedList, ListItem, Circle, Stack } from "@chakra-ui/react"
 import EventComponent from "../../component/eventComponent"
 import EventList from "../../component/eventList"
 import EventsHeld from "../../component/eventsHeld"
@@ -225,6 +225,7 @@ const CompetitionPage = () => {
                 fontSize="36px"
                 lineHeight="42px"
                 color="#F8C800"
+                textAlign="center"
             >
                 Case Collaborator
             </Center>
@@ -266,7 +267,33 @@ const CompetitionPage = () => {
             </Center>
             <Center>
                 <Flex mt="70px" direction={{base:"column", md:"row"}}>
-                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%">
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" position="relative">
+                        <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
+                            <Flex direction="column">
+                                <Text
+                                    className="tertiaryFont"
+                                    fontWeight="700"
+                                    fontSize="24px"
+                                    textAlign="center"
+                                    position="relative"
+                                    transform="translateY(6px)"
+                                >
+                                    
+                                    <Text
+                                        className="secondaryFont"
+                                        fontWeight="400"
+                                        fontSize="12px"
+                                        textAlign="center"
+                                        position="absolute"
+                                        bottom="28px"
+                                        left="20%"
+                                    >
+                                        Save
+                                    </Text>
+                                    50%
+                                </Text>
+                            </Flex>
+                        </Circle>
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
@@ -310,7 +337,33 @@ const CompetitionPage = () => {
                             Get Bundle
                         </Button>
                     </Box>
-                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" mx={{base:"0", md:"48px"}} my={{base:"48px", md:"0"}}>
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" mx={{base:"0", md:"48px"}} my={{base:"48px", md:"0"}} position="relative">
+                    <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
+                            <Flex direction="column">
+                                <Text
+                                    className="tertiaryFont"
+                                    fontWeight="700"
+                                    fontSize="24px"
+                                    textAlign="center"
+                                    position="relative"
+                                    transform="translateY(6px)"
+                                >
+                                    
+                                    <Text
+                                        className="secondaryFont"
+                                        fontWeight="400"
+                                        fontSize="12px"
+                                        textAlign="center"
+                                        position="absolute"
+                                        bottom="28px"
+                                        left="20%"
+                                    >
+                                        Save
+                                    </Text>
+                                    50%
+                                </Text>
+                            </Flex>
+                        </Circle>
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
@@ -354,7 +407,33 @@ const CompetitionPage = () => {
                             Get Bundle
                         </Button>
                     </Box>
-                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%">
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" position="relative">
+                    <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
+                            <Flex direction="column">
+                                <Text
+                                    className="tertiaryFont"
+                                    fontWeight="700"
+                                    fontSize="24px"
+                                    textAlign="center"
+                                    position="relative"
+                                    transform="translateY(6px)"
+                                >
+                                    
+                                    <Text
+                                        className="secondaryFont"
+                                        fontWeight="400"
+                                        fontSize="12px"
+                                        textAlign="center"
+                                        position="absolute"
+                                        bottom="28px"
+                                        left="20%"
+                                    >
+                                        Save
+                                    </Text>
+                                    50%
+                                </Text>
+                            </Flex>
+                        </Circle>
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
