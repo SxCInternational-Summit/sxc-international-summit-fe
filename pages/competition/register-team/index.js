@@ -80,10 +80,11 @@ const RegisterTeamPage = () => {
     const [secondMemberFaculty, setsecondMemberFaculty] = useState("")
     const [secondMemberMajor, setsecondMemberMajor] = useState("")
 
-    const [leaderTwibbonLink, setLeaderTwibbonLink] = useState("")
     const [leaderFollowLink, setLeaderFollowLink] = useState("")
+    const [leaderTwibbonLink, setLeaderTwibbonLink] = useState("")
     const [firstMemberTwibbonLink, setFirstMemberTwibbonLink] = useState("")
     const [secondMemberTwibbonLink, setSecondMemberTwibbonLink] = useState("")
+
     const [activeStep, setActiveStep] = useState(1);
 
     const [errorRegister, setErrorRegister] = useState(null)
@@ -133,7 +134,6 @@ const RegisterTeamPage = () => {
             member2_faculty: secondMemberFaculty,
             member2_major: secondMemberMajor,
 
-            leader_twibbon: leaderTwibbonLink,
             leader_follow: leaderFollowLink,
             member1_twibbon: firstMemberTwibbonLink,
             member2_twibbon: secondMemberTwibbonLink,
@@ -261,7 +261,7 @@ const RegisterTeamPage = () => {
                     </Text>
                     <Text
                         className="secondaryFont"
-                        fontSize="1rem"
+                        fontSize="1.2rem"
                         lineHeight="150%"
                         color="white"
                         textAlign="center"
@@ -274,7 +274,7 @@ const RegisterTeamPage = () => {
                             )
                             } else if (activeStep == 2) {
                             return (
-                                <>Team’s leader is not required to fill this form</>
+                                <>Please Provide Your Team Member Information</>
                             )
                             } else if(activeStep == 3){
                                 return(
@@ -327,7 +327,7 @@ const RegisterTeamPage = () => {
                                     w={{base:"90vw",md:"30vw"}}
                                 >
                             
-                                <FormControl>
+                                <FormControl isRequired>
                                     <FormLabel className="label" mt="36px" htmlFor="teamName">
                                         TEAM NAME
                                     </FormLabel>
@@ -467,14 +467,15 @@ const RegisterTeamPage = () => {
                                             >
                                                 Team Member 1
                                             </Text>
-                                            <FormControl>
+                                            <FormControl isRequired>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberName">
                                                     FULL NAME
                                                 </FormLabel>
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="firstMemberName" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="ex: Andi" 
                                                     onChange={(e) => setfirstMemberName(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberDateOfBirth">
@@ -484,6 +485,7 @@ const RegisterTeamPage = () => {
                                                     <Input 
                                                     id="firstMemberDateOfBirth" 
                                                     type='text'  
+                                                    placeholder="Format: dd-mm-yyy (ex: 16-01-2001)"
                                                     onChange={(e) => setFirstMemberDateOfBirth(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberAddress">
@@ -491,8 +493,9 @@ const RegisterTeamPage = () => {
                                                 </FormLabel>
                                                 <InputGroup className="input" >
                                                     <Input 
-                                                    id="firstMemberAddress" 
-                                                    type='text' 
+                                                    id="firstMemberAddress"
+                                                    type='text'
+                                                    placeholder='ex: Jalan Sudirman Kav 6 Nomor 3, Menteng Raya' 
                                                     onChange={(e) => setfirstMemberAddress(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberCity">
@@ -501,7 +504,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="firstMemberCity" 
-                                                    type='text'  
+                                                    type='text' 
+                                                    placeholder="ex: Jakarta Pusat" 
                                                     onChange={(e) => setfirstMemberCity(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberUniversity">
@@ -510,7 +514,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="firstMemberUniversity" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="Universitas Indonesia"
                                                     onChange={(e) => setfirstMemberUniversity(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberFaculty">
@@ -520,6 +525,7 @@ const RegisterTeamPage = () => {
                                                     <Input 
                                                     id="firstMemberFaculty" 
                                                     type='text' 
+                                                    placeholder="Teknik"
                                                     onChange={(e) => setfirstMemberFaculty(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="firstMemberMajor">
@@ -528,7 +534,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="firstMemberMajor" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="Teknik Industri"
                                                     onChange={(e) => setfirstMemberMajor(e.target.value)} />
                                                 </InputGroup>
                                             </FormControl>
@@ -549,14 +556,15 @@ const RegisterTeamPage = () => {
                                             >
                                                 Team Member 2
                                             </Text>
-                                            <FormControl>
+                                            <FormControl isRequired>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberName">
                                                     FULL NAME
                                                 </FormLabel>
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberName" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="Alicia Setiawan"
                                                     onChange={(e) => setsecondMemberName(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberDateOfBirth">
@@ -565,7 +573,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberDateOfBirth" 
-                                                    type='text'  
+                                                    type='text'
+                                                    placeholder="Format: dd-mm-yyy (ex: 16-01-2001)" 
                                                     onChange={(e) => setSecondMemberDateOfBirth(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberAddress">
@@ -574,7 +583,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberAddress" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="'ex: Jalan Sudirman Kav 6 Nomor 3, Menteng Raya"
                                                     onChange={(e) => setsecondMemberAddress(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberCity">
@@ -583,7 +593,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberCity" 
-                                                    type='text'  
+                                                    type='text'
+                                                    placeholder="Jakarta Pusat"
                                                     onChange={(e) => setsecondMemberCity(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberUniversity">
@@ -592,7 +603,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberUniversity" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="Universitas Indonesia" 
                                                     onChange={(e) => setsecondMemberUniversity(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberFaculty">
@@ -601,7 +613,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberFaculty" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="Fakultas Ilmu Politik dan Sosial"
                                                     onChange={(e) => setsecondMemberFaculty(e.target.value)} />
                                                 </InputGroup>
                                                 <FormLabel className="label" mt="32px" htmlFor="secondMemberMajor">
@@ -610,7 +623,8 @@ const RegisterTeamPage = () => {
                                                 <InputGroup className="input" >
                                                     <Input 
                                                     id="secondMemberMajor" 
-                                                    type='text' 
+                                                    type='text'
+                                                    placeholder="Ilmu Komunikasi"
                                                     onChange={(e) => setsecondMemberMajor(e.target.value)} />
                                                 </InputGroup>
                                             </FormControl>
@@ -1051,59 +1065,102 @@ const RegisterTeamPage = () => {
                             } else if (activeStep == 4) {
                                 return (
                                     <>
-                                        <Box 
-                                            color="white"
-                                            lineHeight="150%"
-                                            textAlign="left"
-                                            w="30vw"
+                                    <Box 
+                                        color="white"
+                                        lineHeight="150%"
+                                        textAlign="left"
+                                        mt="60px"
+                                        w="25vw">
+                                        <Text
+                                            mt="0.25rem"
+                                            className="secondaryFont"
+                                            fontSize="1.5rem"
+                                            textAlign="center"
+                                            fontWeight="600"
                                         >
-                                            <FormControl>
-                                                <FormLabel className="label" mt="36px" htmlFor="leaderTwibbonLink">
-                                                    Leader Twibbon Link
-                                                </FormLabel>
-                                                <InputGroup className="input" >
-                                                    <Input 
-                                                    id="leaderTwibbonLink" 
-                                                    type='text' 
-                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
-                                                    isRequired={true}
-                                                    onChange={(e) => setLeaderTwibbonLink(e.target.value)} />
-                                                </InputGroup>
-                                                <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
-                                                    Leader Follow Accounts Link
-                                                </FormLabel>
-                                                <InputGroup className="input" >
-                                                    <Input 
-                                                    id="leaderFollowLink" 
-                                                    type='text' 
-                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
-                                                    isRequired={true}
-                                                    onChange={(e) => setLeaderFollowLink(e.target.value)} />
-                                                </InputGroup>
-                                                <FormLabel className="label" mt="36px" htmlFor="firstMemberTwibbonLink">
-                                                    First Member Twibbon Link
-                                                </FormLabel>
-                                                <InputGroup className="input" >
-                                                    <Input 
-                                                    id="firstMemberTwibbonLink" 
-                                                    type='text' 
-                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
-                                                    isRequired={true}
-                                                    onChange={(e) => setFirstMemberTwibbonLink(e.target.value)} />
-                                                </InputGroup>
-                                                <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
-                                                    Second Member Twibbon Link
-                                                </FormLabel>
-                                                <InputGroup className="input" >
-                                                    <Input 
-                                                    id="secondMemberTwibbonLink" 
-                                                    type='text' 
-                                                    placeholder='ex: https://www.instagram.com/p/CRnzl7WMt_u/?utm_source=ig_web_copy_link' 
-                                                    isRequired={true}
-                                                    onChange={(e) => setSecondMemberTwibbonLink(e.target.value)} />
-                                                </InputGroup>
-                                            </FormControl>
+                                            Requirements
+                                        </Text>
+                                    </Box>
+                                    
+                                    <Box
+                                        lineHeight="125%"
+                                        className="tertiaryFont"
+                                        fontWeight="500">
+                                        <Box mt="20px">
+                                            <UnorderedList color="white">
+                                                <ListItem>
+                                                    <Flex fontSize="1rem" align="center">
+                                                        <Text color="#F8C800">
+                                                            Twibbon (3 Person)
+                                                        </Text>
+                                                    </Flex>
+                                                </ListItem>
+                                                <ListItem>
+                                                    <Flex fontSize="1rem" align="center">
+                                                        <Text color="#F8C800">
+                                                            Follow Account (sxcintersummit)
+                                                        </Text>
+                                                    </Flex>
+                                                </ListItem>
+                                            </UnorderedList>
                                         </Box>
+                                    </Box>
+
+                                    <Box 
+                                        color="white"
+                                        lineHeight="150%"
+                                        textAlign="left"
+                                        w="30vw"
+                                    >
+                                        <FormControl isRequired>
+                                            <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
+                                                Shareable Drive Link
+                                            </FormLabel>
+                                            <InputGroup className="input" >
+                                                <Input 
+                                                id="leaderFollowLink" 
+                                                type='text' 
+                                                placeholder='ex: https://drive.google.com/<link>' 
+                                                isRequired={true}
+                                                onChange={(e) => setLeaderFollowLink(e.target.value)} />
+                                            </InputGroup>
+                                            <FormHelperText textAlign="center">Please insert all of the requirements into one shareable drive link (ex: Google Drive)</FormHelperText>
+                                            <FormHelperText textAlign="center">File Name Format: [TeamName_YourName] for each files</FormHelperText>
+                                            <FormLabel className="label" mt="36px" htmlFor="leaderTwibbonLink">
+                                                Team Leader Twibbon Link
+                                            </FormLabel>
+                                            <InputGroup className="input" >
+                                                <Input 
+                                                id="leaderTwibbonLink" 
+                                                type='text' 
+                                                placeholder='ex: https://www.instagram.com/p/CRtR9j1Mp57/' 
+                                                isRequired={true}
+                                                onChange={(e) => setLeaderTwibbonLink(e.target.value)} />
+                                            </InputGroup>
+                                            <FormLabel className="label" mt="36px" htmlFor="firstMemberTwibbonLink">
+                                                Team Member Twibbon Link
+                                            </FormLabel>
+                                            <InputGroup className="input" >
+                                                <Input 
+                                                id="firstMemberTwibbonLink" 
+                                                type='text' 
+                                                placeholder='ex: https://www.instagram.com/p/CRtR9j1Mp57/' 
+                                                isRequired={true}
+                                                onChange={(e) => setFirstMemberTwibbonLink(e.target.value)} />
+                                            </InputGroup>
+                                            <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
+                                                Team Member Twibbon Link
+                                            </FormLabel>
+                                            <InputGroup className="input" >
+                                                <Input 
+                                                id="secondMemberTwibbonLink" 
+                                                type='text' 
+                                                placeholder='ex: https://www.instagram.com/p/CRtR9j1Mp57/' 
+                                                isRequired={true}
+                                                onChange={(e) => setSecondMemberTwibbonLink(e.target.value)} />
+                                            </InputGroup>
+                                        </FormControl>
+                                    </Box>
                                     </>
                                 )
                             } else if(activeStep == 5) {
@@ -1220,9 +1277,9 @@ const RegisterTeamPage = () => {
                                                 </Text>
                                                 <UnorderedList color="white">
                                                     <ListItem>
-                                                        <Flex fontSize="0.85rem" align="center">
+                                                        <Flex fontSize="0.75rem" align="center">
                                                             <Text color="#F8C800">
-                                                                +6281218989775 <br /> phyliciafebian@gmail.com
+                                                                PayPal - phyliciafebian@gmail.com
                                                             </Text>
                                                             <Text color="white" className="secondaryFont" fontWeight="400" lineHeight="150%" ml="10px">
                                                                 (Phylicia Febian)
@@ -1332,7 +1389,11 @@ const RegisterTeamPage = () => {
                                 border="none"
                                 onClick={activeStep != 5 ? handleNext : onOpen}
                                 mb="36px"
-                                //isDisabled={}
+                                isDisabled={
+                                    (activeStep == 4 && (firstMemberTwibbonLink == "" || secondMemberTwibbonLink == "" || leaderTwibbonLink == "")) || 
+                                    (activeStep == 1 && (leaderName == "" || leaderPhone == "" || leaderAddress ==  "" || teamName == "" || leaderDateOfBirth == "" || leaderUniversity == "" || leaderFaculty == "" || leaderMajor == "")) ||
+                                    (activeStep == 2 && (firstMemberName == "" || firstMemberDateOfBirth == "" || firstMemberAddress == "" || firstMemberCity == "" || firstMemberUniversity == "" || firstMemberFaculty == "" || firstMemberMajor == "" || secondMemberName == "" || secondMemberDateOfBirth == "" || secondMemberAddress == "" || secondMemberCity == "" || secondMemberUniversity == "" || secondMemberFaculty == "" || secondMemberMajor == ""))
+                                }
                                 >
                                 {activeStep != 5 ? "Next" : "Register"}
                             </Button>
