@@ -34,6 +34,8 @@ import Faq from "../../component/faq";
 
 import { FaInstagram, FaWhatsapp } from "react-icons/fa"
 
+import { NextSeo } from "next-seo";
+
 const parseJSON = resp => (resp.json ? resp.json() : resp)
 
 const checkStatus = resp => {
