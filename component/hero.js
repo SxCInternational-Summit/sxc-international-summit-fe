@@ -84,7 +84,7 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                         >
                         Event Guidebook
                     </Button>
-                    <Button
+                    {/* <Button
                         onClick={() => router.push("competition/register-team")}
                         mt="16px"
                         ml="20px"
@@ -97,7 +97,7 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                         lineHeight="20px"
                         >
                         Register Now
-                    </Button>
+                    </Button> */}
                 </Center>
                 :
                 <></>
