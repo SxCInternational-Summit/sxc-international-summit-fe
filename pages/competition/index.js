@@ -144,7 +144,7 @@ const CompetitionPage = () => {
                 Total Prize
             </Center>
             <Center>
-                <Flex align="center" mt="60px">
+                <Flex align="center" mt="60px" overflowX="scroll">
                     <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
                         <Image src="/images/secondPlace.svg" alt="" />
                         <Center
