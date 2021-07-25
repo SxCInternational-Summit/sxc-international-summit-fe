@@ -20,13 +20,17 @@ const Stepper = ({activeStep}) => {
             stepNumber: 3
         },
         {
-            label: "Payment",
+            label: "Requirements",
             stepNumber: 4
+        },
+        {
+            label: "Payment",
+            stepNumber: 5
         }
     ]
     return(
         <>
-            <Stack direction="row" spacing="78px" divider={<StackDivider borderColor="#C4C4C4" dir="row" h="100px" transform="rotate(90deg)" />}>
+            <Stack direction="row" spacing="78px" divider={<StackDivider borderColor="#C4C4C4" dir="row" transform="rotate(90deg)" />}>
                 {steps.map((el, index) => {
                     if (el.stepNumber < activeStep) {
                         return(
