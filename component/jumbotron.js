@@ -64,7 +64,7 @@ const Jumbotron = () => {
                     className="tertiaryFont"
                     fontSize="16px"
                     color="#FFFFFF"
-                    fontWeight="30"
+                    fontWeight="300"
                 >
                     Stand Up, Stand Out, Be the One
                 </Text>
