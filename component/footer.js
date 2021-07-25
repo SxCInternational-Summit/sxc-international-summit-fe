@@ -12,7 +12,7 @@ const Footer = () => {
     const [isDesktop] = useMediaQuery("(min-width: 48em)")
     return(
         <Center w="100%" h="192px" bgColor="#080818">
-            {isDesktop ? <Image src="/images/footerLogo.svg" className={styles.footerLogo} height={{base:"48px", sm: "92px", md: "128px"}} alt=""/> : <Image src="/images/footerLogo.svg" className={styles.footerLogo2} alt=""/>}
+            {isDesktop ? <Image src="/images/footerLogo.svg" className={styles.footerLogo} height={{base:"48px", sm: "92px", md: "128px"}} alt=""/> : <></>}
             {isDesktop ? <Stack alignItems="center" >
                 <Flex>
                     <Image src="/images/instagram.svg" alt="instagram" cursor="pointer"/>
@@ -23,6 +23,7 @@ const Footer = () => {
                         Copyright @2021 StudentsxCEOs 
                 </Text>
             </Stack> : <Stack alignItems="center">
+            <Image src="/images/footerLogo.svg" alt=""/>
                 <Flex>
                     <Image src="/images/instagram.svg" alt="instagram" cursor="pointer"/>
                     <Image src="/images/linkedIn.svg" alt="linkedIn" ml="16px" cursor="pointer"/>

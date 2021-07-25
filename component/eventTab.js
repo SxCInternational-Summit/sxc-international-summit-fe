@@ -13,6 +13,7 @@ import {
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { FaMicrophone } from "react-icons/fa"
+import { AiFillTrophy, AiFillStar } from "react-icons/ai"
 
 const EventTab = () => {
     const [activeTab, setactiveTab] = useState("preEvent")
@@ -61,7 +62,7 @@ const EventTab = () => {
                             color="white"
                             onClick={() => {setactiveTab("competition"); setactiveCaption(competitionCaption)}}
                             cursor="pointer">
-                            <Icon as={FaMicrophone} fontSize="30px" />
+                            <Icon as={AiFillTrophy} fontSize="30px" />
                         </Circle>
                     </Box>
                     <Divider transform="translateY(40px)" mx="20px" />
@@ -73,7 +74,7 @@ const EventTab = () => {
                             color="white"
                             onClick={() => {setactiveTab("mainEvent"); setactiveCaption(mainEventCaption)}}
                             cursor="pointer">
-                            <Icon as={FaMicrophone} fontSize="30px" />
+                            <Icon as={AiFillStar} fontSize="30px" />
                         </Circle>
                     </Box>
                 </Flex>
