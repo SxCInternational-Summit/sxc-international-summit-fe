@@ -154,7 +154,7 @@ const RegisterPage = () => {
                             className="secondaryFont"
                             fontSize="1rem"
                         >
-                            Pre-Event #1 Talkshow
+                            Pre-Event "Maintain product existence in the middle of global pandemic"
                         </Text>
 
                         <Text
@@ -170,7 +170,7 @@ const RegisterPage = () => {
                             className="secondaryFont"
                             fontSize="1rem"
                         >
-                            8:00 PM (GMT+7), 24 July 2021
+                            8:00 PM (GMT+7), 28 August 2021
                         </Text>
 
                         <Text

@@ -288,7 +288,7 @@ const RegisterTeamPage = () => {
                             } else if(activeStep == 5) {
                                 return (
                                     <>Please proceed to pay the registration fee. If you need help, check out the payment FAQ below the 
-                                    register and previous button, or contact us at +6281218989775</>
+                                    register and previous button, or contact us at <Text color="F8C800">inreg@sxcintersummit.com</Text></>
                                 )
                             } else {
                                 return (
@@ -1289,6 +1289,22 @@ const RegisterTeamPage = () => {
                                                     </ListItem>
                                                 </UnorderedList>
                                         </Box>
+                                        <Box 
+                                        color="white"
+                                        lineHeight="150%"
+                                        textAlign="center"
+                                        mt="60px"
+                                        w="25vw">
+                                        <Text
+                                            mt="0.25rem"
+                                            className="secondaryFont"
+                                            fontSize="1.5rem"
+                                            textAlign="center"
+                                            fontWeight="600"
+                                        >
+                                            Please send each person a copy of member's student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
+                                        </Text>
+                                    </Box>
                                     </>
                                 )
                             } else {
