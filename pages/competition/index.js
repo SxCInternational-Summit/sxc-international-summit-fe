@@ -144,7 +144,7 @@ const CompetitionPage = () => {
                 Total Prize
             </Center>
             <Center>
-                <Flex align="center" mt="60px">
+                <Flex align="center" mt="60px" overflowX="scroll">
                     <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
                         <Image src="/images/secondPlace.svg" alt="" />
                         <Center
@@ -249,6 +249,7 @@ const CompetitionPage = () => {
                 fontSize="48px"
                 lineHeight="52px"
                 pt="120px"
+                textAlign="center"
                 >
                 Buy Bundle Packs
             </Center>
@@ -259,12 +260,13 @@ const CompetitionPage = () => {
                 fontSize="16px"
                 lineHeight="150%"
                 color="white"
+                textAlign="center"
             >
                 Save some time and money by buying our bundle packs!
             </Center>
             <Center>
-                <Flex mt="70px">
-                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="33%">
+                <Flex mt="70px" direction={{base:"column", md:"row"}}>
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%">
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
@@ -308,7 +310,7 @@ const CompetitionPage = () => {
                             Get Bundle
                         </Button>
                     </Box>
-                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="33%" mx="48px">
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" mx={{base:"0", md:"48px"}} my={{base:"48px", md:"0"}}>
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
@@ -352,7 +354,7 @@ const CompetitionPage = () => {
                             Get Bundle
                         </Button>
                     </Box>
-                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="33%">
+                    <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%">
                         <Text
                             className="tertiaryFont"
                             fontWeight="700"
