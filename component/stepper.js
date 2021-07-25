@@ -32,7 +32,7 @@ const Stepper = ({activeStep}) => {
                         return(
                             <Center>
                                 <Stack align="center">
-                                    <Image src="/images/completedStep.svg" alt="" boxSize="36px" />
+                                    <Image src="/images/completedStep.svg" alt="" boxSize="36px" minW="36px" />
                                 </Stack>
                             </Center>
                             
@@ -41,7 +41,7 @@ const Stepper = ({activeStep}) => {
                         return(
                             <Center>
                                 <Stack align="center">
-                                <Image src="/images/activeStep.svg" alt="" boxSize="36px" />
+                                <Image src="/images/activeStep.svg" alt="" boxSize="36px" minW="36px" />
                                 </Stack>
                             </Center>
                         )
@@ -49,7 +49,7 @@ const Stepper = ({activeStep}) => {
                         return(
                             <Center>
                                 <Stack align="center">
-                                <Image src="/images/incompleteStep.svg" alt="" boxSize="36px" />
+                                <Image src="/images/incompleteStep.svg" alt="" boxSize="36px" minW="36px" />
                                 </Stack>
                             </Center>
                         )
