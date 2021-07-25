@@ -116,6 +116,7 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                         fontWeight="bold"
                         fontSize="16px"
                         lineHeight="20px"
+                        isDisabled={true}
                         >
                         Register Now
                     </Button>

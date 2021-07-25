@@ -23,7 +23,7 @@ const PreEventPage = () => {
             type: "Pre-Event",
             date: "28 August 2021",
             fee: "Free",
-            linkTo: "https://sxcinternationalsummit.vercel.app/pre-event/register"
+            linkTo: ""
           },
           
     ]
