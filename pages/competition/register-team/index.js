@@ -93,10 +93,12 @@ const RegisterTeamPage = () => {
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        window.scrollTo(0, 0)
     };
 
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
+        window.scrollTo(0, 0)
     };
 
     const handleSubmit = async e => {
@@ -162,7 +164,7 @@ const RegisterTeamPage = () => {
         } else {
             // Berhasil maka lanjut ke payment?
             handleNext()
-
+            window.scrollTo(0, 0)
             // ini udah kan ya .-.
         }
     }
