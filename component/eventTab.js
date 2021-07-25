@@ -33,18 +33,19 @@ const EventTab = () => {
                 fontSize="36px"
                 lineHeight="52px"
                 color="white"
+                textAlign="center"
             >
                 What's up with this year's International Summit?
             </Center>
-            <Flex direction={{base:"row", md:"column"}}>
+            <Flex direction={{base:"row", md:"column"}} w={{base:"100%", md:""}} justify="space-evenly">
                 <Flex 
-                mt="40px" 
+                mt={{base:"12px", md:"40px"}} 
                 justify="space-between" 
                 px={{base:"0", md:"256px"}}
                 direction={{base:"column", md:"row"}}>
                     <Box>
                         <Circle 
-                            ml="16px"
+                            ml={{base:"0", md:"16px"}}
                             size="80px" 
                             bg={activeTab === "preEvent" ? "linear-gradient(135deg, #F8C800 0%, #FF6941 100%)" : "#0FA1DB"}
                             color="white"
@@ -54,9 +55,10 @@ const EventTab = () => {
                             
                         </Circle>
                     </Box>
-                    <Divider transform="translateY(40px)" mx="20px" />
+                    <Divider transform="translateY(40px)" mx="20px" display={{base:"none", md:"block"}} />
                     <Box>
                         <Circle 
+                            mt={{base:"16px", md:"0"}}
                             size="80px" 
                             bg={activeTab === "competition" ? "linear-gradient(135deg, #F8C800 0%, #FF6941 100%)" : "#0FA1DB"}
                             color="white"
@@ -65,10 +67,11 @@ const EventTab = () => {
                             <Icon as={AiFillTrophy} fontSize="30px" />
                         </Circle>
                     </Box>
-                    <Divider transform="translateY(40px)" mx="20px" />
+                    <Divider transform="translateY(40px)" mx="20px" display={{base:"none", md:"block"}} />
                     <Box>
                         <Circle 
-                            mr="16px"
+                            mt={{base:"16px", md:"0"}}
+                            mr={{base:"0", md:"16px"}}
                             size="80px" 
                             bg={activeTab === "mainEvent" ? "linear-gradient(135deg, #F8C800 0%, #FF6941 100%)" : "#0FA1DB"}
                             color="white"
@@ -78,7 +81,7 @@ const EventTab = () => {
                         </Circle>
                     </Box>
                 </Flex>
-                <Flex justifyContent="space-between" px="256px" direction={{base:"column", md:"row"}}>
+                <Flex justifyContent="space-between" px={{base:"0",md:"256px"}} direction={{base:"column", md:"row"}}>
                     <Box>
                         <Text
                             mt="12px"
@@ -92,7 +95,7 @@ const EventTab = () => {
                             Pre-Event
                         </Text>
                         <Text
-                            mt="4px"
+                            mt={{base:"0", md:"4px"}}
                             textAlign="center"
                             className="secondaryFont"
                             fontWeight="400"
@@ -105,7 +108,7 @@ const EventTab = () => {
                     </Box>
                     <Box>
                         <Text
-                            mt="12px"
+                            mt={{base:"0", md:"12px"}}
                             textAlign="center"
                             className="tertiaryFont"
                             fontWeight="700"
@@ -116,7 +119,7 @@ const EventTab = () => {
                             Competition
                         </Text>
                         <Text
-                            mt="4px"
+                            mt={{base:"0", md:"4px"}}
                             textAlign="center"
                             className="secondaryFont"
                             fontWeight="400"
@@ -129,7 +132,7 @@ const EventTab = () => {
                     </Box>
                     <Box>
                         <Text
-                            mt="12px"
+                            mt={{base:"0", md:"12px"}}
                             textAlign="center"
                             className="tertiaryFont"
                             fontWeight="700"
@@ -140,7 +143,7 @@ const EventTab = () => {
                             Main Event
                         </Text>
                         <Text
-                            mt="4px"
+                            mt={{base:"0", md:"4px"}}
                             textAlign="center"
                             className="secondaryFont"
                             fontWeight="400"
