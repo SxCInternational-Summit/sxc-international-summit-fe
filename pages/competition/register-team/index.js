@@ -135,6 +135,7 @@ const RegisterTeamPage = () => {
             member2_major: secondMemberMajor,
 
             leader_follow: leaderFollowLink,
+            leader_twibbon: leaderTwibbonLink,
             member1_twibbon: firstMemberTwibbonLink,
             member2_twibbon: secondMemberTwibbonLink,
         }
@@ -171,16 +172,16 @@ const RegisterTeamPage = () => {
 
     const faq =[
 		{
-			question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			question: "How do I pay for the registration?",
+			answer: "After you filled some information, we will provide you with the payment information you need."
 		},
 		{
-			question: "When will the Pre-Events take place?",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			question: "What is the payment option if I live in Indonesia?",
+			answer: "Currently we accept payment via bank transfer by BCA."
 		},
 		{
-			question: "What will I get?",
-			answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			question: "What if I live outside Indonesia?",
+			answer: "You're welcomed to participate!"
 		}
 	]
 
