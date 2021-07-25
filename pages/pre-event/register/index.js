@@ -281,7 +281,7 @@ const RegisterPage = () => {
                                 textAlign="center"
                                 mt="60px"
                             >
-                                We value your privacy and your information will be used for event purposes.
+                                We value your privacy and your information will only be used for event purposes.
                         </Text>
                         <Flex justifyContent="flex-end" w="100%">
                             <Button

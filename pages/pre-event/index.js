@@ -91,6 +91,7 @@ const PreEventPage = () => {
           title="SxC International Summit Pre-Event"
           subtitle='"Maintain product existence in the middle of global pandemic"'
           image={backgroundImageURL}
+          buttonPreEvent={true}
           />
         <EventsHeld title="Meet The Speakers" props={speakers} />
         <EventList events={events} />
