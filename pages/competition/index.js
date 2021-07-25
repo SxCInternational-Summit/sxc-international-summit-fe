@@ -8,6 +8,8 @@ import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 import Timeline from "../../component/timeline"
 
+import Head from 'next/head'
+
 const { PROD_URL } = process.env
 
 const CompetitionPage = () => {
@@ -119,6 +121,9 @@ const CompetitionPage = () => {
 
     return(
     <>
+        <Head>
+            <title>Competition | SxCIntersummit 2021</title>
+        </Head>
         <Navbar />
         <Hero 
         title=" International Product Branding Competition"

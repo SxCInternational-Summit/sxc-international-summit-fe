@@ -9,10 +9,15 @@ import { useState } from "react";
 import Footer from "../../component/footer";
 import EventTab from "../../component/eventTab";
 
+import Head from 'next/head'
+
 const LandingPage = () => {
     const [activeTabe, setactiveTabe] = useState("preEvent")
     return(
         <>
+            <Head>
+                <title>SxCIntersummit 2021</title>
+            </Head>
             <Box bgColor="black">
                 <Navbar />
                 <Jumbotron />

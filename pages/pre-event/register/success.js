@@ -13,9 +13,15 @@ import Navbar from "../../../component/navbar";
 import { FaWhatsapp, FaRegAddressBook } from "react-icons/fa"
 import { useRouter } from "next/router";
 
+import Head from 'next/head'
+
 const RegisterSuccess = () => {
     const router = useRouter()
     return(
+        <>
+        <Head>
+            <title>Registration Process Complete</title>
+        </Head>
         <Box bgColor="#04040C" >
             <Navbar />
             <Center 
@@ -131,6 +137,7 @@ const RegisterSuccess = () => {
                 </Center>
             <Footer />
         </Box>
+        </>
     )
 }
 
