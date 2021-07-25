@@ -12,9 +12,9 @@ import styles from "../styles/event.module.scss"
 
 const Faq = ({faqList, title}) => {
 
-    // const rotateIcon = (el) => {
-    //     el.classList.toggle(styles.rotate)
-    // }
+    const rotateIcon = (el) => {
+        el.classList.toggle(styles.rotate)
+    }
 
     return (
         <Box p={{base: "20px", md:"100px"}} bgColor="#04040C">
@@ -29,16 +29,26 @@ const Faq = ({faqList, title}) => {
             
             {faqList.map((list, index) => {
                 return (
-                    <Accordion allowToggle allowMultiple borderColor="transparent">
+                    <Accordion allowToggle allowMultiple borderColor="transparent" key={index}>
                         <AccordionItem>
                             <AccordionButton
                             key={index}
                             bgColor="#080818"
                             p="56px 36px 36px" 
-                            //onClick={() => rotateIcon("arrow")} 
+                            onClick={() => rotateIcon(arrow1)} 
                             border="3px solid #04040C"
-                            borderRadius="20px 20px 0px 0px">
-                                <IoMdArrowDropdownCircle id="arrow" fontSize="24px" color="#0FA1DB" />
+                            borderRadius={(() => {
+                                if (index == 0) {
+                                    return(
+                                        "20px 20px 0px 0px"
+                                    )
+                                } else if(index == faqList.length - 1) {
+                                    return(
+                                        "0px 0px 20px 20px"
+                                    )
+                                }
+                            })}>
+                                <IoMdArrowDropdownCircle id={`arrow${index}`} fontSize="24px" color="#0FA1DB" />
                                 <Box 
                                     key={index}
                                     flex="1" 
