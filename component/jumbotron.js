@@ -2,61 +2,60 @@ import {
     Box,
     Text,
     Flex,
-    Button,
-    Stack
+    useMediaQuery
   } from "@chakra-ui/react";
 
 import styles from "../styles/landing.module.scss";
 
 const Jumbotron = () => {
+    const [isDesktop] = useMediaQuery("(min-width: 48em)")
     return(
-            <Box ml="126px" fontSize="64px" mt="200px">
+            <Box 
+            pl={{base:"0", md:"126px"}} 
+            fontSize={{base:"36px", md:"64px"}} 
+            pt={{base:"156px", md:"267px" }}
+            lineHeight={{base:"42px", md:"72px"}} 
+            className={styles.backgroundImage} 
+            textAlign={{base:"center", md:"left"}}
+            h={{base:"552px", md:"780px"}}>
                 <Text 
-                    className={styles.titleFont} 
+                    className="tertiaryFont"
+                    fontWeight="700"
                     color="white">
                         StudentsxCEOs<br/>International
                 </Text>
-
-                <Flex mt="-128px">
+                {isDesktop ? <Flex >
                     <Text 
-                        className={styles.titleFont} 
+                        className="tertiaryFont"
+                        fontWeight="700"
                         color="white">
                             Summit 
-                        </Text>
+                    </Text>
                     <Text 
-                        className={[styles.titleFont, styles.gradientBlue].join(" ")}
-                         ml="12px">
+                        className={["tertiaryFont", styles.gradientBlue].join(" ")}
+                        fontWeight="700"
+                        ml="12px">
                              2021
                     </Text>
-                </Flex>
+                </Flex> : <>
+                    <Text 
+                        className="tertiaryFont"
+                        fontWeight="700"
+                        color="white">
+                            Summit 
+                    </Text>
+                    <Text 
+                        className={["tertiaryFont", styles.gradientBlue].join(" ")}
+                        fontWeight="700"
+                        ml="12px">
+                             2021
+                    </Text>
+                </>}
+                
 
-                <Text 
-                    className={styles.sloganFont} 
-                    mt="-48px">
-                        Jaya Jaya Jaya
+                <Text className={styles.sloganFont} mt="15px">
+                        Stand Up, Stand Out, Be The One
                 </Text>
-
-                <Stack spacing="24px" direction="row" mt="120px">
-                    <Button 
-                        borderRadius="4px" 
-                        p="10px 24px"
-                        bgColor="#F8C800" 
-                        border="none" 
-                        className={styles.buttonFont}
-                        cursor="pointer">
-                            Register
-                    </Button>
-                    <Button 
-                        borderRadius="4px" 
-                        p="10px 24px" 
-                        border="1px solid #F8C800" 
-                        bgColor="transparent" 
-                        color="white" 
-                        className={styles.buttonFont}
-                        cursor="pointer">
-                            Sign In
-                    </Button>
-                </Stack>
             </Box>
     )
 }
