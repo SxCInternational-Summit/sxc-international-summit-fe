@@ -39,7 +39,7 @@ const CompetitionPage = () => {
         },
         {
             title: "The Grand Final",
-            subtitle: "Speak confidently and pitch eloquently. The final stage will present the top 10 finalists to present their proposed ideas in front of the professional judges and the public streamers to determine who's going to be the one taking the winner title in the awarding ceremony.",
+            subtitle: "Speak confidently and pitch eloquently. The final stage will present the top 10 finalists to present their proposed ideas in front of the professional judges and the public streamers to determine who is going to be the one taking the winner title in the awarding ceremony.",
             src: "/images/presentation.jfif"
         },
     ]

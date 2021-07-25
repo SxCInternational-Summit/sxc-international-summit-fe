@@ -1302,7 +1302,7 @@ const RegisterTeamPage = () => {
                                             textAlign="center"
                                             fontWeight="600"
                                         >
-                                            Please send each person a copy of member's student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
+                                            Please send each person a copy of member`s student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
                                         </Text>
                                     </Box>
                                     </>

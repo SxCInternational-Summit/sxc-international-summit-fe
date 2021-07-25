@@ -160,7 +160,7 @@ const RegisterPage = () => {
                                 className="secondaryFont"
                                 fontSize="1rem"
                             >
-                                Pre-Event "Maintain product existence in the middle of global pandemic"
+                                Pre-Event: Maintain product existence in the middle of global pandemic
                             </Text>
 
                             <Text
