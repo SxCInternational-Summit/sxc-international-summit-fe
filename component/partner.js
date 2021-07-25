@@ -14,6 +14,7 @@ import styles from "../styles/landing.module.scss";
 const Partner = () => {
     const [isDesktop] = useMediaQuery("(min-width: 48em)")
     return(
+        <>
         <Center bgColor="black" flexDirection="column" pt="89px" px="30px">
             <Center>
                 <Text className={styles.sectionFont} textAlign="center">What is StudentxCEOs International Summit?</Text>
@@ -54,21 +55,31 @@ const Partner = () => {
             <Center mt="86px">
                 <Text className={styles.sectionFont}>Our Partners and Sponsors</Text>
             </Center>
-            
-            <Flex mx="10%" fontSize="64px" w="80%" justifyContent="space-between" mt="87px">
+            <Center>
+                <Text
+                    className={styles.sectionFont}
+                    textAlign="center"
+                    fontSize="2xl"
+                    color="#5e5858"
+                    mt="64px"
+                >
+                    - No Partners Yet -
+                </Text>
+            </Center>
+            {/* <Flex mx="10%" fontSize="64px" w="80%" justifyContent="space-between" mt="87px">
                 <Image src="/images/sponsor1.svg" alt="sponsor 1" />
                 <Image src="/images/sponsor2.svg" alt="sponsor 2" />
                 <Image src="/images/sponsor3.svg" alt="sponsor 3" />
                 <Image src="/images/sponsor4.svg" alt="sponsor 4" />
                 {isDesktop ? <Image src="/images/sponsor5.svg" alt="sponsor 5" /> : <></>}
-            </Flex>
+            </Flex> */}
             {isDesktop ? <></> : 
                 <Flex>
                     <Image src="/images/sponsor5.svg" alt="sponsor 5" />
                 </Flex>
             }
         </Center>
-            
+        </>
     )
 }
 
