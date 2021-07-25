@@ -467,9 +467,9 @@ const RegisterTeamPage = () => {
                             } else if (activeStep == 2) {
                             return (
                                 <>
-                                    <HStack w="80vw" spacing="80px" mt="80px">
+                                    <Stack w="80vw" spacing="80px" mt="80px" direction={{base:"column", md:"row"}}>
                                         <Box 
-                                        w="50%" 
+                                        w="100%" 
                                         bgColor="#080818" 
                                         p="50px"
                                         color="white"
@@ -572,7 +572,7 @@ const RegisterTeamPage = () => {
                                             </FormControl>
                                         </Box>
                                         <Box 
-                                        w="50%" 
+                                        w="100%" 
                                         bgColor="#080818" 
                                         p="50px"
                                         color="white"
@@ -674,7 +674,7 @@ const RegisterTeamPage = () => {
                                                 </InputGroup>
                                             </FormControl>
                                         </Box>
-                                    </HStack>
+                                    </Stack>
                                 </>
                             )
                             } else if(activeStep == 3){
@@ -849,9 +849,9 @@ const RegisterTeamPage = () => {
                                                 </Text>
                                             </Box>
                                         </Stack>
-                                        <HStack w="80vw" spacing="80px" mt="120px">
+                                        <Stack w="80vw" spacing="80px" mt="120px" direction={{base:"column", md:"row"}}>
                                         <Box 
-                                        w="50%" 
+                                        w="100%" 
                                         bgColor="#080818" 
                                         p="50px"
                                         color="white"
@@ -978,7 +978,7 @@ const RegisterTeamPage = () => {
                                                 </Text>
                                         </Box>
                                         <Box 
-                                        w="50%" 
+                                        w="100%" 
                                         bgColor="#080818" 
                                         p="50px"
                                         color="white"
@@ -1104,7 +1104,7 @@ const RegisterTeamPage = () => {
                                                     {secondMemberMajor ? secondMemberMajor : "-"}
                                                 </Text>
                                         </Box>
-                                    </HStack>
+                                    </Stack>
                                     </>
                                 )
                             } else if (activeStep == 4) {
@@ -1155,7 +1155,7 @@ const RegisterTeamPage = () => {
                                         color="white"
                                         lineHeight="150%"
                                         textAlign="left"
-                                        w="30vw"
+                                        w="80vw"
                                     >
                                         <FormControl isRequired>
                                             <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
@@ -1224,32 +1224,28 @@ const RegisterTeamPage = () => {
                                             lineHeight="150%"
                                             textAlign="left"
                                             mt="60px"
-                                            w="25vw">
+                                            w="80vw">
                                             <Text 
                                                 className="tertiaryFont"
                                                 fontWeight="700"
                                                 fontSize="0.75rem"
                                             >
-                                                Competition Name
+                                                Item Name
                                             </Text>
                                             <Text
                                                 mt="0.25rem"
                                                 className="secondaryFont"
                                                 fontSize="1rem"
                                             >
-                                                SxC Business Case Competition
+                                                All Package Bundle
                                             </Text>
                                         </Box>
-                                        <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
-                                            <Text fontWeight="700">
-                                                DOMESTIC
-                                            </Text>
-                                            <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
-                                        </Flex>
                                         <Box
                                             lineHeight="125%"
                                             className="tertiaryFont"
-                                            fontWeight="700">
+                                            fontWeight="700"
+                                            w="80vw"
+                                            >
                                             <Box mt="20px">
                                                 <Text 
                                                     color="white"
@@ -1262,7 +1258,7 @@ const RegisterTeamPage = () => {
                                                     fontSize="1rem"
                                                     color="#F8C800"
                                                 >
-                                                    Rp279.000,- <Text color="#FF6941">(Early Bird)</Text>
+                                                    Rp309.000,- <Text color="#FF6941">(Early Bird)</Text>
                                                 </Text>
                                             </Box>
                                             <Box mt="20px">
@@ -1346,7 +1342,7 @@ const RegisterTeamPage = () => {
                                         lineHeight="150%"
                                         textAlign="center"
                                         mt="60px"
-                                        w="25vw">
+                                        w="80vw">
                                         <Text
                                             mt="0.25rem"
                                             className="secondaryFont"
