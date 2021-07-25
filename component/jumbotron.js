@@ -24,7 +24,37 @@ const Jumbotron = () => {
                     color="white">
                         StudentsxCEOs<br/>International
                 </Text>
-                {isDesktop ? <Flex >
+                {isDesktop ? 
+                <Box>
+                    <Flex>
+                        <Text 
+                            fontSize={{base:"36px", md:"64px"}} 
+                            lineHeight={{base:"42px", md:"72px"}}
+                            className="tertiaryFont"
+                            fontWeight="700"
+                            color="white">
+                                Summit 
+                        </Text>
+                        <Text 
+                            fontSize={{base:"36px", md:"64px"}} 
+                            lineHeight={{base:"42px", md:"72px"}}
+                            className={["tertiaryFont", styles.gradientBlue].join(" ")}
+                            fontWeight="700"
+                            ml="12px">
+                                2021
+                        </Text>
+                    </Flex>
+                    <Box>
+                        <Text
+                            className="tertiaryFont"
+                            color="white"
+                            fontSize={{base:"16px", md:"1.4em"}}
+                        >
+                            Stand Up, Stand Out, Be the One
+                        </Text>
+                    </Box>
+                </Box>
+                 : <>
                     <Text 
                         fontSize={{base:"36px", md:"64px"}} 
                         lineHeight={{base:"42px", md:"72px"}}
@@ -41,33 +71,14 @@ const Jumbotron = () => {
                         ml="12px">
                              2021
                     </Text>
-                </Flex> : <>
-                    <Text 
-                        fontSize={{base:"36px", md:"64px"}} 
-                        lineHeight={{base:"42px", md:"72px"}}
+                    <Text
                         className="tertiaryFont"
-                        fontWeight="700"
-                        color="white">
-                            Summit 
-                    </Text>
-                    <Text 
-                        fontSize={{base:"36px", md:"64px"}} 
-                        lineHeight={{base:"42px", md:"72px"}}
-                        className={["tertiaryFont", styles.gradientBlue].join(" ")}
-                        fontWeight="700"
-                        ml="12px">
-                             2021
+                        color="white"
+                        fontSize={{base:"16px", md:"1.4em"}}
+                    >
+                        Stand Up, Stand Out, Be the One
                     </Text>
                 </>}
-
-                <Text
-                    className="tertiaryFont"
-                    fontSize="16px"
-                    color="#FFFFFF"
-                    fontWeight="30"
-                >
-                    Stand Up, Stand Out, Be the One
-                </Text>
             </Box>
     )
 }
