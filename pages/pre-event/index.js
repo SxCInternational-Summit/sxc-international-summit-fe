@@ -92,7 +92,7 @@ const PreEventPage = () => {
           subtitle='"Maintain product existence in the middle of global pandemic"'
           image={backgroundImageURL}
           />
-        <EventsHeld props={speakers} />
+        <EventsHeld title="Meet The Speakers" props={speakers} />
         <EventList events={events} />
         <Faq faqList={faq} title={true} />
         <EventComponent />
