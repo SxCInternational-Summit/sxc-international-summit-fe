@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 
 import Head from "next/head"
 
-const Hero = ({title, subtitle, image, buttons, guidebookURL}) => {
+const Hero = ({title, subtitle, image, buttons, buttonPreEvent}) => {
     const [isMobile] = useMediaQuery("(max-width: 48em)")
     const router = useRouter()
 
@@ -101,6 +101,27 @@ const Hero = ({title, subtitle, image, buttons, guidebookURL}) => {
                 </Center>
                 :
                 <></>
+                }
+
+                {buttonPreEvent ? 
+                    <>
+                        <Button
+                        onClick={() => router.push("pre-event/register")}
+                        mt="16px"
+                        ml="20px"
+                        color="black"
+                        bgColor="#F8C800"
+                        p="10px 24px"
+                        className="tertiaryFont"
+                        fontWeight="bold"
+                        fontSize="16px"
+                        lineHeight="20px"
+                        >
+                        Register Now
+                    </Button>
+                    </> 
+                    : 
+                    <></>
                 }
             </Center>
         </>
