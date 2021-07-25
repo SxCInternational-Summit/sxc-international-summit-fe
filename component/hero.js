@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 
 import Head from "next/head"
 
-const Hero = ({title, subtitle, image, buttons, buttonPreEvent}) => {
+const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) => {
     const [isMobile] = useMediaQuery("(max-width: 48em)")
     const router = useRouter()
 
