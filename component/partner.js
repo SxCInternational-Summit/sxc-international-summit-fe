@@ -19,7 +19,7 @@ const Partner = () => {
             <Center>
                 <Text className={styles.sectionFont} textAlign="center">What is StudentxCEOs International Summit?</Text>
             </Center>
-            <Stack ml="10%" mr="10%" fontSize="64px" w="80%" justifyContent="space-between" mt={{base:"70px", md:"32px"}} direction={{base:"column", md:"row"}} spacing="72px">
+            <Stack ml="10%" mr="10%" fontSize="64px" w="80%" justifyContent="space-between" mt={{base:"70px", lg:"32px"}} direction={{base:"column", lg:"row"}} spacing="72px">
                 <Box pos="relative" w="100%">
                     <Circle bgColor="#FF6941" size="80px" pos="absolute" top="-20px" left="-40px">
                         <Image src="/images/bookIcon.svg" alt="" />

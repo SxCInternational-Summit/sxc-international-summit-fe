@@ -49,7 +49,7 @@ const EventList = ({events}) => {
             </Text>
 
             <Grid 
-            templateColumns={{base:"repeat(1, 1fr)", md:"repeat(2, 1fr)", lg:"repeat(3, 1fr)" }}
+            templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", lg:"repeat(3, 1fr)" }}
             rowGap="72px" 
             columnGap="84px"
             mt={{base:"40px", md:"72px"}}>
