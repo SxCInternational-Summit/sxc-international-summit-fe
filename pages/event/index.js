@@ -12,7 +12,7 @@ const Events = ({events}) => {
 			answer: "There are 3 events. Pre-event (webinar), Competition, and Main Event"
 		},
 		{
-			question: "When will the Pre-Events take place?",
+			question: "Where will the Pre-Events take place?",
 			answer: "Zoom platform from your home."
 		},
 		{
