@@ -1230,7 +1230,7 @@ const RegisterTeamPage = () => {
                                                     lineHeight="150%"
                                                     textAlign="left"
                                                     mt="60px"
-                                                    w="80vw">
+                                                    w={{base:"80vw", md: "30vw"}}>
                                                     <Text 
                                                         className="tertiaryFont"
                                                         fontWeight="700"
@@ -1250,7 +1250,7 @@ const RegisterTeamPage = () => {
                                                     lineHeight="125%"
                                                     className="tertiaryFont"
                                                     fontWeight="700"
-                                                    w="80vw"
+                                                    w={{base:"80vw", md: "30vw"}}
                                                     >
                                                     <Box mt="20px">
                                                         <Text 
@@ -1349,7 +1349,7 @@ const RegisterTeamPage = () => {
                                             lineHeight="150%"
                                             textAlign="center"
                                             mt="60px"
-                                            w="80vw">
+                                            w={{base:"80vw", md: "30vw"}}>
                                             <Text
                                                 mt="0.25rem"
                                                 className="secondaryFont"

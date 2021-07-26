@@ -1173,13 +1173,13 @@ const RegisterTeamPage = () => {
                                 } else if(activeStep == 5) {
                                     return (
                                         <>
-                                            <Center>
+                                            
                                                 <Box 
                                                     color="white"
                                                     lineHeight="150%"
                                                     textAlign="left"
                                                     mt="60px"
-                                                    w="80vw">
+                                                    w={{base:"80vw", md: "30vw"}}>
                                                     <Text 
                                                         className="tertiaryFont"
                                                         fontWeight="700"
@@ -1195,14 +1195,14 @@ const RegisterTeamPage = () => {
                                                         Product Branding Competition
                                                     </Text>
                                                 </Box>
-                                                <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
+                                                <Flex align="center" color="#0FA1DB" w={{base:"80vw", md: "30vw"}} mt="24px">
                                                     <Text fontWeight="700">
                                                         DOMESTIC
                                                     </Text>
                                                     <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
                                                 </Flex>
                                                 <Box
-                                                    w="80vw"
+                                                    w={{base:"80vw", md: "30vw"}}
                                                     lineHeight="125%"
                                                     className="tertiaryFont"
                                                     fontWeight="700">
@@ -1252,14 +1252,14 @@ const RegisterTeamPage = () => {
                                                         </UnorderedList>
                                                     </Box>
                                                 </Box>
-                                                <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
+                                                <Flex align="center" color="#0FA1DB" w={{base:"80vw", md: "30vw"}} mt="24px">
                                                     <Text fontWeight="700">
                                                         INTERNATIONAL
                                                     </Text>
                                                     <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
                                                 </Flex>
                                                 <Box
-                                                    w="80vw"
+                                                    w={{base:"80vw", md: "30vw"}}
                                                     lineHeight="125%"
                                                     className="tertiaryFont"
                                                     fontWeight="700">
@@ -1303,7 +1303,7 @@ const RegisterTeamPage = () => {
                                                 lineHeight="150%"
                                                 textAlign="center"
                                                 mt="60px"
-                                                w="80vw">
+                                                w={{base:"80vw", md: "30vw"}}>
                                                 <Text
                                                     mt="0.25rem"
                                                     className="secondaryFont"
@@ -1314,7 +1314,7 @@ const RegisterTeamPage = () => {
                                                     Please send each person a copy of member`s student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
                                                 </Text>
                                             </Box>
-                                        </Center>
+                                        
                                         </>
                                     )
                                 } else {
