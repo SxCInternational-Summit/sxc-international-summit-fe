@@ -1146,14 +1146,14 @@ const RegisterTeamPage = () => {
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Twibbon (3 Person)
+                                                                Twibbon (3 People)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Follow Account (sxcintersummit)
+                                                                Follow Account (sxcintersummit and studentsxceosjkt)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
