@@ -456,7 +456,7 @@ const CompetitionPage = () => {
                             lineHeight="28px"
                             color="#F8C800"
                         >
-                            Competition Only
+                            Competition
                         </Text>
                         <UnorderedList 
                             mt="12px" 
@@ -466,8 +466,7 @@ const CompetitionPage = () => {
                             lineHeight="150%"
                             mb="120px"
                         >
-                            <ListItem>Only Competition</ListItem>
-                            <ListItem>3 Members per team</ListItem>
+                            <ListItem>Access to Pre-event webinar and conference (day 3)</ListItem>
                             <ListItem>International</ListItem>
                         </UnorderedList>
                         <Text
