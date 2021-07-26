@@ -11,7 +11,6 @@ import Navbar from "../../component/navbar"
 import { NextSeo } from "next-seo"
 
 const PreEventPage = () => {
-    const title = "Pre-Event | SxCInternational Summit 2021"
     const description = "SxC International Summit Pre-Event"
 
     const backgroundImageURL = "/images/preEventBackground.svg"
@@ -67,7 +66,7 @@ const PreEventPage = () => {
     return(
     <>
         <NextSeo
-          title={title}
+          title="Pre-Event | SxCInternational Summit 2021"
           description={description}
         />
         <Navbar />
