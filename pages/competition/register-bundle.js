@@ -1225,7 +1225,6 @@ const RegisterTeamPage = () => {
                                 } else if(activeStep == 5) {
                                     return (
                                         <>
-                                            <Center>
                                                 <Box 
                                                     color="white"
                                                     lineHeight="150%"
@@ -1299,7 +1298,6 @@ const RegisterTeamPage = () => {
                                                         </UnorderedList>
                                                     </Box>
                                                 </Box>
-                                            </Center>
                                             {/* <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
                                                 <Text fontWeight="700">
                                                     INTERNATIONAL
