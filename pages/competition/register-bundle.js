@@ -1348,7 +1348,7 @@ const RegisterTeamPage = () => {
                                             lineHeight="150%"
                                             textAlign="center"
                                             mt="60px"
-                                            w="80vw">
+                                            w={{base: "80vw", md: "30vw"}}>
                                             <Text
                                                 mt="0.25rem"
                                                 className="secondaryFont"
