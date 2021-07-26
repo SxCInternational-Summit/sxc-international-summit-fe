@@ -467,7 +467,7 @@ const CompetitionPage = () => {
                             mb="120px"
                         >
                             <ListItem>Access to Pre-event webinar and conference (day 3)</ListItem>
-                            <ListItem>International</ListItem>
+                            <ListItem>Available for International and Indonesia</ListItem>
                         </UnorderedList>
                         <Text
                             mt="12px"
