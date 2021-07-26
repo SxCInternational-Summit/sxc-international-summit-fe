@@ -344,7 +344,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Super Business' 
                                             isRequired={true}
-                                            onChange={(e) => setteamName(e.target.value)} />
+                                            onChange={(e) => setteamName(e.target.value)}
+                                            value={teamName}
+                                            />
                                         </InputGroup>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderName">
                                             {"TEAM LEADER'S FULL NAME"}
@@ -355,7 +357,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Andi' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderName(e.target.value)} />
+                                            onChange={(e) => setleaderName(e.target.value)}
+                                            value={leaderName}
+                                            />
                                         </InputGroup>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderEmail">
                                             {"TEAM LEADER'S EMAIL"}
@@ -366,7 +370,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: admin@sxcintersummit.com' 
                                             isRequired={true}
-                                            onChange={(e) => setLeaderEmail(e.target.value)} />
+                                            onChange={(e) => setLeaderEmail(e.target.value)} 
+                                            value={leaderEmail}
+                                            />
                                         </InputGroup>
                                         <FormHelperText className="formHelper">Please input your active email account, We will contact you through this email</FormHelperText>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderDateOfBirth">
@@ -378,7 +384,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='format: dd-mm-yyyy (ex: 16-01-2001)' 
                                             isRequired={true}
-                                            onChange={(e) => setLeaderDateOfBirth(e.target.value)} />
+                                            onChange={(e) => setLeaderDateOfBirth(e.target.value)} 
+                                            value={leaderDateOfBirth}
+                                            />
                                         </InputGroup>
                                         <FormHelperText className="formHelper">Your information is required for event purposes and will not be shared publicly</FormHelperText>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderPhone">
@@ -390,7 +398,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: 0891204123' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderPhone(e.target.value)} />
+                                            onChange={(e) => setleaderPhone(e.target.value)} 
+                                            value={leaderPhone}
+                                            />
                                         </InputGroup>
                                         <FormHelperText className="formHelper">Please input your active phone number</FormHelperText>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderAddress">
@@ -402,7 +412,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Jalan Sudirman Kav 6 Nomor 3, Menteng Raya' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderAddress(e.target.value)} />
+                                            onChange={(e) => setleaderAddress(e.target.value)} 
+                                            value={leaderAddress}
+                                            />
                                         </InputGroup>
                                         <FormHelperText className="formHelper">Please input your current address</FormHelperText>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderCity">
@@ -414,7 +426,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Jakarta Pusat' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderCity(e.target.value)} />
+                                            onChange={(e) => setleaderCity(e.target.value)} 
+                                            value={leaderCity}
+                                            />
                                         </InputGroup>
                                         <FormHelperText className="formHelper">Please input your current city</FormHelperText>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderUniversity">
@@ -426,7 +440,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Universitas Indonesia' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderUniversity(e.target.value)} />
+                                            onChange={(e) => setleaderUniversity(e.target.value)} 
+                                            value={leaderUniversity}
+                                            />
                                         </InputGroup>
                                         <FormHelperText className="formHelper">Please input your current or previous university name</FormHelperText>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderFaculty">
@@ -438,7 +454,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Computer Science' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderFaculty(e.target.value)} />
+                                            onChange={(e) => setleaderFaculty(e.target.value)} 
+                                            value={leaderFaculty}
+                                            />
                                         </InputGroup>
                                         <FormLabel className="label" mt="36px" htmlFor="leaderMajor">
                                             {"TEAM LEADER'S MAJOR"}
@@ -449,7 +467,9 @@ const RegisterTeamPage = () => {
                                             type='text' 
                                             placeholder='ex: Information System' 
                                             isRequired={true}
-                                            onChange={(e) => setleaderMajor(e.target.value)} />
+                                            onChange={(e) => setleaderMajor(e.target.value)} 
+                                            value={leaderMajor}
+                                            />
                                         </InputGroup>
                                     </FormControl>
                                 </Box>
@@ -483,7 +503,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberName" 
                                                         type='text'
                                                         placeholder="ex: Andi" 
-                                                        onChange={(e) => setfirstMemberName(e.target.value)} />
+                                                        onChange={(e) => setfirstMemberName(e.target.value)} 
+                                                        value={firstMemberName}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="firstMemberDateOfBirth">
                                                         DATE OF BIRTH
@@ -493,7 +515,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberDateOfBirth" 
                                                         type='text'  
                                                         placeholder="Format: dd-mm-yyy (ex: 16-01-2001)"
-                                                        onChange={(e) => setFirstMemberDateOfBirth(e.target.value)} />
+                                                        onChange={(e) => setFirstMemberDateOfBirth(e.target.value)} 
+                                                        value={firstMemberDateOfBirth}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="firstMemberAddress">
                                                         ADDRESS
@@ -503,7 +527,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberAddress"
                                                         type='text'
                                                         placeholder='ex: Jalan Sudirman Kav 6 Nomor 3, Menteng Raya' 
-                                                        onChange={(e) => setfirstMemberAddress(e.target.value)} />
+                                                        onChange={(e) => setfirstMemberAddress(e.target.value)} 
+                                                        value={firstMemberAddress}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="firstMemberCity">
                                                         CITY
@@ -513,7 +539,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberCity" 
                                                         type='text' 
                                                         placeholder="ex: Jakarta Pusat" 
-                                                        onChange={(e) => setfirstMemberCity(e.target.value)} />
+                                                        onChange={(e) => setfirstMemberCity(e.target.value)} 
+                                                        value={firstMemberCity}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="firstMemberUniversity">
                                                         UNIVERSITY
@@ -523,7 +551,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberUniversity" 
                                                         type='text'
                                                         placeholder="Universitas Indonesia"
-                                                        onChange={(e) => setfirstMemberUniversity(e.target.value)} />
+                                                        onChange={(e) => setfirstMemberUniversity(e.target.value)} 
+                                                        value={firstMemberUniversity}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="firstMemberFaculty">
                                                         FACULTY
@@ -533,7 +563,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberFaculty" 
                                                         type='text' 
                                                         placeholder="Teknik"
-                                                        onChange={(e) => setfirstMemberFaculty(e.target.value)} />
+                                                        onChange={(e) => setfirstMemberFaculty(e.target.value)} 
+                                                        value={firstMemberFaculty}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="firstMemberMajor">
                                                         MAJOR
@@ -543,7 +575,9 @@ const RegisterTeamPage = () => {
                                                         id="firstMemberMajor" 
                                                         type='text'
                                                         placeholder="Teknik Industri"
-                                                        onChange={(e) => setfirstMemberMajor(e.target.value)} />
+                                                        onChange={(e) => setfirstMemberMajor(e.target.value)} 
+                                                        value={firstMemberMajor}
+                                                        />
                                                     </InputGroup>
                                                 </FormControl>
                                             </Box>
@@ -572,7 +606,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberName" 
                                                         type='text'
                                                         placeholder="Alicia Setiawan"
-                                                        onChange={(e) => setsecondMemberName(e.target.value)} />
+                                                        onChange={(e) => setsecondMemberName(e.target.value)} 
+                                                        value={secondMemberName}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="secondMemberDateOfBirth">
                                                         Date of Birth
@@ -582,7 +618,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberDateOfBirth" 
                                                         type='text'
                                                         placeholder="Format: dd-mm-yyy (ex: 16-01-2001)" 
-                                                        onChange={(e) => setSecondMemberDateOfBirth(e.target.value)} />
+                                                        onChange={(e) => setSecondMemberDateOfBirth(e.target.value)} 
+                                                        value={secondMemberDateOfBirth}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="secondMemberAddress">
                                                         ADDRESS
@@ -592,7 +630,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberAddress" 
                                                         type='text'
                                                         placeholder="'ex: Jalan Sudirman Kav 6 Nomor 3, Menteng Raya"
-                                                        onChange={(e) => setsecondMemberAddress(e.target.value)} />
+                                                        onChange={(e) => setsecondMemberAddress(e.target.value)} 
+                                                        value={secondMemberAddress}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="secondMemberCity">
                                                         CITY
@@ -602,7 +642,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberCity" 
                                                         type='text'
                                                         placeholder="Jakarta Pusat"
-                                                        onChange={(e) => setsecondMemberCity(e.target.value)} />
+                                                        onChange={(e) => setsecondMemberCity(e.target.value)} 
+                                                        value={secondMemberCity}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="secondMemberUniversity">
                                                         UNIVERSITY
@@ -612,7 +654,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberUniversity" 
                                                         type='text'
                                                         placeholder="Universitas Indonesia" 
-                                                        onChange={(e) => setsecondMemberUniversity(e.target.value)} />
+                                                        onChange={(e) => setsecondMemberUniversity(e.target.value)} 
+                                                        value={secondMemberUniversity}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="secondMemberFaculty">
                                                         FACULTY
@@ -622,7 +666,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberFaculty" 
                                                         type='text'
                                                         placeholder="Fakultas Ilmu Politik dan Sosial"
-                                                        onChange={(e) => setsecondMemberFaculty(e.target.value)} />
+                                                        onChange={(e) => setsecondMemberFaculty(e.target.value)} 
+                                                        value={secondMemberFaculty}
+                                                        />
                                                     </InputGroup>
                                                     <FormLabel className="label" mt="32px" htmlFor="secondMemberMajor">
                                                         MAJOR
@@ -632,7 +678,9 @@ const RegisterTeamPage = () => {
                                                         id="secondMemberMajor" 
                                                         type='text'
                                                         placeholder="Ilmu Komunikasi"
-                                                        onChange={(e) => setsecondMemberMajor(e.target.value)} />
+                                                        onChange={(e) => setsecondMemberMajor(e.target.value)} 
+                                                        value={secondMemberMajor}
+                                                        />
                                                     </InputGroup>
                                                 </FormControl>
                                             </Box>
@@ -1098,14 +1146,14 @@ const RegisterTeamPage = () => {
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Twibbon (3 Person)
+                                                                Twibbon (3 People)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Follow Account (sxcintersummit)
+                                                                Follow Account (sxcintersummit and studentsxceosjkt)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
@@ -1117,7 +1165,7 @@ const RegisterTeamPage = () => {
                                             color="white"
                                             lineHeight="150%"
                                             textAlign="left"
-                                            w="80vw"
+                                            w={{base:"80vw", md:"30vw"}}
                                         >
                                             <FormControl isRequired>
                                                 <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
@@ -1129,7 +1177,9 @@ const RegisterTeamPage = () => {
                                                     type='text' 
                                                     placeholder='ex: https://drive.google.com/<link>' 
                                                     isRequired={true}
-                                                    onChange={(e) => setLeaderFollowLink(e.target.value)} />
+                                                    onChange={(e) => setLeaderFollowLink(e.target.value)} 
+                                                    value={leaderFollowLink}
+                                                    />
                                                 </InputGroup>
                                                 <FormHelperText textAlign="center">Please insert all of the requirements into one shareable drive link (ex: Google Drive)</FormHelperText>
                                                 <FormHelperText textAlign="center">File Name Format: [TeamName_YourName] for each files</FormHelperText>
@@ -1142,8 +1192,11 @@ const RegisterTeamPage = () => {
                                                     type='text' 
                                                     placeholder='ex: https://www.instagram.com/p/CRtR9j1Mp57/' 
                                                     isRequired={true}
-                                                    onChange={(e) => setLeaderTwibbonLink(e.target.value)} />
+                                                    onChange={(e) => setLeaderTwibbonLink(e.target.value)} 
+                                                    value={leaderTwibbonLink}
+                                                    />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn`t private.</FormHelperText>
                                                 <FormLabel className="label" mt="36px" htmlFor="firstMemberTwibbonLink">
                                                     Team Member Twibbon Link
                                                 </FormLabel>
@@ -1153,8 +1206,11 @@ const RegisterTeamPage = () => {
                                                     type='text' 
                                                     placeholder='ex: https://www.instagram.com/p/CRtR9j1Mp57/' 
                                                     isRequired={true}
-                                                    onChange={(e) => setFirstMemberTwibbonLink(e.target.value)} />
+                                                    onChange={(e) => setFirstMemberTwibbonLink(e.target.value)} 
+                                                    value={firstMemberTwibbonLink}
+                                                    />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn`t private.</FormHelperText>
                                                 <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
                                                     Team Member Twibbon Link
                                                 </FormLabel>
@@ -1164,8 +1220,11 @@ const RegisterTeamPage = () => {
                                                     type='text' 
                                                     placeholder='ex: https://www.instagram.com/p/CRtR9j1Mp57/' 
                                                     isRequired={true}
-                                                    onChange={(e) => setSecondMemberTwibbonLink(e.target.value)} />
+                                                    onChange={(e) => setSecondMemberTwibbonLink(e.target.value)} 
+                                                    value={secondMemberTwibbonLink}
+                                                    />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn`t private.</FormHelperText>
                                             </FormControl>
                                         </Box>
                                         </>
@@ -1173,13 +1232,13 @@ const RegisterTeamPage = () => {
                                 } else if(activeStep == 5) {
                                     return (
                                         <>
-                                            <Center>
+                                            
                                                 <Box 
                                                     color="white"
                                                     lineHeight="150%"
                                                     textAlign="left"
                                                     mt="60px"
-                                                    w="80vw">
+                                                    w={{base:"80vw", md: "30vw"}}>
                                                     <Text 
                                                         className="tertiaryFont"
                                                         fontWeight="700"
@@ -1195,14 +1254,14 @@ const RegisterTeamPage = () => {
                                                         Product Branding Competition
                                                     </Text>
                                                 </Box>
-                                                <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
+                                                <Flex align="center" color="#0FA1DB" w={{base:"80vw", md: "30vw"}} mt="24px">
                                                     <Text fontWeight="700">
                                                         DOMESTIC
                                                     </Text>
                                                     <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
                                                 </Flex>
                                                 <Box
-                                                    w="80vw"
+                                                    w={{base:"80vw", md: "30vw"}}
                                                     lineHeight="125%"
                                                     className="tertiaryFont"
                                                     fontWeight="700">
@@ -1252,14 +1311,14 @@ const RegisterTeamPage = () => {
                                                         </UnorderedList>
                                                     </Box>
                                                 </Box>
-                                                <Flex align="center" color="#0FA1DB" w="80vw" mt="24px">
+                                                <Flex align="center" color="#0FA1DB" w={{base:"80vw", md: "30vw"}} mt="24px">
                                                     <Text fontWeight="700">
                                                         INTERNATIONAL
                                                     </Text>
                                                     <Divider borderColor="#0FA1DB" w="100%" ml="12px" />
                                                 </Flex>
                                                 <Box
-                                                    w="80vw"
+                                                    w={{base:"80vw", md: "30vw"}}
                                                     lineHeight="125%"
                                                     className="tertiaryFont"
                                                     fontWeight="700">
@@ -1303,7 +1362,7 @@ const RegisterTeamPage = () => {
                                                 lineHeight="150%"
                                                 textAlign="center"
                                                 mt="60px"
-                                                w="80vw">
+                                                w={{base:"80vw", md: "30vw"}}>
                                                 <Text
                                                     mt="0.25rem"
                                                     className="secondaryFont"
@@ -1314,7 +1373,7 @@ const RegisterTeamPage = () => {
                                                     Please send each person a copy of member`s student ID and the proof of payment to <Text color="#F8C800">inreg@sxcintersummit.com</Text>
                                                 </Text>
                                             </Box>
-                                        </Center>
+                                        
                                         </>
                                     )
                                 } else {

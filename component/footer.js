@@ -23,7 +23,7 @@ const Footer = () => {
                         <Image src="/images/linkedIn.svg" alt="linkedIn" ml="16px" cursor="pointer"/>
                     </Link>
                     <Link href="https://www.tiktok.com/@sxcintersummit?lang=en" isExternal> 
-                        <Image src="/images/twitter.svg" alt="twitter" ml="16px" cursor="pointer"/>
+                        <Image src="/images/tiktok.svg" alt="tiktok" ml="16px" cursor="pointer"/>
                     </Link>
                 </Flex>
                 <Text fontSize="md" color="white" className={styles.footerFont}>
@@ -39,7 +39,7 @@ const Footer = () => {
                         <Image src="/images/linkedIn.svg" alt="linkedIn" ml="16px" cursor="pointer"/>
                     </Link>
                     <Link href="https://www.tiktok.com/@sxcintersummit?lang=en" isExternal> 
-                        <Image src="/images/twitter.svg" alt="twitter" ml="16px" cursor="pointer"/>
+                        <Image src="/images/tiktok.svg" alt="tiktok" ml="16px" cursor="pointer"/>
                     </Link>
                 </Flex>
                 <Text color="white" className={styles.footerFont} fontSize={{base:"14px", md: "16px"}}>

@@ -1141,14 +1141,14 @@ const RegisterTeamPage = () => {
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Twibbon (3 Person)
+                                                                Twibbon (3 People)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
                                                     <ListItem>
                                                         <Flex fontSize="1rem" align="center">
                                                             <Text color="#F8C800">
-                                                                Follow Account (sxcintersummit)
+                                                                Follow Account (sxcintersummit and studentsxceosjkt)
                                                             </Text>
                                                         </Flex>
                                                     </ListItem>
@@ -1160,7 +1160,7 @@ const RegisterTeamPage = () => {
                                             color="white"
                                             lineHeight="150%"
                                             textAlign="left"
-                                            w="80vw"
+                                            w={{base:"80vw", md:"30vw"}}
                                         >
                                             <FormControl isRequired>
                                                 <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
@@ -1191,6 +1191,7 @@ const RegisterTeamPage = () => {
                                                     value={leaderTwibbonLink}
                                                     />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn`t private.</FormHelperText>
                                                 <FormLabel className="label" mt="36px" htmlFor="firstMemberTwibbonLink">
                                                     Team Member Twibbon Link
                                                 </FormLabel>
@@ -1204,6 +1205,7 @@ const RegisterTeamPage = () => {
                                                     value={firstMemberTwibbonLink}
                                                     />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn`t private.</FormHelperText>
                                                 <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
                                                     Team Member Twibbon Link
                                                 </FormLabel>
@@ -1217,6 +1219,7 @@ const RegisterTeamPage = () => {
                                                     value={secondMemberTwibbonLink}
                                                     />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn`t private.</FormHelperText>
                                             </FormControl>
                                         </Box>
                                         </>
@@ -1224,13 +1227,12 @@ const RegisterTeamPage = () => {
                                 } else if(activeStep == 5) {
                                     return (
                                         <>
-                                            <Center>
                                                 <Box 
                                                     color="white"
                                                     lineHeight="150%"
                                                     textAlign="left"
                                                     mt="60px"
-                                                    w="80vw">
+                                                    w={{base:"80vw", md: "30vw"}}>
                                                     <Text 
                                                         className="tertiaryFont"
                                                         fontWeight="700"
@@ -1243,14 +1245,14 @@ const RegisterTeamPage = () => {
                                                         className="secondaryFont"
                                                         fontSize="1rem"
                                                     >
-                                                        Product Branding Competition
+                                                        Product Branding Competition + Totebags (3 pcs)
                                                     </Text>
                                                 </Box>
                                                 <Box
                                                     lineHeight="125%"
                                                     className="tertiaryFont"
                                                     fontWeight="700"
-                                                    w="80vw"
+                                                    w={{base:"80vw", md: "30vw"}}
                                                     >
                                                     <Box mt="20px">
                                                         <Text 
@@ -1298,7 +1300,6 @@ const RegisterTeamPage = () => {
                                                         </UnorderedList>
                                                     </Box>
                                                 </Box>
-                                            </Center>
                                             {/* <Flex align="center" color="#0FA1DB" w="25vw" mt="24px">
                                                 <Text fontWeight="700">
                                                     INTERNATIONAL
@@ -1349,7 +1350,7 @@ const RegisterTeamPage = () => {
                                             lineHeight="150%"
                                             textAlign="center"
                                             mt="60px"
-                                            w="80vw">
+                                            w={{base:"80vw", md: "30vw"}}>
                                             <Text
                                                 mt="0.25rem"
                                                 className="secondaryFont"

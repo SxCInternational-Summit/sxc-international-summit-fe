@@ -25,7 +25,7 @@ const CompetitionPage = () => {
             type: "Competition",
             date: "26 July 2021 - 10 October 2021",
             fee: "IDR 279.000",
-            linkTo: 'https://sxcinternationalsummit.vercel.app/competition/register-team'
+            linkTo: 'https://sxcinternationalsummit.vercel.app/competition/'
           }
     ]
 
@@ -92,8 +92,8 @@ const CompetitionPage = () => {
             date: "15 August 2021 - 27 August 2021"
         },
         {
-            title : "Late Bird Registration",
-            date: "16 August 2021 - 3 September 2021"
+            title : "Late Bird Registration and Case Distribution",
+            date: "28 August - 3 September 2021"
         },
         {
             title : "Coaching Clinic 1",
@@ -113,7 +113,7 @@ const CompetitionPage = () => {
         },
         {
             title : "Pitch Deck Submission",
-            date: "19 June 2021"
+            date: "8 October 2021"
         },
         {
             title : "The Grand Final",
@@ -168,7 +168,7 @@ const CompetitionPage = () => {
                             color="white"
                             mb="12px"
                         >
-                            Rp3.500.000
+                            Rp3.500.000+ ($240+)
                         </Center>
                     </Box>
                     <Box p="24px 35px" bgColor="#080818" borderRadius="16px" mx="87px">
@@ -191,7 +191,7 @@ const CompetitionPage = () => {
                             color="white"
                             mb="12px"
                         >
-                            Rp5.000.000
+                            Rp5.000.000+ ($345+)
                         </Center>
                     </Box>
                     <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
@@ -214,7 +214,7 @@ const CompetitionPage = () => {
                             color="white"
                             mb="12px"
                         >
-                            Rp2.500.000
+                            Rp2.500.000+ ($170+)
                         </Center>
                     </Box>
                 </Flex>

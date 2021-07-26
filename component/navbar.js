@@ -54,7 +54,7 @@ const Navbar = () => {
                             <Link color="#FF6941" href="/" cursor="pointer" alignSelf="center">
                                     Home
                                 </Link>
-                                <Link href="/" cursor="pointer" alignSelf="center">
+                                <Link href="/event" cursor="pointer" alignSelf="center">
                                     Events
                                 </Link>
                         </VStack>
