@@ -5,6 +5,8 @@ import EventList from "../../component/eventList";
 import Faq from "../../component/faq";
 import Navbar from "../../component/navbar";
 
+import { NextSeo } from "next-seo";
+
 const Events = ({events}) => {
 	const faq =[
 		{
@@ -21,12 +23,15 @@ const Events = ({events}) => {
 		}
 	]
 	return (
+		<>
+		<NextSeo 
+			title="Events List | SxCInternational Summit 2021" />
 		<Box>
 			<Navbar />
 			<EventList key={events.id} events={events}/>
 			<Faq faqList={faq} title={true} />
 		</Box>
-		
+		</>
 	)
 }
 
