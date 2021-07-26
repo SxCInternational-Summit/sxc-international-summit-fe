@@ -1161,7 +1161,7 @@ const RegisterTeamPage = () => {
                                             color="white"
                                             lineHeight="150%"
                                             textAlign="left"
-                                            w="80vw"
+                                            w={{base:"80vw", md:"30vw"}}
                                         >
                                             <FormControl isRequired>
                                                 <FormLabel className="label" mt="36px" htmlFor="leaderFollowLink">
@@ -1192,6 +1192,7 @@ const RegisterTeamPage = () => {
                                                     value={leaderTwibbonLink}
                                                     />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn't private.</FormHelperText>
                                                 <FormLabel className="label" mt="36px" htmlFor="firstMemberTwibbonLink">
                                                     Team Member Twibbon Link
                                                 </FormLabel>
@@ -1205,6 +1206,7 @@ const RegisterTeamPage = () => {
                                                     value={firstMemberTwibbonLink}
                                                     />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn't private.</FormHelperText>
                                                 <FormLabel className="label" mt="36px" htmlFor="secondMemberTwibbonLink">
                                                     Team Member Twibbon Link
                                                 </FormLabel>
@@ -1218,6 +1220,7 @@ const RegisterTeamPage = () => {
                                                     value={secondMemberTwibbonLink}
                                                     />
                                                 </InputGroup>
+                                                <FormHelperText textAlign="center">Simply copy and paste the twibbon link from your instagram and make sure your account isn't private.</FormHelperText>
                                             </FormControl>
                                         </Box>
                                         </>
