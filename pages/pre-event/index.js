@@ -9,6 +9,7 @@ import Navbar from "../../component/navbar"
 import Head from 'next/head'
 
 import { NextSeo } from "next-seo"
+import React from "react"
 
 const PreEventPage = () => {
     const description = "SxC International Summit Pre-Event"
@@ -56,7 +57,7 @@ const PreEventPage = () => {
     ]
 
     return(
-    <>
+    <React.Fragment>
         <NextSeo 
           title="Pre-Event | SxCInternational Summit 2021"
           description={description}
@@ -73,7 +74,7 @@ const PreEventPage = () => {
         <Faq faqList={faq} title={true} />
         <EventComponent />
         <Footer />
-    </>
+    </React.Fragment>
     )
 }
 export default PreEventPage

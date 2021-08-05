@@ -10,6 +10,7 @@ import Timeline from "../../component/timeline"
 
 import Head from 'next/head'
 import { useRouter } from "next/router"
+import { NextSeo } from "next-seo"
 
 const { PROD_URL } = process.env
 
@@ -124,16 +125,16 @@ const CompetitionPage = () => {
 
     return(
     <>
-        <Head>
-            <title>Competition | SxCIntersummit 2021</title>
-        </Head>
+        <NextSeo
+            title="Competition | SxCInternational Summit 2021"
+        />
         <Navbar />
         <Hero 
-        title=" International Product Branding Competition"
-        subtitle="StudentsxCEOs International Summit Competition is a case-based competition consisting of two stages, proposal stage and pitching stage."
-        image={backgroundImageURL}
-        buttons={true}
-        guidebookURL="https://drive.google.com/file/d/1O0_n4O6nhL4o6fV_sQlEm6BJksRk5LZ-/view"
+            title=" International Product Branding Competition"
+            subtitle="StudentsxCEOs International Summit Competition is a case-based competition consisting of two stages, proposal stage and pitching stage."
+            image={backgroundImageURL}
+            buttons={true}
+            guidebookURL="https://drive.google.com/file/d/1O0_n4O6nhL4o6fV_sQlEm6BJksRk5LZ-/view"
         />
         <Box bgColor="#04040C">
             <Center 
