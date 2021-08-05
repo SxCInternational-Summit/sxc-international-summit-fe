@@ -14,9 +14,6 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
 
     return(
         <>
-            <Head>
-                <title>Competition | SxCInternational Summit 2021</title>
-            </Head>
             <Center
                 backgroundImage={`url(${image})`}
                 p={{base: "20px", md: "0"}}
