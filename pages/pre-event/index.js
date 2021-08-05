@@ -6,7 +6,7 @@ import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import Navbar from "../../component/navbar"
 
-//import Head from 'next/head'
+import Head from 'next/head'
 
 import { NextSeo } from "next-seo"
 
@@ -35,16 +35,8 @@ const PreEventPage = () => {
       },
       {
         subtitle: "Brand Manager Unilever",
-        src: "/images/rifka_aulia.png",
+        src: "/images/rifka_auliya_rounded.png",
         title: "Rifka Auliya",
-      },
-    ]
-
-    const mods = [
-      {
-        title: 'Bagastama Aulia Mahardika',
-        caption: 'FET and Corporate Finance Intern at Unilever| Undergraduate Accounting Student at Universitas Indonesia',
-        src: '',
       },
     ]
 
@@ -65,7 +57,7 @@ const PreEventPage = () => {
 
     return(
     <>
-        <NextSeo
+        <NextSeo 
           title="Pre-Event | SxCInternational Summit 2021"
           description={description}
         />
