@@ -176,7 +176,7 @@ const RegisterPage = () => {
                                 className="secondaryFont"
                                 fontSize="1rem"
                             >
-                                8:00 PM (GMT+7), 28 August 2021
+                                13:00 (GMT+7), 28 August 2021
                             </Text>
 
                             <Text
