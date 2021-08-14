@@ -104,7 +104,7 @@ const RegisterSuccess = () => {
                             lineHeight="150%"
                             color="white"
                             textAlign="center">
-                                +628121898977 (Phylicia)
+                                +6281218989775 (Phylicia)
                             </Text>
                         </Flex>
                         <Flex
@@ -118,7 +118,7 @@ const RegisterSuccess = () => {
                             lineHeight="150%"
                             color="white"
                             textAlign="center">
-                                Email us at: inreg@sxcintersummit.com
+                                Email us at: info.sxcintersummit@gmail.com 
                             </Text>
                         </Flex>
                         <Button
