@@ -480,7 +480,7 @@ const CompetitionPage = () => {
                             color="white"
                             pos="absolute"
                         >
-                            Rp299.000,- <Text color="#FF6941">(Normal Bird)</Text>
+                            Rp299.000,- / 24 USD <Text color="#FF6941">(Normal Bird)</Text>
                         </Text>
                         <Button
                             color="black"
