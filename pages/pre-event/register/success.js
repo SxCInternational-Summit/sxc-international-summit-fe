@@ -22,7 +22,9 @@ const RegisterSuccess = () => {
         <Head>
             <title>Registration Process Complete</title>
         </Head>
-        <Box bgColor="#04040C" >
+        <Box 
+            bgColor="#04040C"
+        >
             <Navbar />
             <Center 
                     w="40%"
@@ -52,10 +54,10 @@ const RegisterSuccess = () => {
                     <Image src="/images/registerEventSuccess.svg" alt="" fontSize="96px" mt="92px" />
                     <Text 
                         className="gradientFont"
-                        fontSize="48px"
+                        fontSize={{base: "24px", md: "48px"}}
                         lineHeight="52px"
                         textAlign="center"
-                        w="70%"
+                        w="100%"
                         mt="12px"
                         >
                         Registration Process Completed
@@ -74,12 +76,18 @@ const RegisterSuccess = () => {
                         color="#F8C800"
                         alignItems="center"
                         mt="48px">
-                            <Icon as={FaWhatsapp} fontSize="48px" />
+                            <Icon 
+                                as={FaWhatsapp} 
+                                fontSize="36px"
+                            />
                             <Text ml="0.75rem"
-                            fontSize="24px"
-                            lineHeight="28px"
-                            className="tertiaryFont"
-                            fontWeight="700">
+                                fontSize={{base:"18px", md:"24px"}}
+                                lineHeight="28px"
+                                className="tertiaryFont"
+                                fontWeight="700"
+                                maxWidth="80vw"
+                                textAlign="center"
+                                >
                                 https://chat.whatsapp.com/E5msaBzu2yM31VOTGdchfC
                             </Text>
                         </Flex>
