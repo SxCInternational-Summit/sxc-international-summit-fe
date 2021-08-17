@@ -98,7 +98,7 @@ const RegisterPage = () => {
             <Box bgColor="#04040C">
                 <Navbar />
                     <Center 
-                        w="30%"
+                        w="30vw"
                         mx="35%"
                         mt="64px"
                         flexDirection="column"
@@ -146,6 +146,7 @@ const RegisterPage = () => {
                             color="white"
                             lineHeight="150%"
                             textAlign="left"
+                            w={{base: "80vw", md:"30vw"}}
                         >
                             <Text
                                 className="tertiaryFont"
