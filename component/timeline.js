@@ -13,8 +13,8 @@ const Timeline = ({type, events}) => {
         <Box bgColor="#04040C" pt="120px">
             <Center>
                 <Text
-                    fontSize="36px"
-                    lineHeight="42px"
+                    fontSize={{base:"24px", md:"36px"}}
+                    lineHeight={{base:"28px", md:"42px"}}
                     className="tertiaryFont"
                     fontWeight="700"
                     color="#F8C800"
@@ -25,7 +25,7 @@ const Timeline = ({type, events}) => {
             <HStack 
                 ml={{base:"0", md:"187px"}} 
                 mt="96px" 
-                overflowX="scroll"
+                overflowX="auto"
                 alignItems="flex-start"
                 pb="60px"
                 >
