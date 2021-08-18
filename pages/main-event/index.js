@@ -79,6 +79,7 @@ const MainEvent = () => {
 
     const mainEventDetails =[
         {
+            dayCount: "1",
             color: "linear-gradient(102.67deg, #0F75BC -2.74%, #0FA1DB 91.23%)",
             session : [
                 {
@@ -101,6 +102,7 @@ const MainEvent = () => {
             ]
         },
         {
+            dayCount: "2",
             color: "linear-gradient(135deg, #F8C800 0%, #FF6941 100%)",
             session : [
                 {
@@ -124,6 +126,7 @@ const MainEvent = () => {
             
         },
         {
+            dayCount: "3",
             color: "linear-gradient(135deg, #0FA1DB 0%, #9AE95A 50.32%, #F8C800 97.59%)",
             session : [
                 {

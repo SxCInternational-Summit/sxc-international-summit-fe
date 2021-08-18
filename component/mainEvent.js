@@ -40,7 +40,7 @@ export const ProfileCard = ({path, name, achievement}) => {
     )
 }
 
-export const MainEventCard = ({session, color}) => {
+export const MainEventCard = ({session, color, dayCount}) => {
     return(
         <Flex
             bgColor="#080818"
@@ -67,7 +67,7 @@ export const MainEventCard = ({session, color}) => {
                             lineHeight="68px"
                             mt="32px"
                         >
-                            1
+                            {dayCount}
                         </Text>
                     </Flex>
                     
@@ -141,7 +141,7 @@ const MainEventList = ({days}) => {
             <Box mt="64px" mx="120px">
                 {days.map((el, index) => {
                     return(
-                        <MainEventCard key={index} session={el.session} color={el.color} />
+                        <MainEventCard key={index} session={el.session} color={el.color} dayCount={el.dayCount} />
                     )
                 })}
             </Box>
