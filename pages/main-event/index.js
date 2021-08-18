@@ -1,11 +1,13 @@
 import { Box } from "@chakra-ui/react"
 import BundleList from "../../component/bundleList"
+import EventComponent from "../../component/eventComponent"
 import EventsHeld from "../../component/eventsHeld"
 import Footer from "../../component/footer"
 import Hero from "../../component/hero"
 import MainEventList from "../../component/mainEvent"
 import Navbar from "../../component/navbar"
 import Timeline from "../../component/timeline"
+import Faq from "../../component/faq"
 
 const MainEvent = () => {
     const backgroundImageURL = "/images/mainEventBg.svg"
@@ -163,6 +165,21 @@ const MainEvent = () => {
         }
     ]
 
+    const faqList =[
+        {
+            question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
+            answer: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?"
+        },
+        {
+            question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
+            answer: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?"
+        },
+        {
+            question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
+            answer: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?"
+        }
+    ]
+
     return(
         <Box bgColor="#04040C">
             <Navbar />
@@ -178,6 +195,8 @@ const MainEvent = () => {
             <EventsHeld title="What are the held events?" props={mainEvents} />
             <Timeline type="Main-Event" events={eventsTimeline} />
             <MainEventList days={mainEventDetails} />
+            <Faq faqList={faqList} title />
+            <EventComponent />
             <Footer />
         </Box>
     )
