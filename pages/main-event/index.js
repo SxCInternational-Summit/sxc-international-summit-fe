@@ -43,7 +43,7 @@ const MainEvent = () => {
                 subtitleAddition="Join Now through the Bundle Packs!"
                 image={backgroundImageURL}
             />
-            <Box bgColor="#04040C" pt="75px" px="120px">
+            <Box bgColor="#04040C" pt="75px" px={{base:"14px", md:"120px"}}>
                 <BundleList list={bundleList} bgColor="#080818" />
             </Box>
         </>

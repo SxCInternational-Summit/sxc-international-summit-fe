@@ -9,9 +9,9 @@ import {
 } from "@chakra-ui/react"
 
 
-const BundleItem =({title, titleColor, advantages, finalPrice, originalPrice, path, saving, priceDescription}) => {
+const BundleItem =({title, titleColor, advantages, finalPrice, originalPrice, path, saving, priceDescription, mx}) => {
     return(
-        <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" maxW="fit-content" position="relative">
+        <Box p="28px 24px" minW="200px" w={{base:"200px", sm:"auto"}} border="2px solid #0FA1DB" borderRadius="16px"  position="relative" mx={{base: "", md: mx}} my={{base: mx, md: ""}}>
             {saving ? <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
                             <Flex direction="column">
                                 <Text
@@ -80,6 +80,7 @@ const BundleItem =({title, titleColor, advantages, finalPrice, originalPrice, pa
                             fontSize="0.75rem"
                             lineHeight="1rem"
                             color="#999999"
+                            as="del"
                         >
                             {originalPrice}
                         </Text> : <></> }
