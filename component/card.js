@@ -85,7 +85,7 @@ const Card = ({title, image, subtitle, type, date, fee, numOfPreEvent, linkTo}) 
 const FlexCard = ({image, title, subtitle}) =>{
     return(
             <Grid
-                templateColumns={{base: "repeat(1, 1fr)", md:"repeat(2, 1fr)"}}
+                templateColumns={{base: "repeat(1, 1fr)", sm:"repeat(2, 1fr)"}}
                 mt={{base:"24px", md:"64px"}}
                 w="100%">
                 <Image 
