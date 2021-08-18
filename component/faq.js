@@ -21,8 +21,8 @@ const Faq = ({faqList, title}) => {
             {title ? <Text 
                 color="white" 
                 className="sectionHeader"
-                fontSize={{base: "16px", md:""}}
-                lineHeight={{base:"20px", md:""}}
+                fontSize={{base: "16px", md:"36px"}}
+                lineHeight={{base:"20px", md:"42px"}}
                 >
                     Frequently Asked Questions
             </Text> : <></>}
