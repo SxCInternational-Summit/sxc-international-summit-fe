@@ -1,4 +1,4 @@
-import { Button, Center, Flex, Box, Image, Text, UnorderedList, ListItem, Circle, Stack } from "@chakra-ui/react"
+import { Button, Center, Flex, Box, Image, Text, UnorderedList, ListItem, Circle, Stack, useMediaQuery, Grid, GridItem } from "@chakra-ui/react"
 import EventComponent from "../../component/eventComponent"
 import EventList from "../../component/eventList"
 import EventsHeld from "../../component/eventsHeld"
@@ -15,6 +15,7 @@ import { NextSeo } from "next-seo"
 const { PROD_URL } = process.env
 
 const CompetitionPage = () => {
+    const [isMobile] = useMediaQuery("(max-width: 768px)")
     const router = useRouter()
 
     const backgroundImageURL = "/images/competitionBackground.svg"
@@ -147,33 +148,13 @@ const CompetitionPage = () => {
             >
                 Total Prize
             </Center>
-            <Center>
-                <Flex align="center" mt="60px" overflowX="scroll">
-                    <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
-                        <Image src="/images/secondPlace.svg" alt="" />
-                        <Center
-                            className="tertiaryFont"
-                            fontWeight="700"
-                            fontSize="24px"
-                            lineHeight="28px"
-                            color="#0FA1DB"
-                            mt="48px"
-                        >
-                            2nd Place
-                        </Center>   
-                        <Center
-                            className="secondaryFont"
-                            fontWeight="400"
-                            fontSize="24px"
-                            lineHeight="28px"
-                            color="white"
-                            mb="12px"
-                        >
-                            Rp3.500.000+ ($240+)
+            {isMobile ? 
+            <Center pt="32px" mx="54px">
+                <Grid templateColumns="repeat(2, 1fr)" gap="12px">
+                    <GridItem bgColor="#080818" borderRadius="16px" colSpan={2} p="24px 35px">
+                        <Center>
+                            <Image src="/images/firstPlace.svg" alt="" w="180px" />
                         </Center>
-                    </Box>
-                    <Box p="24px 35px" bgColor="#080818" borderRadius="16px" mx="87px">
-                        <Image src="/images/firstPlace.svg" alt="" />
                         <Center
                             className="tertiaryFont"
                             fontWeight="700"
@@ -181,7 +162,7 @@ const CompetitionPage = () => {
                             lineHeight="42px"
                             color="#F8C800"
                             mt="48px"
-                        >
+                            >
                             1st Place
                         </Center>   
                         <Center
@@ -194,32 +175,134 @@ const CompetitionPage = () => {
                         >
                             Rp5.000.000+ ($345+)
                         </Center>
-                    </Box>
-                    <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
-                        <Image src="/images/thirdPlace.svg" alt="" />
-                        <Center
-                            className="tertiaryFont"
-                            fontWeight="700"
-                            fontSize="24px"
-                            lineHeight="28px"
-                            color="#0FA1DB"
-                            mt="48px"
-                        >
-                            3rd Place
-                        </Center>   
-                        <Center
-                            className="secondaryFont"
-                            fontWeight="400"
-                            fontSize="24px"
-                            lineHeight="28px"
-                            color="white"
-                            mb="12px"
-                        >
-                            Rp2.500.000+ ($170+)
+                    </GridItem>
+                    <GridItem p="24px 35px" bgColor="#080818" borderRadius="16px">
+                        <Center>
+                            <Image src="/images/secondPlace.svg" alt="" w="80px" />
                         </Center>
-                    </Box>
-                </Flex>
-            </Center>
+                            
+                            <Center
+                                className="tertiaryFont"
+                                fontWeight="700"
+                                fontSize="16px"
+                                lineHeight="24px"
+                                color="#0FA1DB"
+                                mt="48px"
+                            >
+                                2nd Place
+                            </Center>   
+                            <Center
+                                className="secondaryFont"
+                                fontWeight="400"
+                                fontSize="16px"
+                                lineHeight="24px"
+                                color="white"
+                                mb="12px"
+                            >
+                                Rp3.500.000+ ($240+)
+                            </Center>
+                        </GridItem>
+                        <GridItem p="24px 35px" bgColor="#080818" borderRadius="16px">
+                            <Center>
+                                <Image src="/images/thirdPlace.svg" alt="" w="80px" />
+                            </Center>
+                            <Center
+                                className="tertiaryFont"
+                                fontWeight="700"
+                                fontSize="16px"
+                                lineHeight="24px"
+                                color="#0FA1DB"
+                                mt="48px"
+                            >
+                                3rd Place
+                            </Center>   
+                            <Center
+                                className="secondaryFont"
+                                fontWeight="400"
+                                fontSize="16px"
+                                lineHeight="24px"
+                                color="white"
+                                mb="12px"
+                            >
+                                Rp2.500.000+ ($170+)
+                            </Center>
+                        </GridItem>
+                </Grid>
+            </Center> : 
+                <Center>
+                    <Flex align="center" mt="60px">
+                        <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
+                            <Image src="/images/secondPlace.svg" alt="" />
+                            <Center
+                                className="tertiaryFont"
+                                fontWeight="700"
+                                fontSize="24px"
+                                lineHeight="28px"
+                                color="#0FA1DB"
+                                mt="48px"
+                            >
+                                2nd Place
+                            </Center>   
+                            <Center
+                                className="secondaryFont"
+                                fontWeight="400"
+                                fontSize="24px"
+                                lineHeight="28px"
+                                color="white"
+                                mb="12px"
+                            >
+                                Rp3.500.000+ ($240+)
+                            </Center>
+                        </Box>
+                        <Box p="24px 35px" bgColor="#080818" borderRadius="16px" mx="87px">
+                            <Image src="/images/firstPlace.svg" alt="" />
+                            <Center
+                                className="tertiaryFont"
+                                fontWeight="700"
+                                fontSize="36px"
+                                lineHeight="42px"
+                                color="#F8C800"
+                                mt="48px"
+                            >
+                                1st Place
+                            </Center>   
+                            <Center
+                                className="secondaryFont"
+                                fontWeight="400"
+                                fontSize="24px"
+                                lineHeight="28px"
+                                color="white"
+                                mb="12px"
+                            >
+                                Rp5.000.000+ ($345+)
+                            </Center>
+                        </Box>
+                        <Box p="24px 35px" bgColor="#080818" borderRadius="16px">
+                            <Image src="/images/thirdPlace.svg" alt="" />
+                            <Center
+                                className="tertiaryFont"
+                                fontWeight="700"
+                                fontSize="24px"
+                                lineHeight="28px"
+                                color="#0FA1DB"
+                                mt="48px"
+                            >
+                                3rd Place
+                            </Center>   
+                            <Center
+                                className="secondaryFont"
+                                fontWeight="400"
+                                fontSize="24px"
+                                lineHeight="28px"
+                                color="white"
+                                mb="12px"
+                            >
+                                Rp2.500.000+ ($170+)
+                            </Center>
+                        </Box>
+                    </Flex>
+                </Center>
+            }
         </Box>
         <Box bgColor="#04040C" px="20%">
             <Center

@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 
 import Head from "next/head"
 
-const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) => {
+const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL, subtitleAddition}) => {
     const [isMobile] = useMediaQuery("(max-width: 48em)")
     const router = useRouter()
 
@@ -48,7 +48,7 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                     className="gradientFont"
                     fontSize={{base: "24px", md:"64px"}}
                     lineHeight={{base:"28px", md:"68px"}}
-                    w={{base: "80%", md: "40%"}}
+                    w={{base: "80%",sm:"75%", md: "70%", lg:"40%"}}
                     textAlign="center"
                     >
                     {title}
@@ -66,6 +66,18 @@ const Hero = ({title, subtitle, image, buttons, buttonPreEvent, guidebookURL}) =
                     >
                     {subtitle}
                 </Text>
+                {subtitleAddition ? <Text
+                    className="tertiaryFont"
+                    color="#F8C800"
+                    w={{base: "80%", md: "40%"}}
+                    fontSize={{base: "0.75rem", md:"1rem"}}
+                    lineHeight="150%"
+                    fontWeight="700"
+                    textAlign="center"
+                    mt={{base: "0.75rem", md:"1.5rem"}}
+                >
+                    {subtitleAddition}
+                </Text> :<></>}
 
                 {buttons ? 
                 <Center>
