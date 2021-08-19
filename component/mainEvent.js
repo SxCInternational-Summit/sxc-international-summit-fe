@@ -52,7 +52,10 @@ export const MainEventCard = ({session, color, dayCount}) => {
         >
             <Box 
             w={{base:"100%", md:"114px"}} 
-            h={{base: "48px", md:"100%"}} 
+            // h={{base: "48px", md:"100%"}} 
+            h="-moz-max-content"
+            pt="10px"
+            minH={{base:"48px", md:"100%"}}
             borderRadius={{base:"20px 20px 0 0", md:"20px 0px 0px 20px"}} 
             background={color}>
                 <Center w="100%" h="100%">
@@ -92,7 +95,7 @@ export const MainEventCard = ({session, color, dayCount}) => {
                                     lineHeight={{base:"16px", md:"20px"}}
                                     fontWeight="700"
                                     color="#0FA1DB"
-                                    textAlign={{base:"center", md:"left"}}
+                                    textAlign={{base:"center", lg:"left"}}
                                 >
                                     {el.date}
                                 </Text>
@@ -103,7 +106,7 @@ export const MainEventCard = ({session, color, dayCount}) => {
                                     fontWeight="700"
                                     color="#F8C800"
                                     mt={{base:"8px", md:"12px"}}
-                                    textAlign={{base:"center", md:"left"}}
+                                    textAlign={{base:"center", lg:"left"}}
                                 >
                                     {el.title}
                                 </Text>
@@ -114,11 +117,11 @@ export const MainEventCard = ({session, color, dayCount}) => {
                                     fontWeight="400"
                                     mt="12px"
                                     color="white"
-                                    textAlign={{base:"center", md:"left"}}
+                                    textAlign={{base:"center", lg:"left"}}
                                 >
                                     {el.subtitle}
                                 </Text>
-                                <Grid templateColumns={{base:"repeat(1, 1fr)", md:"repeat(2, 1fr)"}} mt="40px" columnGap="90px" rowGap="36px">
+                                <Grid templateColumns={{base:"repeat(1, 1fr)", lg:"repeat(2, 1fr)"}} mt="40px" columnGap="90px" rowGap="36px">
                                     {el.speakers.map((speaker, index) => {
                                         return(
                                             <ProfileCard key={index} path={speaker.src} name={speaker.name} achievement={speaker.achievement} />
