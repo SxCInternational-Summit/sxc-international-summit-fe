@@ -11,7 +11,7 @@ import {
 
 const BundleItem =({title, titleColor, advantages, finalPrice, originalPrice, path, saving, priceDescription, mx}) => {
     return(
-        <Box p="28px 24px" minW="200px" w={{base:"200px", sm:"auto"}} border="2px solid #0FA1DB" borderRadius="16px"  position="relative" mx={{base: "", md: mx}} my={{base: mx, md: ""}}>
+        <Box p="28px 24px" minW="200px" maxW="320px" w={{base:"200px", sm:"100%"}} border="2px solid #0FA1DB" borderRadius="16px"  position="relative" mx={{base: "", md: mx}} my={{base: mx, md: ""}}>
             {saving ? <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
                             <Flex direction="column">
                                 <Text

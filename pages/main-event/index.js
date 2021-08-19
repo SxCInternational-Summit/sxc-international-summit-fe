@@ -192,7 +192,7 @@ const MainEvent = () => {
                 subtitleAddition="Join Now through the Bundle Packs!"
                 image={backgroundImageURL}
             />
-            <Box pt="75px" px={{base:"14px", md:"120px"}}>
+            <Box pt="75px" px={{base:"14px", md:"80px", xl:"120px"}}>
                 <BundleList list={bundleList} bgColor="#080818" />
             </Box>
             <EventsHeld title="What are the held events?" props={mainEvents} />
