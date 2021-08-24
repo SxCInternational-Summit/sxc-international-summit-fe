@@ -88,7 +88,7 @@ const RegisterSuccess = () => {
                                 maxWidth="80vw"
                                 textAlign="center"
                                 >
-                                https://chat.whatsapp.com/E5msaBzu2yM31VOTGdchfC
+                                    https://chat.whatsapp.com/JcO0nc2eWPUIKzlOstJrSw
                             </Text>
                         </Flex>
                         <Text
