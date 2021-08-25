@@ -70,7 +70,7 @@ const RegisterSuccess = () => {
                         textAlign="center"
                         mt="24px"
                     >
-                        Thank you for registering! Don't forget to join the Whatsapp group for the further information. See you soon, future leaders!
+                        Thank you for registering! Dont forget to join the Whatsapp group for the further information. See you soon, future leaders!
                     </Text>
                     <Flex
                         color="#F8C800"
