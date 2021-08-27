@@ -412,7 +412,7 @@ const CompetitionPage = () => {
                             lineHeight="20px"
                             color="white"
                         >
-                            Rp379.000,- <Text color="#FF6941">(Normal Bird)</Text>
+                            Rp399.000,- <Text color="#FF6941">(Late Bird)</Text>
                         </Text>
                         <Button
                             color="black"
@@ -488,7 +488,7 @@ const CompetitionPage = () => {
                             color="white"
                             position="absolute"
                         >
-                            Rp349.000,- <Text color="#FF6941">(Normal Bird)</Text>
+                            Rp449.000,- <Text color="#FF6941">(Late Bird)</Text>
                         </Text>
                         <Button
                             color="black"
@@ -563,7 +563,7 @@ const CompetitionPage = () => {
                             color="white"
                             pos="absolute"
                         >
-                            Rp299.000,- / 24 USD <Text color="#FF6941">(Normal Bird)</Text>
+                            Rp319.000,- / 26 USD <Text color="#FF6941">(Late Bird)</Text>
                         </Text>
                         <Button
                             color="black"

@@ -1267,7 +1267,7 @@ const RegisterTeamPage = () => {
                                                             fontSize="1rem"
                                                             color="#F8C800"
                                                         >
-                                                            Rp379.000,- <Text color="#FF6941">(Normal Bird)</Text>
+                                                            Rp399.000,- <Text color="#FF6941">(Late Bird)</Text>
                                                         </Text>
                                                     </Box>
                                                     <Box mt="20px">
