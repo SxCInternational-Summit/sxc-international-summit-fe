@@ -35,22 +35,22 @@ const Events = ({events}) => {
 		},
 		{
 			title: "Product Branding Competition",
-            src: "/images/event1.svg",
+            src: "/images/product_branding.png",
             subtitle: "SxC International Summit 2021 Product Branding Competition. Click Join Event for more info",
             type: "Competition",
             date: "26 July 2021 - 10 October 2021",
             fee: "Closed",
             linkTo: "https://sxcintersummit.com/competition"
 		},
-		// {
-		// 	title: "SxC International Summit Main Events",
-        //     src: "/images/event1.svg",
-        //     subtitle: "List of this year summit`s main event. Click Join Event for more info",
-        //     type: "Main Event",
-        //     date: "9 October 2021 - 16 October 2021",
-        //     fee: "Learn More",
-        //     linkTo: "https://sxcintersummit.com/main-event"
-		// }
+		{
+			title: "SxC International Summit Main Events",
+            src: "/images/awardingNight.svg",
+            subtitle: "List of this year summit`s main event. Click Join Event for more info",
+            type: "Main Event",
+            date: "9 October 2021 - 16 October 2021",
+            fee: "Learn More",
+            linkTo: "https://sxcintersummit.com/main-event"
+		}
 	]
 
 	return (
