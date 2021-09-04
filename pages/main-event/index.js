@@ -9,6 +9,8 @@ import Navbar from "../../component/navbar"
 import Timeline from "../../component/timeline"
 import Faq from "../../component/faq"
 
+import { NextSeo } from "next-seo"
+
 const MainEvent = () => {
     const backgroundImageURL = "/images/mainEventBg.svg"
     const bundleList = [
@@ -215,24 +217,30 @@ const MainEvent = () => {
     ]
 
     return(
-        <Box bgColor="#04040C">
-            <Navbar />
-            <Hero 
-                title="SxC International Summit Main Event"
-                subtitle="Welcome to the peak of the overall InterSummit! This year we are introducing The Summit, an event where individuals will get the amazing opportunity to be a part of many entertaining and insightful Grand Talkshow sessions and many more!."
-                subtitleAddition="Join Now through the Bundle Packs!"
-                image={backgroundImageURL}
+        <>
+            <NextSeo 
+                title="Main Event | SxCInternational Summit 2021"
+                description="Check out the International Summit 2021`s Main Event"
             />
-            <Box pt="75px" px={{base:"14px", md:"80px", xl:"50px"}}>
-                <BundleList list={bundleList} bgColor="#080818" />
+            <Box bgColor="#04040C">
+                <Navbar />
+                <Hero 
+                    title="SxC International Summit Main Event"
+                    subtitle="Welcome to the peak of the overall InterSummit! This year we are introducing The Summit, an event where individuals will get the amazing opportunity to be a part of many entertaining and insightful Grand Talkshow sessions and many more!."
+                    subtitleAddition="Join Now through the Bundle Packs!"
+                    image={backgroundImageURL}
+                />
+                <Box pt="75px" px={{base:"14px", md:"80px", xl:"50px"}}>
+                    <BundleList list={bundleList} bgColor="#080818" />
+                </Box>
+                <EventsHeld title="What are the held events?" props={mainEvents} />
+                <Timeline type="Main-Event" events={eventsTimeline} />
+                <MainEventList days={mainEventDetails} />
+                <Faq faqList={faqList} title />
+                <EventComponent />
+                <Footer />
             </Box>
-            <EventsHeld title="What are the held events?" props={mainEvents} />
-            <Timeline type="Main-Event" events={eventsTimeline} />
-            <MainEventList days={mainEventDetails} />
-            <Faq faqList={faqList} title />
-            <EventComponent />
-            <Footer />
-        </Box>
+        </>
     )
 }
 
