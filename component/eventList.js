@@ -44,7 +44,10 @@ const EventList = ({events}) => {
             className="sectionHeader"
             fontSize={{base: "16px", md:"36px"}}
             lineHeight={{base:"20px", md:"42px"}}
-            mb={6}>
+            mb={6}
+            textAlign="center"
+            color="#F8C800"
+            >
                 Events List
             </Text>
 
