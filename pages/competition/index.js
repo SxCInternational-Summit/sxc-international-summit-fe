@@ -27,7 +27,7 @@ const CompetitionPage = () => {
             type: "Competition",
             date: "26 July 2021 - 10 October 2021",
             fee: "IDR 279.000",
-            linkTo: 'https://sxcinternationalsummit.vercel.app/competition/'
+            linkTo: 'https://sxcintersummit.com/competition/'
           }
     ]
 
@@ -412,7 +412,7 @@ const CompetitionPage = () => {
                             lineHeight="20px"
                             color="white"
                         >
-                            Rp399.000,- <Text color="#FF6941">(Late Registration)</Text>
+                            Rp399.000,- <Text color="#FF6941">(Registration Closed)</Text>
                         </Text>
                         <Button
                             color="black"
@@ -426,8 +426,9 @@ const CompetitionPage = () => {
                             fontSize="16px"
                             lineHeight="20px"
                             mt="12px"
+                            isDisabled={true}
                         >
-                            Get Bundle
+                            Closed
                         </Button>
                     </Box>
                     <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" mx={{base:"0", md:"48px"}} my={{base:"48px", md:"0"}} position="relative">
@@ -488,7 +489,7 @@ const CompetitionPage = () => {
                             color="white"
                             position="absolute"
                         >
-                            Rp364.000,- <Text color="#FF6941">(Late Registration)</Text>
+                            Rp364.000,- <Text color="#FF6941">(Registration Closed)</Text>
                         </Text>
                         <Button
                             color="black"
@@ -502,8 +503,9 @@ const CompetitionPage = () => {
                             fontSize="16px"
                             lineHeight="20px"
                             mt="12px"
+                            isDisabled={true}
                         >
-                            Get Bundle
+                            Closed
                         </Button>
                     </Box>
                     <Box p="28px 24px" border="2px solid #0FA1DB" borderRadius="16px" w="100%" position="relative">
@@ -563,7 +565,7 @@ const CompetitionPage = () => {
                             color="white"
                             pos="absolute"
                         >
-                            Rp319.000,- / 26 USD <Text color="#FF6941">(Late Registration)</Text>
+                            Rp319.000,- / 26 USD <Text color="#FF6941">(Registration Closed)</Text>
                         </Text>
                         <Button
                             color="black"
@@ -577,8 +579,9 @@ const CompetitionPage = () => {
                             fontSize="16px"
                             lineHeight="20px"
                             mt="12px"
+                            isDisabled={true}
                         >
-                            Get Bundle
+                            Closed
                         </Button>
                     </Box>
                 </Flex>
