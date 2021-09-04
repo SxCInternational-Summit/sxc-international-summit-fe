@@ -13,68 +13,69 @@ const MainEvent = () => {
     const backgroundImageURL = "/images/mainEventBg.svg"
     const bundleList = [
         {
-            title: "Manager",
+            title: "CEO",
             titleColor: "#F8C800",
-            advantages: ["Pre-Event #1 Talkshow", "Pre-Event #2 Talkshow", "Business Case Competition"],
-            finalPrice: "Rp85.000,-",
-            originalPrice: "Rp120.000,-",
-            path: "",
-            saving: "50%"
+            advantages: ["Access to all Main Events"],
+            finalPrice: "Rp39.000,-",
+            originalPrice: "Rp49.000,-",
+            path: "https://forms.gle/zV4QYkfig87Xv1K58",
+            saving: "41%"
         },
         {
-            title: "Economic",
+            title: "Director",
             titleColor: "#FF6941",
-            advantages: ["Pre-Event #1 Talkshow", "Pre-Event #2 Talkshow", "Business Case Competition"],
-            finalPrice: "Rp85.000,-",
-            originalPrice: "Rp120.000,-",
-            path: "",
-            saving: "50%"
+            advantages: ["Events Day 1", "Events Day 3"],
+            finalPrice: "Rp29.000,-",
+            originalPrice: "Rp49.000,-",
+            path: "https://forms.gle/HPmTJ7GyTjAKmdSp8",
+            saving: "17%"
         },
         {
-            title: "Original",
+            title: "Manager",
             titleColor: "#0FA1DB",
-            advantages: ["Pre-Event #1 Talkshow", "Pre-Event #2 Talkshow", "Business Case Competition"],
-            finalPrice: "Rp85.000,-",
-            originalPrice: "Rp120.000,-",
-            path: "",
-            saving: "50%"
+            advantages: ["Events Day 2", "Events Day 3"],
+            finalPrice: "Rp29.000,-",
+            originalPrice: "Rp35.000,-",
+            path: "https://forms.gle/RYNfZsEJEGyZwVgS7",
+            saving: "17%"
+        },
+        {
+            title: "Main Conference",
+            titleColor: "#0FA1DB",
+            advantages: ["Events Day 3"],
+            finalPrice: "Rp15.000,-",
+            originalPrice: "Rp20.000,-",
+            path: "https://forms.gle/shj6ZJVA8XQ3U4oXA",
+            saving: "25%"
         }
     ]
 
     const mainEvents =[
         {
             src: "/images/grandTalkshow.svg",
-            title: "Grand Talkshows",
-            subtitle: "Three different topics covering the most important and essential of the business world, wrapped up into three different session"
+            title: "Conferences",
+            subtitle: "Three different topics covering the most important and essential of the business world, wrapped up into different sessions"
         },
         {
             src: "/images/awardingNight.svg",
             title: "Awarding night",
-            subtitle: "Celebrate the closing of SxC intersummit, enjoy live music performances, and congratulate the winner of SxC Intersummit competitions"
+            subtitle: "Celebrate the closing of SxC intersummit, special performances, and to announce and congratulate the winners of SxC Intersummit competitions"
         }
     ]
 
     const eventsTimeline =[
         {
-            date: "19 June 2021",
-            title: "Pre-Event Talkshow #1"
+            date: "October 9, 2021",
+            title: "Day 1: Chambers"
         },
         {
-            date: "19 June 2021",
-            title: "Pre-Event Instagram Takeover #1"
+            date: "October 10, 2021",
+            title: "Day 2: Virtual Company Visit"
         },
         {
-            date: "19 June 2021",
-            title: "Pre-Event Talkshow #2"
+            date: "October 16, 2021",
+            title: "Main Conference & Awarding Night"
         },
-        {
-            date: "19 June 2021",
-            title: "Pre-Event Talkshow #3"
-        },
-        {
-            date: "19 June 2021",
-            title: "Pre-Event Talkshow #4"
-        }
     ]
 
     const mainEventDetails =[
@@ -83,21 +84,72 @@ const MainEvent = () => {
             color: "linear-gradient(102.67deg, #0F75BC -2.74%, #0FA1DB 91.23%)",
             session : [
                 {
-                    date: "First Grand Talkshow - 09 September 08:00 GMT+7",
-                    title: "Lesson Learned From Pandemics, Don’t You See The COV-ortunities?",
-                    subtitle: "Learn how to manage your financial and gain profit while in a pandemic situation.",
+                    date: "Consulting",
+                    title: "Accelerate Your Productivity: Scales Up and Maintain a Good Working Environment",
+                    subtitle: "Lingkungan kerja yang positif adalah salah satu faktor yang berpengaruh dalam peningkatan produktivitas. Dengan menciptakan dan mempertahankan lingkungan kerja yang positif, dapat menjadi motivasi seseorang untuk meningkatkan potensi diri secara maksimal.",
                     speakers: [
                         {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
+                            name: "Flavia Norpina Sungkit",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
                         },
                         {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
+                            name: "Nathanael Abednego",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
                         }
                     ] 
+                },
+                {
+                    date: "Fast Moving Consumer Goods",
+                    title: "Shape Your Future Path: More Digital Execution On Developing New Normal Business",
+                    subtitle: "Sebuah perusahaan tentu memiliki target-target yang ingin dicapai, baik target dalam jangka pendek maupun target dalam jangka panjang.  Sejak Pandemi COVID-19 melanda dunia, tentu terdapat target-target yang pada akhirnya tidak tercapai dan terdapat target-target yang harus diadaptasi dan atau muncul setelah adanya Pandemi COVID-19 ini.",
+                    speakers: [
+                        {
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
+                        },
+                        {
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
+                        }
+                    ]
+                },
+                {
+                    date: "Start-Up",
+                    title: "Adapt and Overcome: Agile in Era of Acceleration",
+                    subtitle: "Dunia digital yang terus berkembang membuat perubahan besar terjadi dalam setiap aspek, bahkan sampai perubahan perilaku konsumen. Perubahan ini tentunya secara tidak langsung memaksa bisnis/perusahaan harus beradaptasi dan agile dalam era ini. Berbagai strategi dan inovasi harus diciptakan agar dapat bertahan dan menghadapi arus perubahan yang semakin cepat.",
+                    speakers: [
+                        {
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
+                        },
+                        {
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
+                        }
+                    ]
+                },
+                {
+                    date: "Local Business",
+                    title: "Breaking Through Stigma: What is Your Why?",
+                    subtitle: "Stigma yang dahulunya sering melekat pada bisnis lokal bahwa mereka tidak akan bisa go-international akan dipatahkan dalam sesi ini. Persaingan usaha kian hari semakin ketat, maka dari itu menemukan value dan keunikan dari suatu bisnis sangat penting. Sesuatu hal yang unik dan memiliki ciri khas tentu akan memberikan daya tarik tersendiri bagi para konsumen serta membuat produk dapat ‘standout’ di antara kompetitor lainnya.",
+                    speakers: [
+                        {
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
+                        },
+                        {
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
+                        }
+                    ]
                 }
             ]
         },
@@ -106,19 +158,19 @@ const MainEvent = () => {
             color: "linear-gradient(135deg, #F8C800 0%, #FF6941 100%)",
             session : [
                 {
-                    date: "Second Grand Talkshow - 09 September 08:00 GMT+7",
-                    title: "Manifesting Ourselves on Facing Social Anxiety as An Effect of Pandemic",
-                    subtitle: "Learn how to manage your financial and gain profit while in a pandemic situation.",
+                    date: "Virtual Company Visit: Blibli and Paragon",
+                    title: "Ready To Compete An Artificial Intelligence World with Your Teams",
+                    subtitle: "Teknologi AI sekarang sangat berkembang dengan pesat bahkan terdapat beberapa pekerjaan yang telah digantikan dengan peran dari AI.  Will AI take over humans? Dengan adanya persaingan ini, kita sebagai manusia juga harus meningkatkan kemampuan kita semaksimal mungkin agar AI tidak menggantikan peran manusia secara menyeluruh. Manusia yang harus memanfaatkan AI tersebut untuk mendorong terwujudnya inovasi dan kreativitas.",
                     speakers: [
                         {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
                         },
                         {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
                         }
                     ] 
                 }
@@ -130,38 +182,21 @@ const MainEvent = () => {
             color: "linear-gradient(135deg, #0FA1DB 0%, #9AE95A 50.32%, #F8C800 97.59%)",
             session : [
                 {
-                    date: "Second Grand Talkshow - 09 September 08:00 GMT+7",
-                    title: "Is It Too Late To Run A Business Or Make An Investment?",
-                    subtitle: "Learn how to manage your financial and gain profit while in a pandemic situation.",
+                    date: "Main Conference and Awarding Ceremony",
+                    title: "A Leap to Forge My Path: Corporate, Start up, or Building My Own Business?",
+                    subtitle: "In order to provide a way for Gen-Zs to start choosing and pursuing their own path of interest for their future career plan by giving the perspective from 3 major fields in the industry as of this moment.",
                     speakers: [
                         {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
+                            name: "Jehian Panangian Sijabat",
+                            src: "/images/no-picture.jpg",
+                            achievement: "CEO Menantea"
                         },
                         {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
+                            name: "To be Announced",
+                            src: "/images/no-picture.jpg",
+                            achievement: ""
                         }
                     ] 
-                },
-                {
-                    date: "Second Grand Talkshow - 09 September 08:00 GMT+7",
-                    title: "Concert and Awarding Night",
-                    subtitle: "Learn how to manage your financial and gain profit while in a pandemic situation.",
-                    speakers: [
-                        {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
-                        },
-                        {
-                            name: "Muhammad Abdurahman Basyah bin Ismail bin Mail",
-                            src: "/images/abduh.jpg",
-                            achievement: "Lead Software Engineer at Pahamify and Business Intelligence intern at Shopee"
-                        }
-                    ]
                 }
             ]
             
@@ -170,16 +205,12 @@ const MainEvent = () => {
 
     const faqList =[
         {
-            question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
-            answer: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?"
+            question: "How do I attend a conference?",
+            answer: "Read the events description, pick a day to your liking, and simply click on the bundle which suits your interest."
         },
         {
-            question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
-            answer: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?"
-        },
-        {
-            question: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?",
-            answer: "What are the series of StudentsxCEOs 10th Grand Summit Pre-Event?"
+            question: "Who are the speakers of the conference?",
+            answer: "You can look on events description for the speakers, however if they're not announced yet, please stay tuned!"
         }
     ]
 
@@ -192,7 +223,7 @@ const MainEvent = () => {
                 subtitleAddition="Join Now through the Bundle Packs!"
                 image={backgroundImageURL}
             />
-            <Box pt="75px" px={{base:"14px", md:"80px", xl:"120px"}}>
+            <Box pt="75px" px={{base:"14px", md:"80px", xl:"50px"}}>
                 <BundleList list={bundleList} bgColor="#080818" />
             </Box>
             <EventsHeld title="What are the held events?" props={mainEvents} />
