@@ -10,6 +10,11 @@ import {
 
 
 const BundleItem =({title, titleColor, advantages, finalPrice, originalPrice, path, saving, priceDescription, mx}) => {
+
+    const handleRedirection = () => {
+        window.open(path, "_blank")
+    }
+
     return(
         <Box p="28px 24px" minW="200px" maxW="320px" w={{base:"200px", sm:"100%"}} border="2px solid #0FA1DB" borderRadius="16px"  position="relative" mx={{base: "", md: mx}} my={{base: mx, md: ""}}>
             {saving ? <Circle size="70px" bg="#FF6941" color="white" position="absolute" top="-35px" right="-35px">
@@ -89,7 +94,7 @@ const BundleItem =({title, titleColor, advantages, finalPrice, originalPrice, pa
                             color="black"
                             position="absolute"
                             bottom="20px"
-                            onClick={() => router.push(path)}
+                            onClick={handleRedirection}
                             bgColor="#F8C800"
                             p="10px 24px"
                             className="tertiaryFont"
