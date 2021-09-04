@@ -21,14 +21,14 @@ const MainEvent = () => {
             finalPrice: "Rp39.000,-",
             originalPrice: "Rp49.000,-",
             path: "https://forms.gle/zV4QYkfig87Xv1K58",
-            saving: "41%"
+            saving: "20%"
         },
         {
             title: "Director",
             titleColor: "#FF6941",
             advantages: ["Events Day 1", "Events Day 3"],
             finalPrice: "Rp29.000,-",
-            originalPrice: "Rp49.000,-",
+            originalPrice: "Rp35.000,-",
             path: "https://forms.gle/HPmTJ7GyTjAKmdSp8",
             saving: "17%"
         },
