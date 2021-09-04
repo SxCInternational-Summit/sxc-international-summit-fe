@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react"
 
 const Timeline = ({type, events}) => {
+
     return(
         <Box bgColor="#04040C" pt="120px">
             <Center>
