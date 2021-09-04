@@ -42,9 +42,10 @@ const EventList = ({events}) => {
             <Text 
             color="white" 
             className="sectionHeader"
-            fontSize={{base: "16px", md:"36px"}}
+            fontSize={{base: "30px", md:"36px"}}
             lineHeight={{base:"20px", md:"42px"}}
             mb={6}
+            mt={{base: "30px"}}
             textAlign="center"
             color="#F8C800"
             >
