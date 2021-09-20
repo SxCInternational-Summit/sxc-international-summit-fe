@@ -92,13 +92,13 @@ const MainEvent = () => {
                     speakers: [
                         {
                             name: "Flavia Norpina Sungkit",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            src: "/images/flavia_sungkit.jpeg",
+                            achievement: "Founder at Ikigai"
                         },
                         {
                             name: "Nathanael Abednego",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            src: "/images/nathanael_abednego.jpeg",
+                            achievement: "Strategy and Operation Consultant at Deloitte"
                         }
                     ] 
                 },
@@ -108,14 +108,14 @@ const MainEvent = () => {
                     subtitle: "Sebuah perusahaan tentu memiliki target-target yang ingin dicapai, baik target dalam jangka pendek maupun target dalam jangka panjang.  Sejak Pandemi COVID-19 melanda dunia, tentu terdapat target-target yang pada akhirnya tidak tercapai dan terdapat target-target yang harus diadaptasi dan atau muncul setelah adanya Pandemi COVID-19 ini.",
                     speakers: [
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Jesaya Christian",
+                            src: "/images/jesaya_christian.jpg",
+                            achievement: "Brand Manager L-Men, Lokalate, and W'Dank"
                         },
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Cut Nya Dartina Rinatha",
+                            src: "/images/cut_nya_dartina.png",
+                            achievement: "Head of E-Commerce at PARAGON"
                         }
                     ]
                 },
@@ -125,14 +125,14 @@ const MainEvent = () => {
                     subtitle: "Dunia digital yang terus berkembang membuat perubahan besar terjadi dalam setiap aspek, bahkan sampai perubahan perilaku konsumen. Perubahan ini tentunya secara tidak langsung memaksa bisnis/perusahaan harus beradaptasi dan agile dalam era ini. Berbagai strategi dan inovasi harus diciptakan agar dapat bertahan dan menghadapi arus perubahan yang semakin cepat.",
                     speakers: [
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Tony Wei",
+                            src: "/images/tony_wei.jpg",
+                            achievement: "Head of Product at OVO"
                         },
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "William",
+                            src: "/images/william.jpg",
+                            achievement: "VP of Business Development at Blibli"
                         }
                     ]
                 },
@@ -142,14 +142,14 @@ const MainEvent = () => {
                     subtitle: "Stigma yang dahulunya sering melekat pada bisnis lokal bahwa mereka tidak akan bisa go-international akan dipatahkan dalam sesi ini. Persaingan usaha kian hari semakin ketat, maka dari itu menemukan value dan keunikan dari suatu bisnis sangat penting. Sesuatu hal yang unik dan memiliki ciri khas tentu akan memberikan daya tarik tersendiri bagi para konsumen serta membuat produk dapat ‘standout’ di antara kompetitor lainnya.",
                     speakers: [
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Andreas Resha",
+                            src: "/images/hangry.jpeg",
+                            achievement: "Co-Founder and CEO at HANGRY!"
                         },
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Priscilla Pangemanan",
+                            src: "/images/priscillia.jpg",
+                            achievement: "Co-Founder & CMO at SASC"
                         }
                     ]
                 }
