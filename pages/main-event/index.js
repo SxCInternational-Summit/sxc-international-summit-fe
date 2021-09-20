@@ -18,8 +18,8 @@ const MainEvent = () => {
             title: "CEO",
             titleColor: "#F8C800",
             advantages: ["Access to all Main Events"],
-            finalPrice: "Rp39.000,-",
-            originalPrice: "Rp49.000,-",
+            finalPrice: "Rp49.000,-",
+            originalPrice: "",
             path: "https://forms.gle/zV4QYkfig87Xv1K58",
             saving: "20%"
         },
@@ -27,8 +27,8 @@ const MainEvent = () => {
             title: "Director",
             titleColor: "#FF6941",
             advantages: ["Events Day 1", "Events Day 3"],
-            finalPrice: "Rp29.000,-",
-            originalPrice: "Rp35.000,-",
+            finalPrice: "Rp35.000,-",
+            originalPrice: "",
             path: "https://forms.gle/HPmTJ7GyTjAKmdSp8",
             saving: "17%"
         },
@@ -36,8 +36,8 @@ const MainEvent = () => {
             title: "Manager",
             titleColor: "#0FA1DB",
             advantages: ["Events Day 2", "Events Day 3"],
-            finalPrice: "Rp29.000,-",
-            originalPrice: "Rp35.000,-",
+            finalPrice: "Rp35.000,-",
+            originalPrice: "",
             path: "https://forms.gle/RYNfZsEJEGyZwVgS7",
             saving: "17%"
         },
@@ -45,8 +45,8 @@ const MainEvent = () => {
             title: "Main Conference",
             titleColor: "#0FA1DB",
             advantages: ["Events Day 3"],
-            finalPrice: "Rp15.000,-",
-            originalPrice: "Rp20.000,-",
+            finalPrice: "Rp20.000,-",
+            originalPrice: "",
             path: "https://forms.gle/shj6ZJVA8XQ3U4oXA",
             saving: "25%"
         }
