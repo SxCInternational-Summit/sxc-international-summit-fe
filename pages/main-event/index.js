@@ -165,14 +165,19 @@ const MainEvent = () => {
                     subtitle: "Teknologi AI sekarang sangat berkembang dengan pesat bahkan terdapat beberapa pekerjaan yang telah digantikan dengan peran dari AI.  Will AI take over humans? Dengan adanya persaingan ini, kita sebagai manusia juga harus meningkatkan kemampuan kita semaksimal mungkin agar AI tidak menggantikan peran manusia secara menyeluruh. Manusia yang harus memanfaatkan AI tersebut untuk mendorong terwujudnya inovasi dan kreativitas.",
                     speakers: [
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Claresa Wahyu",
+                            src: "/images/claresa_wahyu.jpg",
+                            achievement: "Senior Talent Acquisition Manager at Blibli"
                         },
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Benny Maulana Achsan",
+                            src: "/images/benny_maulana.png",
+                            achievement: "IT Data Engineering at Paragon"
+                        },
+                        {
+                            name: "Belva Prima",
+                            src: "/images/belva_prima.jpg",
+                            achievement: "IT Product Manager at Paragon"
                         }
                     ] 
                 }
@@ -191,12 +196,17 @@ const MainEvent = () => {
                         {
                             name: "Jehian Panangian Sijabat",
                             src: "/images/no-picture.jpg",
-                            achievement: "CEO Menantea"
+                            achievement: "Chief Executive Office of Menantea"
                         },
                         {
-                            name: "To be Announced",
-                            src: "/images/no-picture.jpg",
-                            achievement: ""
+                            name: "Brandon S. Curson",
+                            src: "/images/brandon_curson.jpg",
+                            achievement: "Country Manager at TREVO"
+                        },
+                        {
+                            name: "Bahrun Afriansyah",
+                            src: "/images/bahrun_afriansyah.jpg",
+                            achievement: "Vice President of Marketing at Paragon"
                         }
                     ] 
                 }
