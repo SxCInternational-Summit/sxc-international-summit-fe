@@ -200,7 +200,7 @@ const MainEvent = () => {
                         },
                         {
                             name: "Brandon S. Curson",
-                            src: "/images/brandon_curson.jpg",
+                            src: "/images/no-picture.jpg",
                             achievement: "Country Manager at TREVO"
                         },
                         {
