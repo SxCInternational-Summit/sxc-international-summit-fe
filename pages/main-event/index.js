@@ -148,7 +148,7 @@ const MainEvent = () => {
                         },
                         {
                             name: "Priscilla Pangemanan",
-                            src: "/images/priscillia.jpg",
+                            src: "/images/priscillia.JPG",
                             achievement: "Co-Founder & CMO at SASC"
                         }
                     ]
