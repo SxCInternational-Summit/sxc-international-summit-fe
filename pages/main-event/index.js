@@ -195,12 +195,12 @@ const MainEvent = () => {
                     speakers: [
                         {
                             name: "Jehian Panangian Sijabat",
-                            src: "/images/no-picture.jpg",
+                            src: "/images/jehian.jpg",
                             achievement: "Chief Executive Office of Menantea"
                         },
                         {
                             name: "Brandon S. Curson",
-                            src: "/images/no-picture.jpg",
+                            src: "/images/brandon_curson.jpeg",
                             achievement: "Country Manager at TREVO"
                         },
                         {
