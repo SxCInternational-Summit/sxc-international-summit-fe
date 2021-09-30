@@ -53,7 +53,7 @@ const Partner = () => {
                 </Stack>
 
                 <Center mt="86px">
-                    <Text className={styles.sectionFont} textAlign="center">Our Partners and Sponsors</Text>
+                    <Text className={styles.sectionFont} textAlign="center">Our Sponsors and Media Partners</Text>
                 </Center>
                 <Flex direction="row" align="center" flexWrap="wrap" mt={{base:"30px", md:"120px"}} justifyContent="space-between" w={{base:"90%", md:"80%"}}>
                     <Box w="17%">
@@ -68,7 +68,7 @@ const Partner = () => {
                     <Image src="/images/sponsors/Natur.png" alt="Natur" w="9.5%" />
                     <Image src="/images/sponsors/Hangry.png" alt="Hangry" w="12%" />
                 </Flex>
-                <Image src="/images/sponsors/Medpar.png" alt="Media Partner" w={{base:"90%", md:"80%"}} h="fit-content" my="-25%" />
+                <Image src="/images/sponsors/Medpar2.png" alt="Media Partner" w={{base:"90%", md:"80%"}} h="fit-content" my="-10%" />
             </Center>
         </>
     )
