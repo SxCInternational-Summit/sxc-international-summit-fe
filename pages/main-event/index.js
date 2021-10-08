@@ -18,18 +18,18 @@ const MainEvent = () => {
             title: "CEO",
             titleColor: "#F8C800",
             advantages: ["Access to all Main Events"],
-            finalPrice: "Rp49.000,-",
+            finalPrice: "CLOSED",
             originalPrice: "",
-            path: "https://forms.gle/zV4QYkfig87Xv1K58",
+            path: "",
             saving: "20%"
         },
         {
             title: "Director",
             titleColor: "#FF6941",
             advantages: ["Events Day 1", "Events Day 3"],
-            finalPrice: "Rp35.000,-",
+            finalPrice: "CLOSED",
             originalPrice: "",
-            path: "https://forms.gle/HPmTJ7GyTjAKmdSp8",
+            path: "",
             saving: "17%"
         },
         {
