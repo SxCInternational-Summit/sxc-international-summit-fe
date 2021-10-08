@@ -27,8 +27,8 @@ const MainEvent = () => {
             title: "Director",
             titleColor: "#FF6941",
             advantages: ["Events Day 1", "Events Day 3"],
-            finalPrice: "CLOSED",
-            originalPrice: "Rp35.000",
+            finalPrice: "Rp35.000",
+            originalPrice: "",
             path: "https://forms.gle/HPmTJ7GyTjAKmdSp8",
             saving: "17%"
         },
