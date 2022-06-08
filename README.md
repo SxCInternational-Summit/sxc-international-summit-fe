@@ -23,7 +23,7 @@ or simply use
 git checkout -b <branch-name>
 ```
 
-For best practice, use "feature/<name>" for new feature and "fix/<name>"
+For best practice, use "feature/<name>" for new feature and "fix/<name>" for bugfixing
 
 ### Third, make sure you pulled everything from origin branch before coding to prevent conflicts
 
