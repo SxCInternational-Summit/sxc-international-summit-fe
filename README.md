@@ -1,30 +1,44 @@
 ## Developing steps
 
-First, clone and add repository as origin:
+### First, clone and add repository as origin:
 
 ```bash
-git clone 
+git clone https://github.com/StudentxCEOs-International-Summit-2022/sxc-international-summit-fe.git
+
+then,
+
+git remote add origin https://github.com/StudentxCEOs-International-Summit-2022/sxc-international-summit-fe.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Second, work in branch repository
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+git branch <branch-name>
+then,
+git checkout <branch-name>
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+or simply use
+```bash
+git checkout -b <branch-name>
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For best practice, use "feature/<name>" for new feature and "fix/<name>"
 
-## Learn More
+### Third, make sure you pulled everything from origin branch before coding to prevent conflicts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git pull origin main
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If there are some conflict, resolve it manually by reading and change the code
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Fourth, commit and push your work
 
-## Deploy on Vercel
+```bash
+git add.
+git commit -m "<your commit message>"
+git push origin <branch-name>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Last, if all work is done, make a pull request and request review
