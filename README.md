@@ -4,9 +4,6 @@
 
 ```bash
 git clone https://github.com/StudentxCEOs-International-Summit-2022/sxc-international-summit-fe.git
-
-then,
-
 git remote add origin https://github.com/StudentxCEOs-International-Summit-2022/sxc-international-summit-fe.git
 ```
 
@@ -14,7 +11,6 @@ git remote add origin https://github.com/StudentxCEOs-International-Summit-2022/
 
 ```bash
 git branch <branch-name>
-then,
 git checkout <branch-name>
 ```
 
