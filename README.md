@@ -1,5 +1,9 @@
 ## Developing steps
 
+NextJS docs: https://nextjs.org/docs
+ChakraUI docs: https://chakra-ui.com/guides/first-steps
+ReactJS docs: https://reactjs.org/docs/getting-started.html
+
 ### First, clone and add repository as origin:
 
 ```bash
