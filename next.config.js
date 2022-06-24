@@ -1,6 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const path = require('path')
+require('dotenv').config()
 
-module.exports = nextConfig
+module.exports = {
+  	env: {
+		API_URL: process.env.API_URL
+  	},
+
+  	reactStrictMode: true,
+  	//trailingSlash: true,
+}
