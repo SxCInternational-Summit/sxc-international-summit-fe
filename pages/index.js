@@ -1,12 +1,33 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Layout from '../components/Layout'
-import styles from '../styles/Home.module.css'
+import {
+    Box
+  } from "@chakra-ui/react";
 
-export default function Home() {
-  return (
-    <Layout hasNavbar hasFooter>
-      body
-    </Layout>
-  )
+import Navbar from "../component/navbar"
+import Jumbotron from "../component/jumbotron";
+import Partner from "../component/partner";
+import { useState } from "react";
+import Footer from "../component/footer";
+import EventTab from "../component/eventTab";
+
+import { NextSeo } from "next-seo";
+
+const LandingPage = () => {
+    return(
+        <>
+            <NextSeo 
+                title="SxCInternational Summit 2021"
+                description="Landing page for SxcInternationalSummit 2021"
+            />
+            <Box bgColor="black">
+                <Navbar />
+                <Jumbotron />
+                <Partner />
+                <EventTab />
+                <Footer />
+            </Box>
+            
+        </>
+    )
 }
+
+export default LandingPage
