@@ -1,0 +1,103 @@
+@import "/styles/variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100%;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.primaryFont {
+  font-family: $primaryFont;
+}
+
+.secondaryFont {
+  font-family: $secondaryFont;
+}
+
+.tertiaryFont {
+  font-family: $tertiaryFont;
+}
+
+.yellowButtonFont {
+  font: 700 16px $tertiaryFont;
+  line-height: 20px;
+}
+
+.sectionHeader {
+  font: 700 36px $tertiaryFont;
+  line-height: 42px;
+}
+
+.gradientFont{
+  font-family: $tertiaryFont;
+  font-weight: 700;
+  background: $gradientColor;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: "";
+}
+
+.input {
+  border: 1px solid #666666;
+  border-radius: 6px;
+  line-height: 200%;
+  background-color: transparent;
+  margin-top: 4px;
+  color: white;
+}
+
+.label {
+  font: 700 12px $tertiaryFont;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.formHelper {
+  font: 400 12 $secondaryFont;
+  line-height: 16px;
+  color: #999999;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  max-width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333333;
+  border-radius: 4px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F8C800; 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F8C800; 
+}
+
+.gradientOrange {
+  font-family: $tertiaryFont;
+  font-weight: 700;
+  background: linear-gradient(135deg, #F8C800 0%, #FF6941 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: "";
+}

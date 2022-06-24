@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+.rotate {
+    transform: rotate(-180deg);
+}
+
+.leftArrow {
+    transform: rotate(90deg);
+    margin-right: 24px;
+}
+
+.rightArrow {
+    transform: rotate(-90deg);
+}

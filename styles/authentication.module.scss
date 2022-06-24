@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.backgroundImage {
+    background: $bgLanding no-repeat center center;
+    background-size: cover;
+    height: 100vh !important; 
+    top: 0;
+    width: 100vw !important;
+    overflow: auto; 
+} 
+
+.authenticationHeader {
+    font: 700 48px $tertiaryFont;
+    color: #ffffff;
+}
+
+.subtitle {
+    font: 400 16px $secondaryFont;
+    color: #ffffff;
+}
+
+.input {
+    width: 80%;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    line-height: 200%;
+    background-color: transparent;
+    margin-top: 4px;
+    color: white;
+}
+
+.label {
+    font: 700 12px $tertiaryFont;
+    line-height: 16px;
+    color: #ffffff;
+}

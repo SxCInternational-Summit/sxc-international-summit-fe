@@ -1,0 +1,24 @@
+@import "/styles/variables.scss";
+.footerFont {
+    // font-family: 400 16px $secondaryFont;
+    font-family: $secondaryFont;
+    font-weight: 400;
+    color: white;
+    // font-size: 12px;
+}
+
+.footerLogo{
+    display: flex;
+    position: absolute;
+    width: 178px;
+    height: 92px;
+    left: 120px;
+}
+
+.footerLogo2{
+    display: flex;
+    position: absolute;
+    width: 178px;
+    height: 92px;
+    left: 60px;
+}
